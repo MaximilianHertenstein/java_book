@@ -1,9 +1,0 @@
-name: java-book
-channels:
-  - conda-forge
-dependencies:
-  - openjdk=25
-  - jupyterlab
-  - pip
-  - pip:
-      - jjava

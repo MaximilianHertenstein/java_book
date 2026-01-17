@@ -4,4 +4,4 @@ authors = ["MaximilianHertenstein"]
 language = "de"
 
 [output.html]
-additional-js = ["theme/js/thebe-init.js"]
+additional-js = ["src/theme/js/thebe-init.js"]
