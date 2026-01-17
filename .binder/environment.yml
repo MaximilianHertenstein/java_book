@@ -1,0 +1,7 @@
+name: java-book
+channels:
+  - conda-forge
+dependencies:
+  - openjdk=25
+  - jupyterlab
+  - jupyter-java-kernel

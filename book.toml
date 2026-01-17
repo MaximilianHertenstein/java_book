@@ -1,0 +1,7 @@
+[book]
+authors = ["MaximilianHertenstein"]
+# [preprocessor.quiz]
+language = "de"
+
+[output.html]
+additional-js = ["theme/js/thebe-init.js"]
