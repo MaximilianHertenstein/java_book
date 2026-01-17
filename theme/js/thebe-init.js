@@ -4,7 +4,7 @@ window.thebeConfig = {
     ref: "main",
   },
   kernelOptions: {
-    name: "jjava",
+    name: "java",
   },
   codeMirrorConfig: {
     theme: "default",

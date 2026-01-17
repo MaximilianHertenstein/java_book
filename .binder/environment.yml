@@ -4,4 +4,6 @@ channels:
 dependencies:
   - openjdk=25
   - jupyterlab
-  - jupyter-java-kernel
+  - pip
+  - pip:
+      - jjava
