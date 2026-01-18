@@ -1,0 +1,16 @@
+name: java_book_binder
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python environment
+  - python=3.11
+  - ipython
+  - jupyterlab
+  - thebe
+  - pip
+  - pip:
+      - jjava
+
+  # Java environment
+  - openjdk=25
