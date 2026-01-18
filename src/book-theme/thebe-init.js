@@ -1,6 +1,75 @@
 let statusInitialized = false;
 let bootstrapAttempted = false;
 
+const styleThebeCell = () => {
+  // Force dark styling on all Thebe cells - support both class names
+  document.querySelectorAll('.thebe-cell, .thebelab-cell').forEach(cell => {
+    const input = cell.querySelector('.thebe-input, .thebelab-input');
+    if (input) {
+      input.style.backgroundColor = '#282a36';
+      input.style.color = '#f8f8f2';
+      input.style.padding = '0.5em 1em';
+      input.style.margin = '0';
+      input.style.border = 'none';
+      input.style.borderRadius = '0';
+      input.style.overflow = 'auto';
+    }
+    
+    // Change CodeMirror class to dracula theme
+    const cm = cell.querySelector('.CodeMirror');
+    if (cm) {
+      cm.classList.remove('cm-s-default');
+      cm.classList.add('cm-s-dracula');
+      cm.style.backgroundColor = '#282a36';
+      cm.style.color = '#f8f8f2';
+      cm.style.border = 'none';
+      cm.style.margin = '0';
+      cm.style.padding = '0';
+      cm.style.height = 'auto';
+      cm.style.minHeight = 'auto';
+    }
+    
+    // Force dark backgrounds on all container elements
+    const scroll = cell.querySelector('.CodeMirror-scroll');
+    if (scroll) {
+      scroll.style.backgroundColor = '#282a36';
+      scroll.style.overflow = 'visible';
+      scroll.style.height = 'auto';
+    }
+    
+    const sizer = cell.querySelector('.CodeMirror-sizer');
+    if (sizer) {
+      sizer.style.backgroundColor = '#282a36';
+    }
+    
+    const lines = cell.querySelector('.CodeMirror-lines');
+    if (lines) {
+      lines.style.backgroundColor = '#282a36';
+      lines.style.padding = '0';
+    }
+    
+    // Hide line numbers completely
+    const gutters = cell.querySelectorAll('.CodeMirror-gutters');
+    gutters.forEach(g => {
+      g.style.display = 'none';
+      g.style.width = '0 !important';
+      g.style.visibility = 'hidden';
+    });
+    
+    const lineNumbers = cell.querySelectorAll('.CodeMirror-linenumber');
+    lineNumbers.forEach(ln => {
+      ln.style.display = 'none !important';
+      ln.style.visibility = 'hidden';
+    });
+    
+    // Also hide gutter wrappers
+    const gutterWrappers = cell.querySelectorAll('.CodeMirror-gutter-wrapper');
+    gutterWrappers.forEach(gw => {
+      gw.style.display = 'none !important';
+    });
+  });
+};
+
 window.addEventListener("load", () => {
   if (statusInitialized) return;
   statusInitialized = true;
@@ -101,6 +170,8 @@ window.addEventListener("load", () => {
     thebelab.bootstrap(bootstrapOptions)
       .then(() => {
         console.log("Bootstrap successful");
+        // Apply plain mdbook styling to cells
+        styleThebeCell();
         addStatusMessage('⏳ Connecting to Binder...', 'thebe-status-building');
       })
       .catch(err => {
@@ -124,6 +195,7 @@ window.addEventListener("load", () => {
         if (statusMessages[data.status]) {
           const msg = statusMessages[data.status];
           addStatusMessage(msg.text, msg.class);
+          styleThebeCell(); // Re-apply styling in case new elements were added
           
           if (data.status === 'ready') {
             enableRunButtons();

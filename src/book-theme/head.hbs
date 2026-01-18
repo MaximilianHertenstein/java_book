@@ -13,12 +13,17 @@ window.thebeConfig = {
   },
   selector: "pre[data-executable]",
   codeMirrorConfig: {
-    theme: "default",
-    lineNumbers: true,
-    matchBrackets: true,
+    theme: "dracula",
+    lineNumbers: false,
+    gutters: [],
+    matchBrackets: false,
     mode: "python",
     readOnly: false,
-    viewportMargin: 10
+    viewportMargin: Infinity,
+    indentUnit: 2,
+    tabSize: 2,
+    indentWithTabs: false,
+    styleActiveLine: false
   }
 };
 
@@ -45,66 +50,132 @@ window.thebeConfig = {
 })();
 </script>
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+<!-- Load dark CodeMirror theme -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
 <style>
-  /* Style Thebe to look like mdbook */
-  .thebelab-cell {
-    margin: 1em 0;
+  /* Make Thebe cells look exactly like plain mdbook code blocks */
+          .thebe-cell, .thebelab-cell {
+            margin: 1em 0;
+            position: relative;
+          }
+          
+          .thebe-input, .thebelab-input {
+            background-color: #282a36 !important;
+            color: #f8f8f2 !important;
+            padding: 0.5em 1em !important;
+            overflow-x: auto !important;
+            border-radius: 0 !important;
+            border: none !important;
+            margin: 0 !important;
+          }
+          
+          .thebe-input .CodeMirror, .thebelab-input .CodeMirror {
+            background-color: #282a36 !important;
+            color: #f8f8f2 !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            height: auto !important;
+            min-height: auto !important;
+            margin: 0 !important;
+          }
+          
+          .thebe-input .CodeMirror-scroll, .thebelab-input .CodeMirror-scroll {
+            background-color: #282a36 !important;
+            overflow: visible !important;
+            height: auto !important;
+          }
+          
+          .thebe-input .CodeMirror-sizer, .thebelab-input .CodeMirror-sizer {
+            background-color: #282a36 !important;
+          }
+          
+          .thebe-input .CodeMirror-gutters, .thebelab-input .CodeMirror-gutters {
+            display: none !important;
+            width: 0 !important;
+            visibility: hidden !important;
+          }
+          
+          .thebe-input .CodeMirror-linenumber, .thebelab-input .CodeMirror-linenumber {
+            display: none !important;
+            visibility: hidden !important;
+          }
+          
+          .thebe-input .CodeMirror-gutter, .thebelab-input .CodeMirror-gutter {
+            display: none !important;
+            width: 0 !important;
+          }
+  
+  .thebelab-input .CodeMirror-lines {
+    padding: 0 !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
   }
   
-  .thebelab-input .CodeMirror {
-    background-color: var(--quote-bg) !important;
-    color: var(--fg) !important;
-    font-family: var(--mono-font);
-    font-size: var(--code-font-size);
-    border-radius: 5px;
-    padding: 0.5em;
-    height: auto !important;
-    min-height: auto !important;
+  .thebelab-input .CodeMirror-line {
+    padding: 0 !important;
+    background-color: transparent !important;
   }
   
-  .thebelab-input .CodeMirror-scroll {
-    max-height: 150px;
-    min-height: auto !important;
-  }
-  
-  .thebelab-input .CodeMirror-sizer {
-    min-height: auto !important;
-  }
-  
-  .thebelab-input .CodeMirror-gutters {
-    background-color: var(--quote-bg) !important;
-    border: none;
-  }
-  
-  .thebelab-input .CodeMirror-linenumber {
-    color: var(--fg) !important;
-    opacity: 0.5;
+  /* All syntax highlighting - plain text only */
+  .thebelab-input .cm-keyword,
+  .thebelab-input .cm-atom,
+  .thebelab-input .cm-number,
+  .thebelab-input .cm-def,
+  .thebelab-input .cm-variable,
+  .thebelab-input .cm-variable-2,
+  .thebelab-input .cm-variable-3,
+  .thebelab-input .cm-property,
+  .thebelab-input .cm-operator,
+  .thebelab-input .cm-comment,
+  .thebelab-input .cm-string,
+  .thebelab-input .cm-meta,
+  .thebelab-input .cm-qualifier,
+  .thebelab-input .cm-builtin,
+  .thebelab-input .cm-bracket,
+  .thebelab-input .cm-tag,
+  .thebelab-input .cm-attribute {
+    color: #e1e1e1 !important;
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    background-color: transparent !important;
   }
   
   .thebelab-input .CodeMirror-cursor {
-    border-left-color: var(--fg) !important;
+    border-left: 1px solid #e1e1e1 !important;
+    opacity: 0.7 !important;
   }
   
+  /* Control buttons - only show on hover */
   .thebelab-controls {
-    margin: 0.5em 0;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    margin: 0;
     display: flex;
     gap: 0.5em;
-    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: transparent;
+  }
+  
+  .thebelab-cell:hover .thebelab-controls {
+    opacity: 1;
   }
   
   .thebelab-button {
     background-color: var(--links);
     color: white;
     border: none;
-    padding: 0.4em 0.8em;
+    padding: 0.3em 0.6em;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
     transition: opacity 0.2s;
   }
   
   .thebelab-button:hover:not(:disabled) {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   
   .thebelab-button:disabled {
@@ -122,10 +193,15 @@ window.thebeConfig = {
   .thebe-status-message {
     font-size: 0.85em;
     color: var(--fg);
-    opacity: 0.8;
+    opacity: 0;
     padding: 0.3em 0.6em;
     border-radius: 3px;
     background-color: var(--quote-bg);
+    transition: opacity 0.3s;
+  }
+  
+  .thebelab-cell:hover .thebe-status-message {
+    opacity: 0.7;
   }
   
   .thebe-status-building {
