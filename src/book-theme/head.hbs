@@ -1,3 +1,131 @@
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+<style>
+  /* Style Thebe to look like mdbook */
+  .thebelab-cell {
+    margin: 1em 0;
+  }
+  
+  .thebelab-input .CodeMirror {
+    background-color: var(--quote-bg) !important;
+    color: var(--fg) !important;
+    font-family: var(--mono-font);
+    font-size: var(--code-font-size);
+    border-radius: 5px;
+    padding: 0.5em;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  .thebelab-input .CodeMirror-scroll {
+    max-height: 150px;
+    min-height: auto !important;
+  }
+  
+  .thebelab-input .CodeMirror-sizer {
+    min-height: auto !important;
+  }
+  
+  .thebelab-input .CodeMirror-gutters {
+    background-color: var(--quote-bg) !important;
+    border: none;
+  }
+  
+  .thebelab-input .CodeMirror-linenumber {
+    color: var(--fg) !important;
+    opacity: 0.5;
+  }
+  
+  .thebelab-input .CodeMirror-cursor {
+    border-left-color: var(--fg) !important;
+  }
+  
+  .thebelab-controls {
+    margin: 0.5em 0;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+  }
+  
+  .thebelab-button {
+    background-color: var(--links);
+    color: white;
+    border: none;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: opacity 0.2s;
+  }
+  
+  .thebelab-button:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+  
+  .thebelab-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Hide unnecessary buttons */
+  .thebelab-runall-button,
+  .thebelab-restart-button,
+  .thebelab-restartall-button {
+    display: none;
+  }
+  
+  .thebe-status-message {
+    font-size: 0.85em;
+    color: var(--fg);
+    opacity: 0.8;
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+    background-color: var(--quote-bg);
+  }
+  
+  .thebe-status-building {
+    color: #d29922;
+  }
+  
+  .thebe-status-ready {
+    color: #09ca09;
+  }
+  
+  .thebe-status-failed {
+    color: #f21424;
+  }
+  
+  .thebelab-output {
+    margin-top: 0.5em;
+  }
+  
+  .thebelab-output .jp-OutputArea-output {
+    padding: 0.8em;
+    background-color: var(--quote-bg);
+    border-left: 3px solid var(--links);
+    border-radius: 3px;
+    font-family: var(--mono-font);
+    font-size: var(--code-font-size);
+  }
+  
+  .thebelab-output pre {
+    margin: 0;
+    white-space: pre-wrap;
+    color: var(--fg) !important;
+    background: transparent !important;
+  }
+  
+  .thebelab-busy-spinner {
+    border-color: var(--links) transparent var(--links) transparent;
+  }
+  
+  .jp-OutputArea-output {
+    color: var(--fg) !important;
+  }
+  
+  .jp-RenderedText pre {
+    color: var(--fg) !important;
+    background: transparent !important;
+  }
+</style>
 
 

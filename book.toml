@@ -5,3 +5,4 @@ language = "de"
 
 [output.html]
 additional-js = ["src/book-theme/thebe-init.js"]
+theme = "src/book-theme"
