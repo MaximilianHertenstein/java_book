@@ -1,253 +1,61 @@
 <script>
-// Configure Thebe BEFORE loading the library
-window.thebeConfig = {
-  requestKernel: false,  // Disable auto-bootstrap, we'll do it manually
-  reuseExistingServer: false,  // Don't reuse cached/saved Binder sessions
-  binderOptions: {
-    repo: "MaximilianHertenstein/java_book",
-    ref: "main",
-    binderUrl: "https://mybinder.org"
-  },
-  kernelOptions: {
-    name: "python3"
-  },
-  selector: "pre[data-executable]",
-  codeMirrorConfig: {
-    theme: "dracula",
-    lineNumbers: false,
-    gutters: [],
-    matchBrackets: false,
-    mode: "python",
-    readOnly: false,
-    viewportMargin: Infinity,
-    indentUnit: 2,
-    tabSize: 2,
-    indentWithTabs: false,
-    styleActiveLine: false
-  }
-};
-
-// Mark Python code blocks BEFORE Thebe library loads
-// This ensures they are found when Thebe initializes
-(function() {
-  const markPythonBlocks = () => {
-    document.querySelectorAll("pre code.language-python").forEach((codeBlock) => {
-      const pre = codeBlock.parentElement;
-      if (!pre.hasAttribute('data-executable')) {
-        pre.setAttribute("data-executable", "true");
-        pre.setAttribute("data-language", "python");
-      }
-    });
+  // Configure Thebe BEFORE loading the library
+  window.thebeConfig = {
+    requestKernel: false,  // Disable auto-bootstrap, we'll do it manually
+    reuseExistingServer: false,  // Don't reuse cached/saved Binder sessions
+    binderOptions: {
+      repo: "MaximilianHertenstein/java_book",
+      ref: "main",
+        //binderUrl: "http://localhost:8888",
+      //binderUrl: "https://hub.2i2c.mybinder.org",
+       binderUrl: "https://mybinder.org"
+    },
+    kernelOptions: {
+      name: "python3"
+    },
+    selector: "pre[data-executable]",
   };
-  
-  // Try marking immediately (may not work if DOM not ready)
-  if (document.readyState === 'interactive' || document.readyState === 'complete') {
-    markPythonBlocks();
-  }
-  
-  // Also mark on DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", markPythonBlocks);
-})();
+
+  // Mark Python code blocks BEFORE Thebe library loads
+  // This ensures they are found when Thebe initializes
+  (function () {
+    const markPythonBlocks = () => {
+      document.querySelectorAll("pre code.language-python").forEach((codeBlock) => {
+        const pre = codeBlock.parentElement;
+        if (!pre.hasAttribute('data-executable')) {
+          pre.setAttribute("data-executable", "true");
+          pre.setAttribute("data-language", "python");
+        }
+      });
+    };
+
+    // Try marking immediately (may not work if DOM not ready)
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      markPythonBlocks();
+    }
+
+    // Also mark on DOMContentLoaded
+    document.addEventListener("DOMContentLoaded", markPythonBlocks);
+  })();
 </script>
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
 <!-- Load dark CodeMirror theme -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
 <style>
   /* Make Thebe cells look exactly like plain mdbook code blocks */
-          .thebe-cell, .thebelab-cell {
-            margin: 1em 0;
-            position: relative;
-          }
-          
-          .thebe-input, .thebelab-input {
-            background-color: #282a36 !important;
-            color: #f8f8f2 !important;
-            padding: 0.5em 1em !important;
-            overflow-x: auto !important;
-            border-radius: 0 !important;
-            border: none !important;
-            margin: 0 !important;
-          }
-          
-          .thebe-input .CodeMirror, .thebelab-input .CodeMirror {
-            background-color: #282a36 !important;
-            color: #f8f8f2 !important;
-            border: none !important;
-            border-radius: 0 !important;
-            padding: 0 !important;
-            height: auto !important;
-            min-height: auto !important;
-            margin: 0 !important;
-          }
-          
-          .thebe-input .CodeMirror-scroll, .thebelab-input .CodeMirror-scroll {
-            background-color: #282a36 !important;
-            overflow: visible !important;
-            height: auto !important;
-          }
-          
-          .thebe-input .CodeMirror-sizer, .thebelab-input .CodeMirror-sizer {
-            background-color: #282a36 !important;
-          }
-          
-          .thebe-input .CodeMirror-gutters, .thebelab-input .CodeMirror-gutters {
-            display: none !important;
-            width: 0 !important;
-            visibility: hidden !important;
-          }
-          
-          .thebe-input .CodeMirror-linenumber, .thebelab-input .CodeMirror-linenumber {
-            display: none !important;
-            visibility: hidden !important;
-          }
-          
-          .thebe-input .CodeMirror-gutter, .thebelab-input .CodeMirror-gutter {
-            display: none !important;
-            width: 0 !important;
-          }
-  
-  .thebelab-input .CodeMirror-lines {
-    padding: 0 !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
+
+
+   .CodeMirror {
+    height: auto !important;
   }
-  
-  .thebelab-input .CodeMirror-line {
-    padding: 0 !important;
-    background-color: transparent !important;
+
+   .CodeMirror-linenumber {
+    display: none !important;
+    visibility: hidden !important;
   }
-  
-  /* All syntax highlighting - plain text only */
-  .thebelab-input .cm-keyword,
-  .thebelab-input .cm-atom,
-  .thebelab-input .cm-number,
-  .thebelab-input .cm-def,
-  .thebelab-input .cm-variable,
-  .thebelab-input .cm-variable-2,
-  .thebelab-input .cm-variable-3,
-  .thebelab-input .cm-property,
-  .thebelab-input .cm-operator,
-  .thebelab-input .cm-comment,
-  .thebelab-input .cm-string,
-  .thebelab-input .cm-meta,
-  .thebelab-input .cm-qualifier,
-  .thebelab-input .cm-builtin,
-  .thebelab-input .cm-bracket,
-  .thebelab-input .cm-tag,
-  .thebelab-input .cm-attribute {
-    color: #e1e1e1 !important;
-    font-weight: inherit !important;
-    font-style: inherit !important;
-    background-color: transparent !important;
-  }
-  
-  .thebelab-input .CodeMirror-cursor {
-    border-left: 1px solid #e1e1e1 !important;
-    opacity: 0.7 !important;
-  }
-  
-  /* Control buttons - only show on hover */
-  .thebelab-controls {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    margin: 0;
-    display: flex;
-    gap: 0.5em;
-    opacity: 0;
-    transition: opacity 0.3s;
-    background: transparent;
-  }
-  
-  .thebelab-cell:hover .thebelab-controls {
-    opacity: 1;
-  }
-  
-  .thebelab-button {
-    background-color: var(--links);
-    color: white;
-    border: none;
-    padding: 0.3em 0.6em;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 0.85em;
-    transition: opacity 0.2s;
-  }
-  
-  .thebelab-button:hover:not(:disabled) {
-    opacity: 0.9;
-  }
-  
-  .thebelab-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  /* Hide unnecessary buttons */
-  .thebelab-runall-button,
-  .thebelab-restart-button,
-  .thebelab-restartall-button {
-    display: none;
-  }
-  
-  .thebe-status-message {
-    font-size: 0.85em;
-    color: var(--fg);
-    opacity: 0;
-    padding: 0.3em 0.6em;
-    border-radius: 3px;
-    background-color: var(--quote-bg);
-    transition: opacity 0.3s;
-  }
-  
-  .thebelab-cell:hover .thebe-status-message {
-    opacity: 0.7;
-  }
-  
-  .thebe-status-building {
-    color: #d29922;
-  }
-  
-  .thebe-status-ready {
-    color: #09ca09;
-  }
-  
-  .thebe-status-failed {
-    color: #f21424;
-  }
-  
-  .thebelab-output {
-    margin-top: 0.5em;
-  }
-  
+
   .thebelab-output .jp-OutputArea-output {
-    padding: 0.8em;
-    background-color: var(--quote-bg);
-    border-left: 3px solid var(--links);
-    border-radius: 3px;
+    margin-top: 0.5em;
+
     font-family: var(--mono-font);
-    font-size: var(--code-font-size);
-  }
-  
-  .thebelab-output pre {
-    margin: 0;
-    white-space: pre-wrap;
-    color: var(--fg) !important;
-    background: transparent !important;
-  }
-  
-  .thebelab-busy-spinner {
-    border-color: var(--links) transparent var(--links) transparent;
-  }
-  
-  .jp-OutputArea-output {
-    color: var(--fg) !important;
-  }
-  
-  .jp-RenderedText pre {
-    color: var(--fg) !important;
-    background: transparent !important;
   }
 </style>
-
-
