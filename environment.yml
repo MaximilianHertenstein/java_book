@@ -8,9 +8,9 @@ dependencies:
   - ipython
   - jupyterlab
   - thebe
+  - openjdk
   - pip
   - pip:
       - jjava
 
   # Java environment
-  - openjdk=25
