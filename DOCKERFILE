@@ -1,0 +1,40 @@
+# Use Ubuntu 24.04 (safe for Binder)
+FROM ubuntu:24.04
+
+# Install system tools and Python
+RUN apt-get update && apt-get install -y \
+    wget curl unzip python3 python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# -------------------------------------------------------------------
+# Install OpenJDK 25
+# -------------------------------------------------------------------
+
+ENV JAVA_HOME=/opt/jdk25
+ENV PATH=$JAVA_HOME/bin:$PATH
+
+RUN mkdir -p $JAVA_HOME \
+    && wget -O /tmp/openjdk-25.tar.gz https://download.java.net/java/early_access/jdk25/latest/openjdk-25_linux-x64_bin.tar.gz \
+    && tar -xzf /tmp/openjdk-25.tar.gz -C /opt/jdk25 --strip-components=1 \
+    && rm /tmp/openjdk-25.tar.gz
+
+# -------------------------------------------------------------------
+# Install jjava kernel
+# -------------------------------------------------------------------
+
+# Install jjava Python support
+RUN pip3 install jjava
+
+# Install the JJava kernel spec into Jupyter
+RUN python3 -m jjava install --sys-prefix
+
+# -------------------------------------------------------------------
+# (Optional) Install IPython kernel for Python blocks
+# -------------------------------------------------------------------
+RUN pip3 install ipython ipykernel
+
+# Set the working directory
+WORKDIR /home/jovyan
+
+# Expose Jupyter port
+EXPOSE 8888

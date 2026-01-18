@@ -8,18 +8,18 @@
       ref: "main",
       binderUrl: "https://mybinder.org"
     },
-    kernelOptions: { name: "python3" },
+    kernelOptions: { name: "java" },
     selector: "pre[data-executable]"
   };
 
   // Mark Python code blocks
   (function () {
     const markPythonBlocks = () => {
-      document.querySelectorAll("pre code.language-python").forEach(codeBlock => {
+      document.querySelectorAll("pre code.language-java").forEach(codeBlock => {
         const pre = codeBlock.parentElement;
         if (!pre.hasAttribute('data-executable')) {
           pre.setAttribute("data-executable", "true");
-          pre.setAttribute("data-language", "python");
+          pre.setAttribute("data-language", "java");
         }
       });
     };
