@@ -1,26 +1,21 @@
 <script>
-  // Configure Thebe BEFORE loading the library
+  // Thebe config
   window.thebeConfig = {
-    requestKernel: false,  // Disable auto-bootstrap, we'll do it manually
-    reuseExistingServer: false,  // Don't reuse cached/saved Binder sessions
+    requestKernel: false,
+    reuseExistingServer: false,
     binderOptions: {
       repo: "MaximilianHertenstein/java_book",
       ref: "main",
-        //binderUrl: "http://localhost:8888",
-      //binderUrl: "https://hub.2i2c.mybinder.org",
-       binderUrl: "https://mybinder.org"
+      binderUrl: "https://mybinder.org"
     },
-    kernelOptions: {
-      name: "python3"
-    },
-    selector: "pre[data-executable]",
+    kernelOptions: { name: "python3" },
+    selector: "pre[data-executable]"
   };
 
-  // Mark Python code blocks BEFORE Thebe library loads
-  // This ensures they are found when Thebe initializes
+  // Mark Python code blocks
   (function () {
     const markPythonBlocks = () => {
-      document.querySelectorAll("pre code.language-python").forEach((codeBlock) => {
+      document.querySelectorAll("pre code.language-python").forEach(codeBlock => {
         const pre = codeBlock.parentElement;
         if (!pre.hasAttribute('data-executable')) {
           pre.setAttribute("data-executable", "true");
@@ -28,34 +23,19 @@
         }
       });
     };
-
-    // Try marking immediately (may not work if DOM not ready)
     if (document.readyState === 'interactive' || document.readyState === 'complete') {
       markPythonBlocks();
     }
-
-    // Also mark on DOMContentLoaded
     document.addEventListener("DOMContentLoaded", markPythonBlocks);
   })();
 </script>
+
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-<!-- Load dark CodeMirror theme -->
+
 <style>
-  /* Make Thebe cells look exactly like plain mdbook code blocks */
-
-
-   .CodeMirror {
-    height: auto !important;
-  }
-
-   .CodeMirror-linenumber {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  .thebelab-output .jp-OutputArea-output {
-    margin-top: 0.5em;
-
-    font-family: var(--mono-font);
-  }
+/* Darcula theme, compact editor, hide line numbers */
+.thebe-cell, .thebelab-cell { margin:1em 0; position:relative; }
+.thebe-input .CodeMirror, .thebelab-input .CodeMirror { height:auto !important; }
+.thebe-input .CodeMirror-linenumber, .thebelab-input .CodeMirror-linenumber { display:none !important; }
+.thebelab-output .jp-OutputArea-output { margin-top:0.5em; font-family:var(--mono-font); }
 </style>
