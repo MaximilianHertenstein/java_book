@@ -5,5 +5,4 @@ dependencies:
   - openjdk=25
   - pip
   - pip:
-      - thebe
       - jjava
