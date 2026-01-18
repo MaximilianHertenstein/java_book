@@ -1,41 +1,65 @@
 
 
 
-
 <script>
-  // Thebe config
-  window.thebeConfig = {
-    requestKernel: true, reuseExistingServer: false,
-    binderOptions: {
-      repo: "MaximilianHertenstein/java_book", ref: "main",
-      binderUrl: "https://mybinder.org"
-    }, 
-    kernelOptions: { name: "java", kernelName: "java" },
+window.thebeConfig = {
+  requestKernel: true,
+  reuseExistingServer: false,
 
-    selector: "pre[data-executable]",
-    codemirrorOptions: { mode: "text/x-java" }
-  };
+  binderOptions: {
+    repo: "MaximilianHertenstein/java_book",
+    ref: "main",
+    binderUrl: "https://mybinder.org"
+  },
 
+  kernelOptions: {
+    kernelName: "java"  // important: tells Thebe to use Java kernel
+  },
 
-  // Mark Python code blocks
-  (function () {
-    const markPythonBlocks = () => {
-      document.querySelectorAll("pre code.language-java").forEach(codeBlock => {
-        const pre = codeBlock.parentElement;
-        if (!pre.hasAttribute('data-executable')) {
-          pre.setAttribute("data-executable", "true");
-          pre.setAttribute("data-language", "java");
-        }
-      });
-    };
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      markPythonBlocks();
+  notebookMetadata: {
+    kernelspec: {
+      name: "java",
+      language: "java",
+      display_name: "Java"
     }
-    document.addEventListener("DOMContentLoaded", markPythonBlocks);
-  })();
+  },
 
+  selector: "pre[data-executable]",
 
+  codemirrorOptions: {
+    mode: "text/x-java",
+    theme: "dracula",
+    lineNumbers: true,
+    styleActiveLine: true,
+    matchBrackets: true
+  }
+};
+
+// Automatically mark <pre class="language-java"> as executable
+(function () {
+  const markJavaBlocks = () => {
+    document.querySelectorAll("pre code.language-java").forEach(codeBlock => {
+      const pre = codeBlock.parentElement;
+      if (!pre.hasAttribute('data-executable')) {
+        pre.setAttribute("data-executable", "true");
+        pre.setAttribute("data-language", "java");
+      }
+    });
+  };
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    markJavaBlocks();
+  }
+  document.addEventListener("DOMContentLoaded", markJavaBlocks);
+})();
 </script>
+
+<!-- Load Thebe -->
+<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/dracula.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/clike/clike.min.js"></script>
 
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
 
