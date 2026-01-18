@@ -1,17 +1,4 @@
-// Mark Python code blocks as executable before Thebe loads
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("pre code.language-python").forEach((codeBlock) => {
-    const pre = codeBlock.parentElement;
-    pre.setAttribute("data-executable", "true");
-    pre.setAttribute("data-language", "python");
-    // Remove the buttons div that mdbook adds
-    const buttonsDiv = pre.querySelector('.buttons');
-    if (buttonsDiv) {
-      buttonsDiv.remove();
-    }
-  });
-});
-
+// Set config BEFORE page loads
 window.thebeConfig = {
   requestKernel: true,
   binderOptions: {
@@ -32,7 +19,26 @@ window.thebeConfig = {
   }
 };
 
+// Mark Python code blocks as executable before Thebe loads
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("pre code.language-python").forEach((codeBlock) => {
+    const pre = codeBlock.parentElement;
+    pre.setAttribute("data-executable", "true");
+    pre.setAttribute("data-language", "python");
+    // Remove the buttons div that mdbook adds
+    const buttonsDiv = pre.querySelector('.buttons');
+    if (buttonsDiv) {
+      buttonsDiv.remove();
+    }
+  });
+});
+
+let thebeBootstrapped = false;
+
 window.addEventListener("load", () => {
+  if (thebeBootstrapped) return;
+  thebeBootstrapped = true;
+  
   console.log("Bootstrapping Thebe…");
   thebelab.bootstrap();
   
@@ -68,12 +74,13 @@ window.addEventListener("load", () => {
   disableRunButtons();
   
   thebelab.events.on('status', (event, data) => {
-    console.log("Thebe status:", data.status, data);
+    console.log("Thebe status:", data.status);
     
     const statusMessages = {
       'building': { text: '⏳ Building environment (1-2 min)...', class: 'thebe-status-building' },
       'built': { text: '✓ Environment built', class: '' },
       'launching': { text: '🚀 Starting kernel...', class: '' },
+      'server-ready': { text: '🔌 Server ready, starting kernel...', class: '' },
       'ready': { text: '✅ Ready', class: 'thebe-status-ready' },
       'failed': { text: '❌ Connection failed', class: 'thebe-status-failed' }
     };
