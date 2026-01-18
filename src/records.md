@@ -6,7 +6,7 @@ bla
 
 
 ```java
-x = 10
-y = 5
-print("Sum:", x + y)
+int x = 10;
+int y = 5;
+System.out.println(x + y);
 ```
