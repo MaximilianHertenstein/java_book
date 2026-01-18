@@ -1,10 +1,8 @@
 name: java_book_binder
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - openjdk=25
-  - jupyterlab
   - pip
   - pip:
       - thebe
