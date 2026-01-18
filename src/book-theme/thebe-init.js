@@ -16,3 +16,12 @@ window.addEventListener("load", () => {
     console.error("Thebe bootstrap failed:", err);
   });
 });
+
+    // Wait until Thebe creates the CodeMirror editors, then force mode
+  document.addEventListener("thebe:ready", () => {
+    document.querySelectorAll(".thebe-cell .CodeMirror").forEach(cmEl => {
+      if (cmEl.CodeMirror) {
+        cmEl.CodeMirror.setOption("mode", "text/x-java");
+      }
+    });
+  });

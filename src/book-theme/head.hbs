@@ -1,6 +1,20 @@
+
+
+
+
 <script>
   // Thebe config
-  window.thebeConfig = { requestKernel: true, reuseExistingServer: false, binderOptions: { repo: "MaximilianHertenstein/java_book", ref: "main", binderUrl: "https://mybinder.org" }, kernelOptions: { name: "java", kernelName: "java" }, notebookMetadata: { kernelspec: { name: "java", language: "java", display_name: "Java" } }, selector: "pre[data-executable]", codemirrorOptions: { mode: "text/x-java", theme: "darcula" } };
+  window.thebeConfig = {
+    requestKernel: true, reuseExistingServer: false,
+    binderOptions: {
+      repo: "MaximilianHertenstein/java_book", ref: "main",
+      binderUrl: "https://mybinder.org"
+    }, 
+    kernelOptions: { name: "java", kernelName: "java" },
+
+    selector: "pre[data-executable]",
+    codemirrorOptions: { mode: "text/x-java" }
+  };
 
 
   // Mark Python code blocks
@@ -19,6 +33,8 @@
     }
     document.addEventListener("DOMContentLoaded", markPythonBlocks);
   })();
+
+
 </script>
 
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
