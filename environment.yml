@@ -3,9 +3,9 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - openjdk=25
   - jupyterlab
   - pip
   - pip:
       - thebe
       - jjava
-  - openjdk=25
