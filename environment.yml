@@ -3,14 +3,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  # Python environment
   - python=3.11
   - ipython
   - jupyterlab
-  - thebe
-  - openjdk
   - pip
   - pip:
+      - thebe
       - jjava
-
-  # Java environment
+  - openjdk=25
