@@ -3,5 +3,5 @@ authors = ["MaximilianHertenstein"]
 # [preprocessor.quiz]
 language = "de"
 
-[output.html]
-additional-js = ["src/theme/js/thebe-init.js"]
+# [output.html]
+# additional-js = ["src/theme/js/thebe-init.js"]
