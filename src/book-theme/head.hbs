@@ -1,16 +1,16 @@
 <script>
   // Thebe config
-  window.thebeConfig = {
-    requestKernel: false,
+window.thebeConfig = {
+    requestKernel: true,      // <-- start the Java kernel
     reuseExistingServer: false,
     binderOptions: {
-      repo: "MaximilianHertenstein/java_book",
-      ref: "main",
-      binderUrl: "https://mybinder.org"
+        repo: "MaximilianHertenstein/java_book",
+        ref: "main",
+        binderUrl: "https://mybinder.org"
     },
     kernelOptions: { name: "jjava" },
     selector: "pre[data-executable]"
-  };
+};
 
   // Mark Python code blocks
   (function () {
