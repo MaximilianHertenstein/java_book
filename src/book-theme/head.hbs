@@ -1,35 +1,6 @@
 <script>
   // Thebe config
-window.thebeConfig = {
-  requestKernel: true,
-  reuseExistingServer: false,
-
-  binderOptions: {
-    repo: "MaximilianHertenstein/java_book",
-    ref: "main",
-    binderUrl: "https://mybinder.org"
-  },
-
-  kernelOptions: {
-     name: "java",
-    kernelName: "java"
-  },
-
-  notebookMetadata: {
-    kernelspec: {
-      name: "java",
-      language: "java",
-      display_name: "Java"
-    }
-  },
-
-  selector: "pre[data-executable]",
-
-  codemirrorOptions: {
-    mode: "text/x-java",
-    theme: "darcula"
-  }
-};
+  window.thebeConfig = { requestKernel: true, reuseExistingServer: false, binderOptions: { repo: "MaximilianHertenstein/java_book", ref: "main", binderUrl: "https://mybinder.org" }, kernelOptions: { name: "java", kernelName: "java" }, notebookMetadata: { kernelspec: { name: "java", language: "java", display_name: "Java" } }, selector: "pre[data-executable]", codemirrorOptions: { mode: "text/x-java", theme: "darcula" } };
 
 
   // Mark Python code blocks
@@ -53,23 +24,102 @@ window.thebeConfig = {
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
 
 <style>
-/* Darcula theme, compact editor, hide line numbers and show buttons on hover */
-.thebe-cell, .thebelab-cell { margin:1em 0; position:relative; }
-.thebe-input .CodeMirror, .thebelab-input .CodeMirror { height:auto !important; }
-.thebe-input .CodeMirror-gutters, .thebelab-input .CodeMirror-gutters,
-.thebe-input .CodeMirror-gutter-wrapper, .thebelab-input .CodeMirror-gutter-wrapper,
-.thebe-input .CodeMirror-linenumber, .thebelab-input .CodeMirror-linenumber,
-.thebe-input .CodeMirror-gutter, .thebelab-input .CodeMirror-gutter { display:none !important; width:0 !important; visibility:hidden !important; }
-.thebe-output .jp-OutputArea-output, .thebelab-output .jp-OutputArea-output { margin-top:0.5em; font-family:var(--mono-font); }
+  /* Darcula theme, compact editor, hide line numbers and show buttons on hover */
+  .thebe-cell,
+  .thebelab-cell {
+    margin: 1em 0;
+    position: relative;
+  }
 
-/* Run buttons only on hover (Thebe uses thebe-* classes) */
-.thebe-controls { position:absolute; top:0.5em; right:0.5em; display:flex; gap:0.5em; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.2s; z-index:5; }
-.thebe-run-button { display:none !important; opacity:0 !important; visibility:hidden !important; pointer-events:none; align-items:center; justify-content:center; padding:0.15em 0.25em; border:none; background:transparent; color:transparent; font-size:0; font-weight:700; box-shadow:none; }
-.thebe-run-button::before { content:"▶"; line-height:1; color:#38a169; font-size:1.4rem; }
-.thebe-run-button:hover { background:transparent; }
-.thebe-run-button:hover::before { color:#2f855a; }
-.thebe-run-button:active::before { color:#276749; }
-.thebe-cell:hover .thebe-controls { opacity:1; visibility:visible; pointer-events:auto; }
-.thebe-cell:hover .thebe-run-button { display:inline-flex !important; opacity:1 !important; visibility:visible !important; pointer-events:auto; }
-.thebe-runall-button, .thebe-restart-button, .thebe-restartall-button { display:none !important; }
+  .thebe-input .CodeMirror,
+  .thebelab-input .CodeMirror {
+    height: auto !important;
+  }
+
+  .thebe-input .CodeMirror-gutters,
+  .thebelab-input .CodeMirror-gutters,
+  .thebe-input .CodeMirror-gutter-wrapper,
+  .thebelab-input .CodeMirror-gutter-wrapper,
+  .thebe-input .CodeMirror-linenumber,
+  .thebelab-input .CodeMirror-linenumber,
+  .thebe-input .CodeMirror-gutter,
+  .thebelab-input .CodeMirror-gutter {
+    display: none !important;
+    width: 0 !important;
+    visibility: hidden !important;
+  }
+
+  .thebe-output .jp-OutputArea-output,
+  .thebelab-output .jp-OutputArea-output {
+    margin-top: 0.5em;
+    font-family: var(--mono-font);
+  }
+
+  /* Run buttons only on hover (Thebe uses thebe-* classes) */
+  .thebe-controls {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    display: flex;
+    gap: 0.5em;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 5;
+  }
+
+  .thebe-run-button {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15em 0.25em;
+    border: none;
+    background: transparent;
+    color: transparent;
+    font-size: 0;
+    font-weight: 700;
+    box-shadow: none;
+  }
+
+  .thebe-run-button::before {
+    content: "▶";
+    line-height: 1;
+    color: #38a169;
+    font-size: 1.4rem;
+  }
+
+  .thebe-run-button:hover {
+    background: transparent;
+  }
+
+  .thebe-run-button:hover::before {
+    color: #2f855a;
+  }
+
+  .thebe-run-button:active::before {
+    color: #276749;
+  }
+
+  .thebe-cell:hover .thebe-controls {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .thebe-cell:hover .thebe-run-button {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+  }
+
+  .thebe-runall-button,
+  .thebe-restart-button,
+  .thebe-restartall-button {
+    display: none !important;
+  }
 </style>
