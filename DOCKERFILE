@@ -1,40 +1,26 @@
-# Use Ubuntu 24.04 (safe for Binder)
-FROM ubuntu:24.04
+# Start from a Python base (with Thebe-ready Python)
+FROM python:3.12-slim
 
-# Install system tools and Python
-RUN apt-get update && apt-get install -y \
-    wget curl unzip python3 python3-pip \
-    && rm -rf /var/lib/apt/lists/*
+# Install required system packages
+RUN apt-get update && \
+    apt-get install -y wget unzip curl && \
+    rm -rf /var/lib/apt/lists/*
 
-# -------------------------------------------------------------------
-# Install OpenJDK 25
-# -------------------------------------------------------------------
+# Install JDK 25 manually
+WORKDIR /opt
+RUN wget https://download.java.net/java/early_access/jdk25/XYZ/GPL/openjdk-25_linux-x64_bin.tar.gz -O jdk25.tar.gz && \
+    tar -xzf jdk25.tar.gz && \
+    rm jdk25.tar.gz
 
-ENV JAVA_HOME=/opt/jdk25
-ENV PATH=$JAVA_HOME/bin:$PATH
+# Set JAVA_HOME and PATH
+ENV JAVA_HOME=/opt/jdk-25
+ENV PATH="$JAVA_HOME/bin:$PATH"
 
-RUN mkdir -p $JAVA_HOME \
-    && wget -O /tmp/openjdk-25.tar.gz https://download.java.net/java/early_access/jdk25/latest/openjdk-25_linux-x64_bin.tar.gz \
-    && tar -xzf /tmp/openjdk-25.tar.gz -C /opt/jdk25 --strip-components=1 \
-    && rm /tmp/openjdk-25.tar.gz
+# Verify Java version
+RUN java -version
 
-# -------------------------------------------------------------------
-# Install jjava kernel
-# -------------------------------------------------------------------
+# Install Python packages
+RUN pip install --no-cache-dir jjava ipython ipykernel thebe
 
-# Install jjava Python support
-RUN pip3 install jjava
-
-# Install the JJava kernel spec into Jupyter
-RUN python3 -m jjava install --sys-prefix
-
-# -------------------------------------------------------------------
-# (Optional) Install IPython kernel for Python blocks
-# -------------------------------------------------------------------
-RUN pip3 install ipython ipykernel
-
-# Set the working directory
-WORKDIR /home/jovyan
-
-# Expose Jupyter port
-EXPOSE 8888
+# Optional: mark Python kernel available
+RUN python -m ipykernel install --user --name=python3 --display-name "Python 3"
