@@ -1,20 +1,35 @@
 <script>
   // Thebe config
 window.thebeConfig = {
-    requestKernel: true,      // <-- start the Java kernel
-    reuseExistingServer: false,
-    binderOptions: {
-        repo: "MaximilianHertenstein/java_book",
-        ref: "main",
-        binderUrl: "https://mybinder.org"
-    },
-    kernelOptions: { kernelName: "java" },
-    selector: "pre[data-executable]",
-    codemirrorOptions: {
-    mode: "text/x-java",  // <- tells CodeMirror to highlight Java
-    theme: "darcula",
+  requestKernel: true,
+  reuseExistingServer: false,
+
+  binderOptions: {
+    repo: "MaximilianHertenstein/java_book",
+    ref: "main",
+    binderUrl: "https://mybinder.org"
+  },
+
+  kernelOptions: {
+    name: "java"
+  },
+
+  notebookMetadata: {
+    kernelspec: {
+      name: "java",
+      language: "java",
+      display_name: "Java"
+    }
+  },
+
+  selector: "pre[data-executable]",
+
+  codemirrorOptions: {
+    mode: "text/x-java",
+    theme: "darcula"
   }
 };
+
 
   // Mark Python code blocks
   (function () {
