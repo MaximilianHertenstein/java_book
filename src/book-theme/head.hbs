@@ -2,6 +2,9 @@
 
 
 <script>
+// Prevent auto-initialization
+window.thebeBootstrap = false;
+
 window.thebeConfig = {
   requestKernel: true,
   reuseExistingServer: false,
@@ -13,26 +16,16 @@ window.thebeConfig = {
   },
 
   kernelOptions: {
-    kernelName: "java"  // important: tells Thebe to use Java kernel
+    kernelName: "java"
   },
 
-  notebookMetadata: {
-    kernelspec: {
-      name: "java",
-      language: "java",
-      display_name: "Java"
-    }
-  },
-
-  selector: "pre[data-executable]",
-
-  codemirrorOptions: {
+  codeMirrorConfig: {
     mode: "text/x-java",
     theme: "dracula",
-    lineNumbers: true,
-    styleActiveLine: true,
-    matchBrackets: true
-  }
+    lineNumbers: false
+  },
+
+  selector: "pre[data-executable]"
 };
 
 // Automatically mark <pre class="language-java"> as executable
@@ -42,7 +35,7 @@ window.thebeConfig = {
       const pre = codeBlock.parentElement;
       if (!pre.hasAttribute('data-executable')) {
         pre.setAttribute("data-executable", "true");
-        pre.setAttribute("data-language", "java");
+        pre.setAttribute("data-language", "text/x-java");
       }
     });
   };
@@ -53,14 +46,32 @@ window.thebeConfig = {
 })();
 </script>
 
-<!-- Load Thebe -->
-<script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
-
+<!-- Load CodeMirror FIRST -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/dracula.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/clike/clike.min.js"></script>
 
+<!-- Map text/x-java to clike explicitly -->
+<script>
+  // Define text/x-java mode delegating to clike and set a proper name
+  CodeMirror.defineMode("text/x-java", function(config, parserConfig) {
+    const mode = CodeMirror.modes.clike(config, Object.assign({}, parserConfig, { useCPP: false }));
+    mode.name = "clike";
+    return mode;
+  });
+  CodeMirror.defineMIME("text/x-java", "text/x-java");
+
+  // Alias "java" to the same clike-backed mode
+  CodeMirror.defineMode("java", function(config, parserConfig) {
+    const mode = CodeMirror.modes.clike(config, Object.assign({}, parserConfig, { useCPP: false }));
+    mode.name = "clike";
+    return mode;
+  });
+  CodeMirror.defineMIME("text/java", "text/x-java");
+</script>
+
+<!-- Load Thebe AFTER CodeMirror -->
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
 
 <style>
