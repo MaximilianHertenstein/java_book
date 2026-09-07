@@ -25,11 +25,7 @@ jobs:
         run: |
           cargo install mdbook --version 0.5.4 --locked
           cargo install mdbook-quiz --version 0.5.0 --locked
-	
-      - name: Install Quiz
-        run: |
-          cargo install md	
-	
+
       - name: Build Book
         run: |
           set -e
