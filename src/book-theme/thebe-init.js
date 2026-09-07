@@ -153,7 +153,9 @@
         else if (data.status === 'failed') {
           setStatus(
             `✗ Jupyter-Start fehlgeschlagen (${data.message || 'unbekannter Fehler'}). ` +
-              'Seite neu laden oder später erneut versuchen.',
+              'Bei "Rate limit exceeded": MyBinder begrenzt Builds pro Stunde – ca. 1 Stunde warten ' +
+              'und die Seite in der Zwischenzeit NICHT dauernd neu laden (jeder Reload zählt mit). ' +
+              'Sonst: Seite neu laden oder später erneut versuchen.',
             true
           );
         } else if (data.message) {
@@ -176,8 +178,30 @@
     anchor.before(hint);
   }
 
-  function start() {
-    if (markCells() === 0) return; // keine ausführbaren Blöcke -> kein Binder-Start
+  // Klick-Start statt Auto-Start (seit 09/2026): Jeder Binder-Build-Request
+  // zählt gegen das knappe MyBinder-Kontingent – Auto-Start bei jedem
+  // Seitenaufruf (mal 30 Schüler) läuft sofort in 429-Rate-Limits. Erst der
+  // explizite Klick löst EINEN Build aus; danach teilen sich alle Zellen
+  // der Seite denselben Kernel.
+  function renderStartButton() {
+    const box = statusBox();
+    box.classList.remove('thebe-kernel-status-error');
+    box.textContent = '';
+    const label = document.createElement('span');
+    label.textContent =
+      'Java-Code auf dieser Seite läuft über Jupyter (Binder, Java 25). Erster Start dauert 1–3 Minuten, danach ist das Image im Cache. ';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'thebe-start-button';
+    btn.textContent = '▶ Jupyter jetzt starten';
+    btn.addEventListener('click', () => {
+      btn.disabled = true;
+      activate();
+    });
+    box.append(label, btn);
+  }
+
+  function activate() {
     observeCells();
     if (window.thebelab?.bootstrap) {
       bindStatus();
@@ -197,6 +221,11 @@
     } else {
       showLoadError();
     }
+  }
+
+  function start() {
+    if (markCells() === 0) return; // keine ausführbaren Blöcke -> nur Statusbox, kein Binder-Request
+    renderStartButton();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
