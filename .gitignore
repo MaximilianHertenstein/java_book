@@ -5,3 +5,4 @@ python_book_src
 .opencode
 *.minted
 /sections
+opencode.json
