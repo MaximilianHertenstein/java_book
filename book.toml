@@ -1,8 +1,10 @@
 [book]
 authors = ["MaximilianHertenstein"]
-# [preprocessor.quiz]
+[preprocessor.quiz]
 language = "de"
 
 [output.html]
+additional-css = ["src/book-theme/code-execution.css"]
 additional-js = ["src/book-theme/thebe-init.js"]
+
 theme = "src/book-theme"

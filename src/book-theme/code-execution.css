@@ -1,0 +1,258 @@
+/* Ausführbare Java-Blöcke (Thebe/Jupyter, Java 25).
+   Wird via book.toml (additional-css) nach den Standard-Styles geladen.
+   Ziel: Eine Jupyter-Zelle sieht aus wie ein normaler mdBook-Codeblock
+   (gleiches Padding, gleiche Schrift, gleiche Hintergrundfarbe wie hljs) –
+   nur mit dem Standard-mdBook-Run-Button bei Hover. Es gibt nur Run;
+   Restart/Restart-all werden per JS entfernt (falls doch vorhanden: hier
+   zusätzlich versteckt, damit nie Text-Buttons auftauchen). */
+
+/* --- Zelle: wie ein mdBook-pre (kein eigener Kasten-Look) ------------------ */
+.thebelab-cell {
+  position: relative;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  /* hljs-Hintergrund je mdBook-Theme (highlight/tomorrow-night/ayu): */
+  background: #f6f7f6;
+  color: #000;
+}
+
+html.coal .thebelab-cell,
+html.navy .thebelab-cell {
+  background: #1d1f21;
+  color: #c5c8c6;
+}
+
+html.ayu .thebelab-cell {
+  background: #191f26;
+  color: #e6e1cf;
+}
+
+/* --- Editor: exakt wie `pre > code` (Padding/Schrift vom Theme) ------------ */
+.thebelab-input .CodeMirror {
+  height: auto !important;
+  padding: 1rem;
+  background: transparent !important;
+  color: inherit;
+  font-family: var(--mono-font, monospace) !important;
+  font-size: var(--code-font-size, 0.875em) !important;
+  line-height: 1.6 !important;
+}
+
+/* CodeMirror-Inneres erbt die Zellenschrift (sonst 13px-Default) */
+.thebelab-input .CodeMirror-code,
+.thebelab-input .CodeMirror-line,
+.thebelab-input .CodeMirror-lines,
+.thebelab-input .CodeMirror pre.CodeMirror-line,
+.thebelab-input .CodeMirror pre.CodeMirror-line-like {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.thebelab-input .CodeMirror-cursor {
+  border-left-color: currentcolor;
+}
+
+.thebelab-input .CodeMirror-selected {
+  background: rgba(127, 127, 127, 0.25) !important;
+}
+
+/* Keine Zeilennummern (ruhiges Schriftbild wie mdBook-Blöcke) */
+.thebelab-input .CodeMirror-gutters,
+.thebelab-input .CodeMirror-gutter-wrapper,
+.thebelab-input .CodeMirror-linenumber,
+.thebelab-input .CodeMirror-gutter {
+  display: none !important;
+}
+
+/* Helle Themes: CodeMirror-Defaults sind auf #f6f7f6 gut lesbar. */
+
+/* Dunkle Themes: Token-Farben mit Kontrast (angelehnt an tomorrow-night) */
+html.coal .thebelab-input .CodeMirror,
+html.navy .thebelab-input .CodeMirror,
+html.ayu .thebelab-input .CodeMirror {
+  color: #c5c8c6;
+}
+
+html.ayu .thebelab-input .CodeMirror {
+  color: #e6e1cf;
+}
+
+html.coal .cm-s-default .cm-keyword,
+html.navy .cm-s-default .cm-keyword,
+html.ayu .cm-s-default .cm-keyword {
+  color: #b294bb;
+}
+
+html.coal .cm-s-default .cm-string,
+html.navy .cm-s-default .cm-string,
+html.ayu .cm-s-default .cm-string {
+  color: #b5bd68;
+}
+
+html.coal .cm-s-default .cm-number,
+html.navy .cm-s-default .cm-number,
+html.ayu .cm-s-default .cm-number {
+  color: #de935f;
+}
+
+html.coal .cm-s-default .cm-comment,
+html.navy .cm-s-default .cm-comment,
+html.ayu .cm-s-default .cm-comment {
+  color: #969896;
+  font-style: italic;
+}
+
+html.coal .cm-s-default .cm-variable,
+html.navy .cm-s-default .cm-variable,
+html.ayu .cm-s-default .cm-variable,
+html.coal .cm-s-default .cm-variable-2,
+html.navy .cm-s-default .cm-variable-2,
+html.ayu .cm-s-default .cm-variable-2 {
+  color: #c5c8c6;
+}
+
+html.ayu .cm-s-default .cm-variable,
+html.ayu .cm-s-default .cm-variable-2 {
+  color: #e6e1cf;
+}
+
+html.coal .cm-s-default .cm-def,
+html.navy .cm-s-default .cm-def,
+html.ayu .cm-s-default .cm-def {
+  color: #81a2be;
+}
+
+html.coal .cm-s-default .cm-operator,
+html.navy .cm-s-default .cm-operator,
+html.ayu .cm-s-default .cm-operator {
+  color: #8abeb7;
+}
+
+html.coal .cm-s-default .cm-type,
+html.navy .cm-s-default .cm-type,
+html.ayu .cm-s-default .cm-type {
+  color: #f0c674;
+}
+
+/* --- Run-Button: exakt wie mdBooks `pre > .buttons button.play-button` -----
+   (font-size/border/background aus chrome.css kopiert, damit er neben dem
+   Copy-Button identisch aussieht). Nur bei Hover sichtbar. */
+.thebelab-cell .thebelab-button {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  z-index: 100;
+  margin: 0 5px;
+  padding: 2px 3px 0 4px;
+  font-size: 23px;
+  line-height: 1;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: var(--icons);
+  background-color: var(--theme-popup-bg);
+  color: var(--icons);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.1s linear,
+    opacity 0.1s linear,
+    color 100ms,
+    border-color 100ms,
+    background-color 100ms;
+}
+
+/* #fa-play-SVG skaliert wie bei mdBook über die Schriftgröße */
+.thebelab-cell .thebelab-button .fa-svg svg,
+.thebelab-cell .thebelab-button svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.thebelab-cell:hover .thebelab-run-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+.thebelab-cell .thebelab-button:hover {
+  color: var(--sidebar-active);
+  border-color: var(--icons-hover);
+  background-color: var(--theme-hover);
+}
+
+/* Falls Restart-Buttons je durchrutschen: nie zeigen (nur Run existiert). */
+.thebelab-cell .thebelab-restart-button,
+.thebelab-cell .thebelab-restartall-button {
+  display: none !important;
+}
+
+/* Spinner unauffällig oben rechts (nicht über dem Code) */
+.thebelab-cell .thebelab-busy {
+  position: absolute;
+  top: 8px;
+  right: 52px;
+  visibility: hidden;
+}
+
+/* --- Ausgabe: wie mdBooks `pre > .result` – lesbar, gleiche Schrift -------- */
+.thebelab-cell .jp-OutputArea,
+.thebelab-cell .jp-OutputArea-output,
+.thebelab-cell .jp-OutputArea-child {
+  background: transparent !important;
+}
+
+.thebelab-cell .jp-OutputArea-output {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  color: inherit;
+  font-family: var(--mono-font, monospace);
+  font-size: var(--code-font-size, 0.875em);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.thebelab-cell .jp-OutputArea-output pre {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: none !important;
+  color: inherit;
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+/* stderr (z. B. Compiler-/Kernel-Fehler) in Rot, damit Fehler auffallen */
+.thebelab-cell .jp-OutputArea-stderr,
+.thebelab-cell .jp-OutputArea-output[data-mime-type="application/vnd.jupyter.stderr"] pre {
+  color: #e53e3e;
+}
+
+/* --- Kernel-Statuszeile über der ersten Zelle ------------------------------ */
+.thebe-kernel-status {
+  margin: 1em 0 0.5em;
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  background: var(--quote-bg, #f6f7f6);
+  border-left: 3px solid #3182ce;
+  font-size: var(--code-font-size, 0.875em);
+}
+
+.thebe-kernel-status-error {
+  border-left-color: #e53e3e;
+}
+
+/* Hinweisbanner, falls Thebe nicht geladen werden konnte */
+.thebe-load-error {
+  margin: 1em 0;
+  padding: 0.6em 0.8em;
+  border-left: 3px solid #e53e3e;
+  background: var(--quote-bg, #f6f7f6);
+  font-size: var(--code-font-size, 0.875em);
+}

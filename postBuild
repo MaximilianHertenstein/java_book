@@ -1,0 +1,13 @@
+#!/bin/bash
+# Binder-Buildschritt: installiert den Java-Kernel (jjava) garantiert unter
+# dem Namen "java" – unabhängig davon, was das pip-Paket mitbringt.
+# Muss ausführbar sein (git update-index --chmod=+x postBuild).
+set -e
+JJAVA_VERSION=1.0-a8
+curl -fL --retry 3 -o /tmp/jjava-kernelspec.zip \
+  "https://github.com/dflib/jjava/releases/download/${JJAVA_VERSION}/jjava-${JJAVA_VERSION}-kernelspec.zip"
+rm -rf /tmp/jjava-kernelspec
+mkdir -p /tmp/jjava-kernelspec
+python3 -c "import zipfile; zipfile.ZipFile('/tmp/jjava-kernelspec.zip').extractall('/tmp/jjava-kernelspec')"
+jupyter kernelspec install /tmp/jjava-kernelspec --user --name=java
+jupyter kernelspec list
