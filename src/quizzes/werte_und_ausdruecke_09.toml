@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dienen Klammern in einem Ausdruck wie `(2 + 3) * 4`?"
+prompt.distractors = [
+  "Sie machen den Ausdruck lautlos.",
+  "Sie verändern nur die Namen der Variablen.",
+  "Sie erzeugen einen Syntaxfehler."
+]
+answer.answer = "Sie bestimmen, welche Rechenschritte zuerst ausgeführt werden."
+context = "Klammern verändern die Reihenfolge der Berechnung. `(2 + 3) * 4` heißt: erst `2 + 3 = 5`, dann `5 * 4 = 20`."
+id = "8d70f3b2-7dd9-4ef0-9a0b-f025a10967f7"

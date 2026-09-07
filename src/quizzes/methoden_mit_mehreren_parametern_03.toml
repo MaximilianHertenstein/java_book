@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `konstanteNull()` zurück, wenn die Methode keine Parameter hat und `return 0;` enthält?"
+prompt.distractors = [
+  "Einen Fehler, weil Klammern ohne Inhalt nicht erlaubt sind.",
+  "Gar nichts, weil die Methode ohne Argument nichts weiß.",
+  "Den zuletzt berechneten Wert eines anderen Aufrufs."
+]
+answer.answer = "Immer den Wert `0`. Aufgerufen wird sie ohne Argumente: `konstanteNull()`."
+context = "Eine Methode ohne Parameter wird immer ohne Argumente in den Klammern aufgerufen, z. B. `konstanteNull()`."
+id = "2b3c4d5e-4e3d-4a3a-9e2a-9d1f6b7a5c43"

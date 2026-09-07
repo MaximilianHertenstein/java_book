@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum muss der Parameter `name` in `String greetBavarian(String name)` den Typ `String` haben?"
+prompt.distractors = [
+  "Weil alle Parameter automatisch den Typ String haben.",
+  "Weil `name` sonst nicht verwendet werden darf.",
+  "Weil Methoden ohne Typangabe nicht aufgerufen werden können."
+]
+answer.answer = "Weil der Methode beim Aufruf immer ein String als Name übergeben wird."
+context = "Die Typangabe zeigt an, mit welchem Datentyp ein Parameter beim Aufruf übergeben werden soll."
+id = "7a8b9c0d-9e3d-4a3a-9e2a-9d1f6b7a0c91"

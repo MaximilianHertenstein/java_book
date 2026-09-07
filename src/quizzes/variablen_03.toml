@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist der Variablenname in `var 2YardsInFeet = 6;` nicht erlaubt?"
+prompt.distractors = [
+  "Weil Unterstriche in Variablennamen verboten sind.",
+  "Weil Variablennamen keine Zahlen enthalten dürfen.",
+  "Weil das Gleichheitszeichen hier falsch verwendet wurde."
+]
+answer.answer = "Weil Variablennamen nicht mit einer Zahl beginnen dürfen."
+context = "Variablennamen müssen mit einem Buchstaben beginnen. Zahlen und Unterstriche sind danach erlaubt."
+id = "5c1e6a2b-1e3d-4a3a-9e2a-9d1f6b7a2c13"

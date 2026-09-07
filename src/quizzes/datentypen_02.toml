@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `\"3\" * \"ab\"`?"
+prompt.distractors = [
+  "Das Ergebnis ist `\"ababab\"`.",
+  "Das Ergebnis ist der Integer `3`.",
+  "Java wandelt `\"3\"` automatisch in eine Zahl um und berechnet damit weiter."
+]
+answer.answer = "Es entsteht ein Fehler, weil `*` für Strings nicht definiert ist. Wiederholen geht nur mit `repeat`."
+context = "Für Strings gibt es keinen `*`-Operator. Nur `+` und Methoden wie `repeat` sind definiert."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c02"

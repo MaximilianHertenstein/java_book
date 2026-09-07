@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gilt, wenn eine Methode eine globale Variable liest, ohne sie neu zuzuweisen?"
+prompt.distractors = [
+  "Sie kann in der Methode nicht gelesen werden.",
+  "Sie wird bei jedem Methodenaufruf automatisch gelöscht.",
+  "Ihr Wert muss vor jedem Aufruf neu angegeben werden."
+]
+answer.answer = "Sie kann innerhalb der Methode ganz normal gelesen und in Berechnungen verwendet werden."
+context = "Globale Variablen können in Methoden verwendet werden, solange sie außerhalb der Methode definiert wurden."
+id = "3c4d5e6f-5e3d-4a3a-9e2a-9d1f6b7a6c54"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist ein Wert in Java?"
+prompt.distractors = [
+  "Ein Name einer Variable",
+  "Nur eine Rechnung mit Rechenzeichen",
+  "Ein Befehl, der ausgeführt wird"
+]
+answer.answer = "Eine Zahl oder ein anderes Ergebnis einer Berechnung, zum Beispiel `4` oder `5`."
+context = "Ein Wert ist etwas, das Java berechnen oder verwenden kann. Das Ergebnis von `2 + 3` ist zum Beispiel `5`, und `5` ist ein Wert."
+id = "1d2be3e0-3959-499b-a18a-9cb2ce9eff7b"

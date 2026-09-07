@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat `(1 + 2) * 5`?"
+prompt.distractors = [
+  "11",
+  "7",
+  "25"
+]
+answer.answer = "15"
+context = "Klammern haben Vorrang. Zuerst wird `1 + 2 = 3` berechnet, danach `3 * 5 = 15`."
+id = "66ee3342-5d24-4e09-84e9-0a84a24df608"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum kann man in einer Methode eine andere, vorher definierte Methode aufrufen?"
+prompt.distractors = [
+  "Weil alle Methoden automatisch miteinander verbunden sind.",
+  "Weil das nur bei gleichnamigen Parametern erlaubt ist.",
+  "Weil Java das nur bei eingebauten Methoden wie `IO.println` erlaubt."
+]
+answer.answer = "Weil ein Methodenaufruf ein Ausdruck ist und Ausdrücke im Methodenkörper verwendet werden können."
+context = "Da Methodenaufrufe Ausdrücke sind, können sie überall dort verwendet werden, wo ein Ausdruck erlaubt ist."
+id = "5e6f7a8b-7e3d-4a3a-9e2a-9d1f6b7a8c74"

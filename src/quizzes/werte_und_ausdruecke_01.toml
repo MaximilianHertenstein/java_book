@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis hat der Ausdruck `4 + 3`?"
+prompt.distractors = [
+  "43",
+  "1",
+  "7/2"
+]
+answer.answer = "7"
+context = "Wenn du hier falsch liegst, hast du die Addition mit dem Aneinanderhängen von Ziffern verwechselt. In Java werden Zahlen mit Rechenzeichen berechnet: `4 + 3` ergibt den Wert `7`."
+id = "22f8ed41-96a8-4c4a-9f7c-e743218e37b6"

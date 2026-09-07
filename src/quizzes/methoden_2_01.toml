@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `12 * yardToFeet(7)` zurück, wenn `yardToFeet(7)` den Wert `21` liefert?"
+prompt.distractors = [
+  "`12`, weil nur die letzte Zahl gilt.",
+  "Ein Fehler, weil man Methodenaufrufe nicht mit `*` verbinden darf.",
+  "`7`, weil das Argument übernommen wird."
+]
+answer.answer = "`252`, weil zuerst `yardToFeet(7)` zu `21` ausgewertet wird und danach `12 * 21` berechnet wird."
+context = "Methodenaufrufe sind Ausdrücke und werden zuerst ausgewertet, bevor sie in einer größeren Rechnung verwendet werden."
+id = "5e6f7a8b-7e3d-4a3a-9e2a-9d1f6b7a8c71"

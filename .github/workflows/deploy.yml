@@ -29,9 +29,6 @@ jobs:
           curl -sSL $url | tar -xz --directory=./mdbook
           echo "$(pwd)/mdbook" >> $GITHUB_PATH
 
-      - name: Install mdbook-quiz
-        run: cargo install mdbook-quiz --locked --version 0.5.0
-
       - name: Build Book
         run: |
           set -e

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dienen Kommentare hauptsächlich?"
+prompt.distractors = [
+  "Um den Code schneller ausführen zu lassen.",
+  "Um Fehler im Code automatisch zu beheben.",
+  "Um Variablen vor Änderungen zu schützen."
+]
+answer.answer = "Um den Code für Menschen zu erklären und zu strukturieren."
+context = "Kommentare haben keinen Einfluss auf die Ausführung, sondern helfen beim Verstehen des Codes."
+id = "4d5e6f7a-6e3d-4a3a-9e2a-9d1f6b7a7c63"

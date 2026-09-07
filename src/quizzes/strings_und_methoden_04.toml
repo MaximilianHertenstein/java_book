@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum stehen um `\"Servus \"` Anführungszeichen, aber nicht um `name` und `greetBavarian`?"
+prompt.distractors = [
+  "Weil `name` und `greetBavarian` automatisch als Strings erkannt werden.",
+  "Weil Anführungszeichen nur bei kurzen Texten nötig sind.",
+  "Weil `\"Servus \"` ein Parameter ist."
+]
+answer.answer = "Weil `\"Servus \"` ein fester String-Wert ist, während `name` ein Parametername und `greetBavarian` ein Methodenname ist."
+context = "Anführungszeichen kennzeichnen feste String-Werte. Namen von Parametern und Methoden stehen nie in Anführungszeichen."
+id = "7a8b9c0d-9e3d-4a3a-9e2a-9d1f6b7a0c94"

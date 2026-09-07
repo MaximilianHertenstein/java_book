@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `yardToFeet(7)` zurück, wenn die Methode `return 3 * lengthInYard;` enthält?"
+prompt.distractors = [
+  "`21` wird nur angezeigt, aber nicht zurückgegeben.",
+  "`lengthInYard` bleibt als Text im Ergebnis stehen.",
+  "Es entsteht ein Fehler, weil `7` kein gültiger Parametername ist."
+]
+answer.answer = "`21`, weil `lengthInYard` beim Methodenaufruf durch den Wert `7` ersetzt wird."
+context = "Beim Methodenaufruf wird der Parameter im Methodenkörper durch das übergebene Argument ersetzt."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c22"

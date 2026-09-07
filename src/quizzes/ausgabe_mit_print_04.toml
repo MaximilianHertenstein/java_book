@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum erzeugt `greetBavarianPrint(\"Ada\") + \"!\"` einen Fehler, wenn `greetBavarianPrint` nur `IO.println(...)` aber kein `return` verwendet?"
+prompt.distractors = [
+  "Es entsteht kein Fehler, weil IO.println automatisch einen String zurückgibt.",
+  "Der Fehler entsteht, weil `\"!\"` kein gültiger String ist.",
+  "Der Fehler entsteht, weil zwei println-Aufrufe nicht kombiniert werden dürfen."
+]
+answer.answer = "Weil die Methode `void` ist und nichts zurückgibt. Eine `void`-Methode kann nicht in einem Ausdruck verwendet werden."
+context = "Eine Methode ohne Rückgabewert (void) liefert nichts, womit weitergerechnet werden könnte."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c14"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist eine lokale Variable?"
+prompt.distractors = [
+  "Eine Variable, die überall im Programm verwendet werden kann.",
+  "Eine Variable, die nur außerhalb von Methoden existiert.",
+  "Eine Variable, deren Wert sich nie ändert."
+]
+answer.answer = "Eine Variable, die innerhalb einer Methode definiert wurde und nur dort verwendet werden kann."
+context = "Lokale Variablen existieren nur innerhalb des Blocks (z. B. der Methode), in dem sie definiert wurden."
+id = "3c4d5e6f-5e3d-4a3a-9e2a-9d1f6b7a6c51"

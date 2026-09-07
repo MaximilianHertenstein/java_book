@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit dem alten Wert von `a`, wenn nach `var a = 2;` die Zeile `a = 5;` ausgeführt wird?"
+prompt.distractors = [
+  "Der alte Wert bleibt zusätzlich unter `a` gespeichert.",
+  "Es entsteht ein Fehler, weil `a` schon existiert.",
+  "`a` hat jetzt beide Werte gleichzeitig gespeichert."
+]
+answer.answer = "Der alte Wert wird durch den neuen Wert ersetzt."
+context = "Eine Variable kann sich vorstellen wie eine Box: Bei einer neuen Zuweisung wird der alte Inhalt durch den neuen ersetzt."
+id = "5c1e6a2b-1e3d-4a3a-9e2a-9d1f6b7a2c14"

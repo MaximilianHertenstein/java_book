@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Ein Schüler sagt: „Der Fehler steht sicher in der letzten Zeile des Programms.“ Was stimmt an dieser Aussage nicht?"
+prompt.distractors = [
+  "Java zeigt niemals eine Zeilennummer an.",
+  "Fehler treten immer nur in der ersten Zeile auf.",
+  "Es gibt in Java keine Zeilennummern."
+]
+answer.answer = "Der Syntaxfehler kann in jeder Zeile auftreten. Die Umgebung zeigt genau die Zeile an, in der das Problem erkannt wurde."
+context = "Die Zeilennummer in der Fehlermeldung entspricht der tatsächlichen Fehlerstelle, nicht zwangsläufig dem Programmende."
+id = "1a2b3c4d-3e3d-4a3a-9e2a-9d1f6b7a4c34"

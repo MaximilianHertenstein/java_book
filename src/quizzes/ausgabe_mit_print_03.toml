@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei einer Methode mit `return \"Hello\";` gefolgt von `IO.println(\"Goodbye\");` in der nächsten Zeile?"
+prompt.distractors = [
+  "Beide Zeilen werden ausgeführt.",
+  "Nur `IO.println(\"Goodbye\");` wird ausgeführt.",
+  "Die zweite Zeile wird übersprungen, aber es gibt keinen Fehler."
+]
+answer.answer = "Es entsteht ein Fehler, weil Code hinter `return` unerreichbar ist. Java lässt das gar nicht erst zu."
+context = "Ein return-Statement beendet die Methode sofort. Code danach ist unerreichbar und erzeugt einen Fehler."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c13"

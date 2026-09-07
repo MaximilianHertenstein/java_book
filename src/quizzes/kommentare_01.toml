@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wofür wird die Zeichenkombination `//` in Java verwendet?"
+prompt.distractors = [
+  "Um eine neue Variable zu erstellen.",
+  "Um eine Methode aufzurufen.",
+  "Um eine Berechnung zu markieren, die zuerst ausgeführt wird."
+]
+answer.answer = "Um einen Kommentar zu beginnen, der von der Umgebung ignoriert wird."
+context = "Hinter `//` kann beliebiger Text stehen, der nur für Menschen gedacht ist."
+id = "4d5e6f7a-6e3d-4a3a-9e2a-9d1f6b7a7c61"

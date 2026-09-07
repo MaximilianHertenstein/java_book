@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was macht `\"hello \".repeat(3)`?"
+prompt.distractors = [
+  "Java multipliziert die Buchstaben mit ihrem Zahlenwert.",
+  "Es entsteht ein Fehler, weil man Strings nicht mit Zahlen verbinden darf.",
+  "Der String wird in drei Teile geteilt."
+]
+answer.answer = "Der String `\"hello \"` wird dreimal wiederholt und aneinandergehängt."
+context = "Die Wiederholung eines Strings mit `repeat` hängt den String entsprechend oft aneinander."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c82"

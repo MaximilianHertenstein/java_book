@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert beim Shadowing, wenn eine lokale Variable denselben Namen wie eine globale Variable hat?"
+prompt.distractors = [
+  "Es entsteht ein Fehler, weil derselbe Name zweimal verwendet wird.",
+  "Die globale Variable wird dauerhaft überschrieben.",
+  "Beide Variablen haben automatisch denselben Wert."
+]
+answer.answer = "Innerhalb der Methode wird die globale Variable durch die lokale Variable verdeckt. Die globale Variable bleibt unverändert."
+context = "Nach dem Methodenaufruf hat die globale Variable außerhalb der Methode weiterhin ihren ursprünglichen Wert."
+id = "3c4d5e6f-5e3d-4a3a-9e2a-9d1f6b7a6c52"

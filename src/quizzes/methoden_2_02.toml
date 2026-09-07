@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert beim Aufruf `yardToFeet(2 * 2)`?"
+prompt.distractors = [
+  "Die Methode bekommt zwei einzelne Argumente `2` und `2`.",
+  "Es entsteht ein Fehler, weil das Argument keine einzelne Zahl ist.",
+  "`2 * 2` wird als Text an die Methode übergeben."
+]
+answer.answer = "Zuerst wird `2 * 2` zu `4` ausgewertet, danach wird `4` als Argument übergeben."
+context = "Das Argument einer Methode kann ein beliebiger Ausdruck sein. Dieser wird vor dem Methodenaufruf ausgewertet."
+id = "5e6f7a8b-7e3d-4a3a-9e2a-9d1f6b7a8c72"

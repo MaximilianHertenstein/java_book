@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Kann man außerhalb einer Methode auf eine Variable zugreifen, die innerhalb dieser Methode definiert wurde?"
+prompt.distractors = [
+  "Ja, immer.",
+  "Ja, aber nur wenn die Methode vorher aufgerufen wurde.",
+  "Ja, wenn die Variable denselben Namen wie ein Parameter hat."
+]
+answer.answer = "Nein, lokale Variablen existieren nur innerhalb der Methode, in der sie definiert wurden."
+context = "Der Zugriff von außen auf eine lokale Variable führt immer zu einer Fehlermeldung."
+id = "3c4d5e6f-5e3d-4a3a-9e2a-9d1f6b7a6c53"

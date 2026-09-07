@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Fehler in `return \"Servus \" + \"name\";` (mit Anführungszeichen um name)?"
+prompt.distractors = [
+  "Es entsteht ein Syntaxfehler.",
+  "Der Rückgabewert enthält gar keinen Text mehr.",
+  "Der erste String wird komplett ignoriert."
+]
+answer.answer = "`\"name\"` ist jetzt ein fester String und wird nicht durch das Argument ersetzt."
+context = "Sobald `name` in Anführungszeichen steht, ist es kein Parametername mehr, sondern ein fester Text."
+id = "7a8b9c0d-9e3d-4a3a-9e2a-9d1f6b7a0c93"

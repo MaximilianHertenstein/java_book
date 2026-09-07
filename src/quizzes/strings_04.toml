@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `bat` und `\"bat\"` in einem Ausdruck?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide meinen denselben Wert.",
+  "`bat` ist ein String, `\"bat\"` ist eine Variable.",
+  "`\"bat\"` erzeugt automatisch eine neue Variable mit diesem Namen."
+]
+answer.answer = "`bat` ist der Name einer Variablen, deren Wert eingesetzt wird. `\"bat\"` ist der String-Wert `bat` selbst."
+context = "Anführungszeichen um ein Wort machen daraus einen festen String-Wert statt eines Variablennamens."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c84"

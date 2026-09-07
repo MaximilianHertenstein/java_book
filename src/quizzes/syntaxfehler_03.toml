@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum entsteht bei `int quadrat(int x)` ohne öffnende geschweifte Klammer ein Syntaxfehler?"
+prompt.distractors = [
+  "Weil Methoden keine Rückgabewerte haben dürfen.",
+  "Weil `x` kein gültiger Parametername ist.",
+  "Weil `int` nicht als Typ verwendet werden darf."
+]
+answer.answer = "Weil jeder Methodenkopf mit einer öffnenden geschweiften Klammer abgeschlossen werden muss."
+context = "Die öffnende geschweifte Klammer gehört zur Syntax jeder Methodendefinition und darf nicht fehlen."
+id = "1a2b3c4d-3e3d-4a3a-9e2a-9d1f6b7a4c33"

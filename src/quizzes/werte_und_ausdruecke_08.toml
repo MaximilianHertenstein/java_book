@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist `2 + 3 * 4` gleich 14 und nicht 20?"
+prompt.distractors = [
+  "Weil das Plus zuerst gerechnet wird.",
+  "Weil Java nur von rechts nach links rechnet.",
+  "Weil Klammern fehlen."
+]
+answer.answer = "Weil die Multiplikation vor der Addition berechnet wird."
+context = "Java rechnet zuerst Multiplikation und Division und erst danach Addition und Subtraktion. Deshalb ist `2 + 3 * 4 = 14`."
+id = "3d10a5ff-d1a4-44bf-9e8b-7ebc28a8ec6b"

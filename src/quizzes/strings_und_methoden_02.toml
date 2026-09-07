@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `greetBavarian(\"Ada\")` zurück, wenn die Methode `return \"Servus \" + name;` enthält?"
+prompt.distractors = [
+  "`\"Servus name\"`",
+  "`\"Servus \"`",
+  "Einen Fehler, weil `name` kein String ist."
+]
+answer.answer = "`\"Servus Ada\"`, weil `name` durch den Wert `\"Ada\"` ersetzt wird."
+context = "Beim Methodenaufruf wird der Parameter im Methodenkörper durch das übergebene Argument ersetzt."
+id = "7a8b9c0d-9e3d-4a3a-9e2a-9d1f6b7a0c92"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt die Methode `IO.readln()` immer zurück, unabhängig davon, was eingegeben wurde?"
+prompt.distractors = [
+  "Einen Integer.",
+  "Einen Boolean.",
+  "Den zuletzt ausgegebenen println-Text."
+]
+answer.answer = "Immer einen String, auch wenn eine Zahl eingegeben wurde."
+context = "IO.readln gibt die Eingabe des Benutzers immer als String zurück, egal was eingegeben wurde."
+id = "0d1e2f3a-2e3d-4a3a-9e2a-9d1f6b7a3c21"

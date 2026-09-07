@@ -1,42 +1,5 @@
-<!-- Thebe für ausführbare Java-Blöcke (Binder + jjava-Kernel, Java 25).
-     Blöcke: ```java, java-exec (Standard; alte Aliase java-execute/java-run/
-     cheerpj/jupyter/thebe laufen ebenfalls über Jupyter, damit überall
-     Java 25 gilt: Records, IO.println/IO.readln, ...).
-     Thebe 0.8.2 ist gepinnt (KEIN @latest: 0.9 ändert die API). Für 0.8.2
-     heißt der Kernel in `kernelOptions.name` (geht an KernelManager.startNew);
-     `kernelName` steht zusätzlich drin (harmlos, falls je 0.9 geladen wird).
-     Die Config steht hier als text/x-thebe-config, damit auch das
-     Auto-Mount (Status-/Activate-Widgets) sie sieht; thebe-init.js übergibt
-     dieselbe Config zusätzlich explizit an bootstrap(). -->
-<script type="text/x-thebe-config">
-{
-  "requestKernel": true,
-  "mountActivateWidget": false,
-  "mountStatusWidget": false,
-  "predefinedOutput": false,
-  "selector": "[data-executable]",
-  "binderOptions": {
-    "repo": "MaximilianHertenstein/java_book",
-    "ref": "main",
-    "binderUrl": "https://mybinder.org",
-    "codeMirrorConfig": {
-      "theme": "default",
-      "mode": "text/x-java",
-      "lineWrapping": true,
-      "lineNumbers": false
-    }
-  },
-  "kernelOptions": {
-    "name": "java",
-    "kernelName": "java",
-    "path": "."
-  },
-  "codeMirrorConfig": {
-    "theme": "default",
-    "mode": "text/x-java",
-    "lineWrapping": true,
-    "lineNumbers": false
-  }
-}
-</script>
+<!-- Thebe 0.8.2 für ausführbare Java-Blöcke (```java, java-exec).
+     Gepinnt, kein @latest (neuere Versionen ändern die API).
+     Die Config steht ausschließlich in thebe-init.js (kein Auto-Start:
+     erst der Klick auf ▶ in der Menüleiste startet Binder). -->
 <script src="https://unpkg.com/thebe@0.8.2/lib/index.js"></script>

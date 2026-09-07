@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum entsteht bei `1 + * 1` ein Syntaxfehler?"
+prompt.distractors = [
+  "Weil `*` ein Wert ist.",
+  "Weil Java nur `+` und `-` kennt.",
+  "Weil `1` kein gültiger Wert ist."
+]
+answer.answer = "Weil nach dem Operator `+` kein gültiger Operand folgt."
+context = "Nach einem Rechenzeichen muss immer ein gültiger Wert stehen. Ein einzelnes `*` ist kein Wert, deshalb entsteht ein Syntaxfehler."
+id = "88fac238-e09b-4c0d-b95c-0ed5d62338d8"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welches Ergebnis liefert `1 + 2 * 5`?"
+prompt.distractors = [
+  "15",
+  "7",
+  "30"
+]
+answer.answer = "11"
+context = "Punkt vor Strich: Java rechnet zuerst `2 * 5 = 10` und danach erst `1 + 10 = 11`."
+id = "e46ba554-71f9-44ea-aec8-0aa5d74c4e7f"

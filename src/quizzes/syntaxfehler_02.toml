@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet das `^`-Zeichen in einer Fehlermeldung der Java-Umgebung?"
+prompt.distractors = [
+  "Es markiert das Ende des Programms.",
+  "Es zeigt an, wo ein neuer Methodenaufruf beginnt.",
+  "Es zeigt die Gesamtzahl der Fehler im Programm an."
+]
+answer.answer = "Es zeigt genau die Stelle, an der die Umgebung den Fehler zuerst bemerkt hat."
+context = "Das `^`-Zeichen markiert die Position im Code, an der die Syntax nicht mehr den Regeln entspricht."
+id = "1a2b3c4d-3e3d-4a3a-9e2a-9d1f6b7a4c32"

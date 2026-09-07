@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum funktioniert `\"good bye \".repeat(3)`, aber nicht `1 + \"2\"`?"
+prompt.distractors = [
+  "Weil Wiederholung immer erlaubt ist, Addition aber nie.",
+  "Weil `+` nur für Integer definiert ist und `repeat` für alle Typen.",
+  "Weil `\"2\"` keine gültige Zeichenkette ist."
+]
+answer.answer = "Weil `repeat` für Strings definiert ist, `+` aber nicht für die Kombination Integer links und String rechts."
+context = "Operationen sind immer nur für bestimmte Kombinationen von Typen definiert."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c01"

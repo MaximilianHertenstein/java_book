@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `var x = 5; // Startwert`?"
+prompt.distractors = [
+  "Es entsteht ein Syntaxfehler, weil Code und Kommentar sich nicht mischen dürfen.",
+  "Nur der Kommentar wird ausgeführt.",
+  "Java führt zuerst den Kommentar und dann den Code aus."
+]
+answer.answer = "Der Code vor dem `//` wird normal ausgeführt, der Rest der Zeile wird ignoriert."
+context = "Ein Kommentar kann auch hinter einem Statement in derselben Zeile stehen."
+id = "4d5e6f7a-6e3d-4a3a-9e2a-9d1f6b7a7c64"

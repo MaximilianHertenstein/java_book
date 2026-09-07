@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum entsteht ein Fehler, wenn `x` verwendet wird, obwohl `x` vorher nicht definiert wurde?"
+prompt.distractors = [
+  "Weil `x` ein reserviertes Schlüsselwort ist.",
+  "Weil Variablennamen immer mit einem Großbuchstaben beginnen müssen.",
+  "Weil Java jede Variable am Programmanfang deklarieren muss."
+]
+answer.answer = "Weil Java nur Variablen verwenden kann, die vorher mit einer Zuweisung erstellt wurden."
+context = "Eine Variable muss immer zuerst mit einer Zuweisung initialisiert werden, bevor sie in einem Ausdruck verwendet werden kann."
+id = "5c1e6a2b-1e3d-4a3a-9e2a-9d1f6b7a2c12"

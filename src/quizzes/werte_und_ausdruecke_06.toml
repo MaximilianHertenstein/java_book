@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist ein Ausdruck in Java?"
+prompt.distractors = [
+  "Ein Name für eine Variable",
+  "Nur ein Text in Anführungszeichen",
+  "Ein Befehl, den Java sofort ausführt"
+]
+answer.answer = "Eine Kombination aus Werten, Variablen und Operatoren, die zu einem Ergebnis ausgewertet wird."
+context = "Ein Ausdruck ist eine Berechnung wie `2 + 3`. Das Ergebnis dieser Berechnung ist ein Wert, zum Beispiel `5`."
+id = "738a4f7b-2e1d-4e62-a1ec-3a2ee9e8f2b6"

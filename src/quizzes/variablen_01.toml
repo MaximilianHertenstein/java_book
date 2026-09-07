@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei der Zuweisung `var threeYardsInFeet = 3 * 7;`?"
+prompt.distractors = [
+  "Der Name wird sofort ausgeführt wie ein Befehl.",
+  "Java speichert zuerst den Namen und rechnet erst später.",
+  "Es entsteht ein Fehler, weil auf beiden Seiten Werte stehen müssen."
+]
+answer.answer = "Zuerst wird der Ausdruck `3 * 7` berechnet, danach wird der Wert unter dem Namen `threeYardsInFeet` gespeichert."
+context = "Bei einer Zuweisung wird immer zuerst die rechte Seite ausgewertet und erst danach unter dem Namen links gespeichert."
+id = "5c1e6a2b-1e3d-4a3a-9e2a-9d1f6b7a2c11"

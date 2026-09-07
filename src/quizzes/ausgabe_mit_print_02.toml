@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `return` und `IO.println` in einer Methode?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide zeigen einen Wert an.",
+  "`IO.println` gibt einen Wert zurück, der weiterverwendet werden kann, `return` nicht.",
+  "`return` zeigt einen Wert nur auf der Konsole an, ohne die Methode zu verlassen."
+]
+answer.answer = "`return` gibt einen Wert zurück, der z. B. in einer Rechnung verwendet werden kann. `IO.println` zeigt nur einen Wert an und verlässt die Methode nicht automatisch."
+context = "Ein zurückgegebener Wert kann weiterverwendet werden, eine Ausgabe mit IO.println nicht."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c12"

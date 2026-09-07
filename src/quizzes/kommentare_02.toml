@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Muss hinter `//` korrekter Java-Code stehen?"
+prompt.distractors = [
+  "Ja, sonst entsteht ein Syntaxfehler.",
+  "Ja, aber nur bei Methodendefinitionen.",
+  "Nein, aber der Kommentar wird trotzdem ausgeführt."
+]
+answer.answer = "Nein, der Text nach `//` wird von der Umgebung komplett ignoriert."
+context = "Kommentare werden beim Ausführen des Programms nicht beachtet, egal was hinter dem `//` steht."
+id = "4d5e6f7a-6e3d-4a3a-9e2a-9d1f6b7a7c62"

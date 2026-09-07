@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie viele Kommas benötigt eine Methode mit drei Parametern im Methodenkopf?"
+prompt.distractors = [
+  "Drei",
+  "Eins",
+  "Keins"
+]
+answer.answer = "Zwei, weil Kommas nur zwischen den Parametern stehen."
+context = "Zwischen zwei Parametern steht genau ein Komma. Bei drei Parametern gibt es also zwei Trennstellen."
+id = "2b3c4d5e-4e3d-4a3a-9e2a-9d1f6b7a5c41"

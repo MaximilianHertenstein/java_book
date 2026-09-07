@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt eine Methode zurück, die nur `IO.println(...)`, aber kein `return` enthält?"
+prompt.distractors = [
+  "Den zuletzt ausgegebenen Text.",
+  "Es gibt keinen Rückgabewert, der Methodenaufruf erzeugt einen Fehler.",
+  "Die Zahl `0`."
+]
+answer.answer = "Nichts. Ohne `return` muss dort `void` stehen, und eine `void`-Methode kann nicht in Ausdrücken verwendet werden."
+context = "Eine Methode ohne return-Statement gibt nichts zurück. Dafür steht `void` anstelle des Rückgabetyps."
+id = "9c0d1e2f-1e3d-4a3a-9e2a-9d1f6b7a2c11"

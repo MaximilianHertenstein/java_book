@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn der Methodenname `yardToFeet` ohne Klammern geschrieben wird, statt ihn mit `yardToFeet(7)` aufzurufen?"
+prompt.distractors = [
+  "Die Methode wird trotzdem ausgeführt.",
+  "Es wird automatisch `0` zurückgegeben.",
+  "Java fragt automatisch nach einem Argument."
+]
+answer.answer = "Die Methode wird nicht aufgerufen. Ohne Klammern findet kein Methodenaufruf statt."
+context = "Nur mit runden Klammern hinter dem Methodennamen wird eine Methode tatsächlich aufgerufen."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c24"

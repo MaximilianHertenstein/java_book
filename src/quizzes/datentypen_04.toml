@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum funktioniert `Integer.parseInt(\"052\")`, aber `Integer.parseInt(\"hello\")` nicht?"
+prompt.distractors = [
+  "Weil Strings mit führender Null verboten sind.",
+  "Weil `parseInt` nur bei kurzen Strings funktioniert.",
+  "Weil Buchstaben in Java generell keine gültigen Zeichen sind."
+]
+answer.answer = "Weil `\"052\"` eine Zeichenfolge aus Ziffern ist, `\"hello\"` aber keine Zahl darstellt und deshalb nicht umgewandelt werden kann."
+context = "Nicht jeder String kann in einen Integer umgewandelt werden, nur solche, die eine Zahl darstellen."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c04"

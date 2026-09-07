@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn eine Methode mit zwei Parametern nur mit einem Argument aufgerufen wird?"
+prompt.distractors = [
+  "Java ergänzt automatisch `0` für das fehlende Argument.",
+  "Die Methode wird trotzdem ganz normal ausgeführt.",
+  "Der zweite Parameter bekommt automatisch denselben Wert wie der erste."
+]
+answer.answer = "Es entsteht ein Fehler, weil die Anzahl der Argumente zur Anzahl der Parameter passen muss."
+context = "Beim Methodenaufruf muss für jeden Parameter genau ein Argument übergeben werden."
+id = "2b3c4d5e-4e3d-4a3a-9e2a-9d1f6b7a5c44"

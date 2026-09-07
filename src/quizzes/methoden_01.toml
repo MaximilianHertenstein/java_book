@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen einem Parameter und einem Argument?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide Begriffe meinen dasselbe.",
+  "Ein Parameter ist der Name der Methode, ein Argument ist ihr Rückgabewert.",
+  "Ein Argument ist immer eine Zahl, ein Parameter kann jeder Typ sein."
+]
+answer.answer = "Der Parameter ist der Platzhalter in der Methodendefinition, das Argument ist der konkrete Wert beim Methodenaufruf."
+context = "Parameter stehen im Methodenkopf, Argumente werden beim Aufruf in Klammern übergeben."
+id = "8f2b3c4d-2e3d-4a3a-9e2a-9d1f6b7a3c21"

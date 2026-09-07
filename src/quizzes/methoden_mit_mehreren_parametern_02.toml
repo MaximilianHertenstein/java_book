@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `summeDerQuadrate(2, 3)` zurück, wenn die Methode `return pA * pA + pB * pB;` enthält?"
+prompt.distractors = [
+  "Es wird nur `pA * pA` berechnet.",
+  "Java addiert automatisch `2 + 3` und ignoriert den Methodenkörper.",
+  "Es entsteht ein Fehler, weil zwei Argumente übergeben wurden."
+]
+answer.answer = "`pA` wird durch `2` und `pB` durch `3` ersetzt, das Ergebnis ist `4 + 9 = 13`."
+context = "Jeder Parameter wird beim Methodenaufruf durch das Argument an der entsprechenden Position ersetzt."
+id = "2b3c4d5e-4e3d-4a3a-9e2a-9d1f6b7a5c42"

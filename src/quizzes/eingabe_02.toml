@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum sollte der Rückgabewert von `IO.readln()` oft in einer Variablen gespeichert werden?"
+prompt.distractors = [
+  "Weil man ihn sonst nicht ausgeben kann.",
+  "Weil IO.readln() sonst automatisch gelöscht wird.",
+  "Weil man IO.readln() sonst kein zweites Mal aufrufen kann."
+]
+answer.answer = "Um die Eingabe später im Programm weiterverwenden zu können."
+context = "Ohne Speicherung in einer Variablen geht der Rückgabewert von IO.readln() verloren, sobald die nächste Zeile ausgeführt wird."
+id = "0d1e2f3a-2e3d-4a3a-9e2a-9d1f6b7a3c22"

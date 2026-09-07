@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ergibt `8 / 2` in Java?"
+prompt.distractors = [
+  "4.0",
+  "8",
+  "2"
+]
+answer.answer = "4"
+context = "Bei ganzen Zahlen rechnet Java ganzzahlig. `8 / 2` ergibt `4`, nicht `4.0`."
+id = "58b9569e-8f8d-4c75-9b27-6679e51f30db"

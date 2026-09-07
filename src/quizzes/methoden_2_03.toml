@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "In welcher Reihenfolge wird `feetToInch(yardToFeet(7))` ausgewertet?"
+prompt.distractors = [
+  "Zuerst `feetToInch`, danach erst `yardToFeet`.",
+  "Beide Methoden werden gleichzeitig ausgewertet.",
+  "Nur die äußere Methode wird ausgewertet, die innere wird ignoriert."
+]
+answer.answer = "Zuerst wird `yardToFeet(7)` ausgewertet. Das Ergebnis wird danach als Argument von `feetToInch` verwendet."
+context = "Bei verschachtelten Methodenaufrufen wird immer zuerst der innere Aufruf ausgewertet."
+id = "5e6f7a8b-7e3d-4a3a-9e2a-9d1f6b7a8c73"

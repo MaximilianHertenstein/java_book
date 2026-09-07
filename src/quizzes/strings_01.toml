@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `\"123\" + \"456\"`?"
+prompt.distractors = [
+  "Es wird die Zahl `579` berechnet.",
+  "Es entsteht ein Fehler, weil Zahlen in Strings nicht addiert werden dürfen.",
+  "Das Ergebnis ist der Integer `123456`."
+]
+answer.answer = "Die beiden Strings werden aneinandergehängt. Das Ergebnis ist der String `\"123456\"`."
+context = "Bei der String-Addition werden Strings unabhängig von ihrem Inhalt einfach aneinandergehängt."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c81"

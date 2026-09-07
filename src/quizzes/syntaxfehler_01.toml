@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Zeilennummer in einer Fehlermeldung der Java-Umgebung?"
+prompt.distractors = [
+  "Sie zeigt an, wie viele Fehler im Programm sind.",
+  "Sie zeigt die Zeile an, in der das Programm gestartet wurde.",
+  "Sie ist nur zur Information und hilft nicht beim Debuggen."
+]
+answer.answer = "Sie zeigt an, in welcher Zeile der Fehler aufgetreten ist."
+context = "Die Java-Umgebung zeigt in der Fehlermeldung genau die Zeile an, in der das Problem erkannt wurde."
+id = "1a2b3c4d-3e3d-4a3a-9e2a-9d1f6b7a4c31"

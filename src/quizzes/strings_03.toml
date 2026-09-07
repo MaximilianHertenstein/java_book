@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum erzeugt `looks` (ohne Anführungszeichen) einen Fehler, wenn keine Variable mit diesem Namen definiert wurde?"
+prompt.distractors = [
+  "Weil `looks` ein reserviertes Schlüsselwort ist.",
+  "Weil Strings ohne Anführungszeichen automatisch zu Zahlen werden.",
+  "Weil Variablennamen nicht klein geschrieben werden dürfen."
+]
+answer.answer = "Die Java-Umgebung interpretiert `looks` als Variablennamen. Da keine Variable mit diesem Namen existiert, entsteht eine Fehlermeldung."
+context = "Ohne Anführungszeichen wird ein Wort immer als Variablenname interpretiert, nicht als String."
+id = "6f7a8b9c-8e3d-4a3a-9e2a-9d1f6b7a9c83"

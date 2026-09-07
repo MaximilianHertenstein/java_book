@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht man in Java keine Umwandlung, um `\"Ergebnis: \" + number` zu schreiben?"
+prompt.distractors = [
+  "Weil `+` Zahlen automatisch rundet.",
+  "Weil `number` dadurch zu einem String wird und bleibt.",
+  "Weil Umwandlungen in Java generell verboten sind."
+]
+answer.answer = "Weil Java den Integer automatisch in einen String umwandelt, sobald ein Operand ein String ist."
+context = "Steht links oder rechts von `+` ein String, wird der andere Operand automatisch umgewandelt und angehängt."
+id = "8b9c0d1e-0e3d-4a3a-9e2a-9d1f6b7a1c03"

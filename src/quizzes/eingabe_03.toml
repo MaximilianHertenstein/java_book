@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn `greetBavarianIo` aufgerufen wird und der Benutzer 'Grace' eingibt?"
+prompt.distractors = [
+  "Es wird `\"Servus name\"` ausgegeben.",
+  "Das Programm wartet nicht auf eine Eingabe.",
+  "Die Eingabe wird ignoriert und stattdessen `\"Ada\"` verwendet."
+]
+answer.answer = "Es wird `\"Servus Grace\"` ausgegeben, weil die Eingabe in `name` gespeichert und danach verwendet wird."
+context = "Die Eingabe des Benutzers wird in der Variablen name gespeichert und anschließend im println-Aufruf verwendet."
+id = "0d1e2f3a-2e3d-4a3a-9e2a-9d1f6b7a3c23"
