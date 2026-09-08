@@ -6,3 +6,5 @@ python_book_src
 *.minted
 /sections
 opencode.json
+kotlin_tutorial
+/kotlin_tutorial
