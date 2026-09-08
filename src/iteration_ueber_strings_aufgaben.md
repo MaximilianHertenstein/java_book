@@ -28,8 +28,8 @@ Schreibe zuerst das Ergebnis auf. Führe dann den Code aus und überprüfe deine
 
 ```java, java-exec
 String word = "cat";
-for (int i = 0; i < word.length(); i = i + 1) {
-    IO.println(word.charAt(i));
+for (char c : word.toCharArray()) {
+    IO.println(c);
 }
 ```
 
@@ -39,8 +39,8 @@ for (int i = 0; i < word.length(); i = i + 1) {
 
 ```java, java-exec
 String word = "cat";
-for (int i = 0; i < word.length(); i = i + 1) {
-    IO.println(word.charAt(i));
+for (char c : word.toCharArray()) {
+    IO.println(c);
 }
 ```
 
@@ -51,7 +51,7 @@ Ergänze die Lücke, sodass `reversed` am Ende den umgekehrten String enthält.
 ```java, java-exec
 String word = "python";
 String reversed = "";
-for (int i = 0; i < word.length(); i = i + 1) {
+for (char c : word.toCharArray()) {
     reversed = ____;
 }
 reversed
@@ -63,7 +63,7 @@ Ergänze die fehlende Initialisierung von `letterCount` (als Zähler, der bei `0
 
 ```java, java-exec
 String word = "hello";
-for (int i = 0; i < word.length(); i = i + 1) {
+for (char c : word.toCharArray()) {
     letterCount = letterCount + 1;
 }
 letterCount
@@ -76,8 +76,8 @@ Sage voraus, was in jeder Zeile ausgegeben wird, bevor du den Code ausführst.
 ```java, java-exec
 String greeting = "hi";
 String weirdGreeting = "";
-for (int i = 0; i < greeting.length(); i = i + 1) {
-    weirdGreeting = greeting.charAt(i) + weirdGreeting;
+for (char c : greeting.toCharArray()) {
+    weirdGreeting = c + weirdGreeting;
     IO.println(weirdGreeting);
 }
 ```

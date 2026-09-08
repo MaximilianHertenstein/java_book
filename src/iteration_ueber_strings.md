@@ -4,26 +4,25 @@
 
 Strings bestehen aus einzelnen Zeichen. Ein einzelnes Zeichen hat den
 *Typ* `char` und steht in einfachen Anführungszeichen (im Gegensatz zu
-*Strings* in doppelten). Mit der Methode `charAt` können wir die
-Zeichen eines *Strings* nacheinander durchlaufen.
+*Strings* in doppelten). Mit einer `for`-Schleife können wir die
+Zeichen eines *Strings* nacheinander durchlaufen. Dafür macht
+`toCharArray()` aus dem *String* ein Zeichen-Array, das die Schleife
+Zeichen für Zeichen durchläuft.
 
 ```java, java-exec
 String greeting = "hello";
-for (int i = 0; i < greeting.length(); i = i + 1) {
-    IO.println(greeting.charAt(i));
+for (char c : greeting.toCharArray()) {
+    IO.println(c);
 }
 ```
 
-- In der ersten Zeile wird festgelegt, dass die *Zählervariable* `i`
-  die Positionen in `"hello"` durchläuft.
-  - Beim ersten Durchlauf hat `i` den Wert `0`, also wird
-    `greeting.charAt(0)` ausgegeben: `'h'`.
-  - Beim zweiten Durchlauf hat `i` den Wert `1`, also wird
-    `greeting.charAt(1)` ausgegeben: `'e'`.
+- Bei jedem Durchlauf enthält `c` das nächste Zeichen in `"hello"`.
+  - Beim ersten Durchlauf ist `c` also `'h'`.
+  - Beim zweiten Durchlauf ist `c` `'e'`.
   - \\(\vdots\\)
 
-- Darunter steht, dass bei jedem Schleifendurchlauf das Zeichen an der
-  aktuellen Position ausgegeben werden soll.
+- Im Schleifenkörper steht, was bei jedem Durchlauf mit dem Zeichen
+  passieren soll (hier: ausgeben).
 
 ## Akkumulator-Pattern
 
@@ -34,8 +33,8 @@ durchführen.
 ```java, java-exec
 String greeting = "hello";
 String weirdGreeting = "";
-for (int i = 0; i < greeting.length(); i = i + 1) {
-    weirdGreeting = greeting.charAt(i) + weirdGreeting;
+for (char c : greeting.toCharArray()) {
+    weirdGreeting = c + weirdGreeting;
 }
 weirdGreeting
 ```

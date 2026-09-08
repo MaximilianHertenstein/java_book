@@ -61,9 +61,11 @@ diesen nicht auswerten und gibt eine Fehlermeldung aus.
 Bei diesem Fehler handelt es sich um einen Syntaxfehler. Die *Syntax*
 einer Programmiersprache gibt an, welche Zeichen im Code erlaubt sind
 und wie diese miteinander kombiniert werden dürfen. Ein Syntaxfehler
-tritt auf, wenn eine dieser Regeln verletzt wurde. Die Umgebung zeigt
-mit einem `^` genau an, welches Zeichen zuerst nicht interpretiert
-werden konnte. In diesem Fall ist es das `*` nach dem `+`. An dieser
+tritt auf, wenn eine dieser Regeln verletzt wurde. Die Umgebung markiert
+die Stelle, an der sie den Fehler zuerst bemerkt hat, farbig (in der
+klassischen JShell-Konsole steht stattdessen ein `^` unter der Stelle)
+und nennt die Art des Fehlers (`Unzulässiger Ausdrucksbeginn`).
+In diesem Fall ist es das `*` nach dem `+`. An dieser
 Stelle würde die Umgebung zum Beispiel eine Zahl, aber sicher kein
 zweites Rechenzeichen erwarten.
 

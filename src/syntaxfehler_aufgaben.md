@@ -46,7 +46,7 @@ hochDrei(3)
 
 ### 3. Vorhersage → Ausführen
 
-Lies den Code genau. Sage voraus, in welcher Zeile der Fehler gemeldet wird, bevor du ausführst.
+Lies den Code genau. Sage voraus, bei welcher Stelle im Code der Fehler gemeldet wird, bevor du ausführst.
 
 ```java, java-exec
 int halb(int x) {
@@ -70,7 +70,7 @@ int einsWeniger(int x)____
 
 ### 5. Prüfe deine Idee
 
-Ändere die öffnende geschweifte Klammer in Zeile 1 in ein Semikolon (`;`) und führe den Code aus. Notiere, welche Zeile und welches Zeichen die Umgebung in der Fehlermeldung nennt.
+Ändere die öffnende geschweifte Klammer in Zeile 1 in ein Semikolon (`;`) und führe den Code aus. Notiere, welche Stelle die Umgebung farbig markiert und was sie laut Fehlermeldung dort stattdessen erwartet.
 
 ```java, java-exec
 int doppelt(int x) {

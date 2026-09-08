@@ -31,26 +31,6 @@ Der *Typ* der Elemente wird in spitzen Klammern geschrieben. Für
 *Listen* beinhalten *Werte* und sind selbst wieder *Werte*. Wir können
 *Listen* also in *Variablen* speichern.
 
-Außerdem können wir Methoden schreiben, die *Listen* als *Argumente*
-entgegennehmen und/oder eine *Liste* zurückgeben. Zum Zusammensetzen
-einer neuen *Liste* bauen wir eine veränderliche Kopie (Details dazu im
-nächsten Kapitel) und geben sie zurück.
-
-```java, java-exec
-import java.util.ArrayList;
-import java.util.List;
-List<Boolean> repeatThreeTimes(List<Boolean> xs) {
-    var result = new ArrayList<>(xs);
-    result.addAll(xs);
-    result.addAll(xs);
-    return result;
-}
-```
-
-```java, java-exec
-repeatThreeTimes(List.of(true, false))
-```
-
 ## Iteration über Listen
 
 Listen können mit `for`-Schleifen durchlaufen werden.
@@ -152,6 +132,27 @@ List<Boolean> xs = List.of(true, false, true, false);
 for (int i = 1; i < xs.size() - 1; i = i + 1) {
     IO.println(xs.get(i));
 }
+```
+
+## Listen als Parameter und Rückgabewerte
+
+*Listen* sind *Werte* wie alle anderen. Darum können sie auch
+*Parameter* und *Rückgabewerte* von Methoden sein.
+
+```java, java-exec
+import java.util.ArrayList;
+import java.util.List;
+List<Integer> mapTimesTwo(List<Integer> xs) {
+    var result = new ArrayList<Integer>();
+    for (int x : xs) {
+        result.add(x * 2);
+    }
+    return result;
+}
+```
+
+```java, java-exec
+mapTimesTwo(List.of(1, 2, 3))
 ```
 
 ## Aufgaben

@@ -1,6 +1,6 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Was passiert bei `weirdGreeting = greeting.charAt(i) + weirdGreeting;` in jedem Schleifendurchlauf?"
+prompt.prompt = "Was passiert bei `weirdGreeting = c + weirdGreeting;` in jedem Schleifendurchlauf?"
 prompt.distractors = [
   "`weirdGreeting` bleibt immer leer.",
   "Nur der letzte Buchstabe von `greeting` bleibt am Ende übrig.",

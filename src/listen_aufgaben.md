@@ -18,6 +18,10 @@
 
 {{#quiz ./quizzes/listen_04.toml}}
 
+### Quiz 5
+
+{{#quiz ./quizzes/listen_05.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
@@ -75,4 +79,21 @@ List<Integer> xs = List.of(1, 2, 3);
 for (int x : xs) {
     IO.println(x * 2);
 }
+```
+
+### 6. Ergänze die Lücke
+
+Ergänze die Lücke, sodass die Methode jedes Element verdoppelt und die neue Liste zurückgibt.
+
+```java, java-exec
+import java.util.ArrayList;
+import java.util.List;
+List<Integer> mapTimesTwo(List<Integer> xs) {
+    var result = new ArrayList<Integer>();
+    for (int x : xs) {
+        result.add(____);
+    }
+    return result;
+}
+mapTimesTwo(List.of(1, 2, 3))
 ```

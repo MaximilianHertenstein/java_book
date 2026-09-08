@@ -26,20 +26,20 @@ definiert. Wir haben schon gesehen, dass man einen *String* mit
 "good bye ".repeat(3)
 ```
 
-Wir können aber **nicht** einen *String* und ein *Integer* addieren.
+Wir können aber **nicht** einen *String* und ein *Integer* subtrahieren.
 
 ```java, java-exec
-1 + "2"
+1 - "2"
 ```
 
-Die Fehlermeldung sagt aus, dass der *Operator* `+` nicht definiert ist,
+Die Fehlermeldung sagt aus, dass der *Operator* `-` nicht definiert ist,
 wenn der linke *Operand* ein *Integer* und der rechte *Operand* ein
 *String* ist.
 
 ## Automatische Umwandlung bei Strings
 
-Andersherum funktioniert die Addition: Steht der *String* links und ein
-*Integer* rechts, wird der *Integer* automatisch in einen *String*
+Mit `+` funktioniert das trotzdem: Steht ein *String* links oder rechts,
+wird die andere Seite automatisch in einen *String*
 umgewandelt.
 
 ```java, java-exec
