@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was berechnet der Operator `%`?"
+prompt.distractors = [
+  "Den Quotienten einer Division.",
+  "Das Produkt zweier Zahlen.",
+  "Den prozentualen Anteil einer Zahl."
+]
+answer.answer = "Den Rest, der bei der ganzzahligen Division übrig bleibt (modulo)."
+context = "`%` wird auch modulo genannt und berechnet den Rest einer ganzzahligen Division."
+id = "1fb33f30-d6d2-424a-ab63-fca6c9e4e5a6"

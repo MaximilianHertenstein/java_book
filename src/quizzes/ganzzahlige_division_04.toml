@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `14 / 5` bei zwei Integern zurück?"
+prompt.distractors = [
+  "2.8",
+  "4",
+  "5"
+]
+answer.answer = "2, weil 5 genau zweimal in 14 passt, ohne 14 zu überschreiten."
+context = "Der ganzzahlige Quotient ist die größte Zahl, mit der man den Divisor multiplizieren kann, ohne den Dividenden zu überschreiten."
+id = "da121199-b867-4dfd-a208-ab97e0e29801"

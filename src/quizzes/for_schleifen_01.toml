@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeuten die `3` und die `8` in `for (int i = 3; i < 8; i = i + 1)`?"
+prompt.distractors = [
+  "Nur den Endwert der Schleife.",
+  "Die Anzahl der Wiederholungen und den Startwert.",
+  "Zwei Werte, die beide als `i` durchlaufen werden."
+]
+answer.answer = "Den Startwert und die Grenze der Bedingung: Gezählt wird ab `3`, solange `i < 8` gilt."
+context = "Der Wert in der Bedingung wird selbst nicht mehr erreicht, sondern markiert das Ende des Bereichs."
+id = "dbdee2ff-3c58-4ed5-8bf1-ada784f91a6e"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht die klassische Form eine Variable wie `name`, um einen Wert zurückzugeben?"
+prompt.distractors = [
+  "Weil `return` in einem `switch` verboten ist.",
+  "Weil `default` in der klassischen Form fehlt.",
+  "Weil Variablen in `case`-Zweigen nicht verändert werden dürfen."
+]
+answer.answer = "Weil die klassische Form als Statement nur Code ausführt und keinen Wert liefert, also wird das Ergebnis gesammelt und danach zurückgegeben."
+context = "Erst die Pfeilform kann als Ausdruck direkt einen Wert zurückgeben (`return switch ...`)."
+id = "97df8325-6bbb-4fd3-a8ef-a1e8f853dbc1"

@@ -18,6 +18,10 @@
 
 {{#quiz ./quizzes/datentypen_04.toml}}
 
+### Quiz 5
+
+{{#quiz ./quizzes/datentypen_05.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `break` in der `hasUnderCourse`-Schleife?"
+prompt.distractors = [
+  "Es bricht die Methode ab, wie `return`.",
+  "Es überspringt nur den Rest des aktuellen Durchlaufs.",
+  "Es beendet das ganze Programm."
+]
+answer.answer = "Es beendet die Schleife sofort. Die restlichen Fächer werden nicht mehr geprüft."
+context = "`break` bricht nur die Schleife ab. Danach läuft die Methode mit dem Code nach der Schleife weiter."
+id = "ab95287a-5c18-4655-b4e4-8ee6c6779bb5"

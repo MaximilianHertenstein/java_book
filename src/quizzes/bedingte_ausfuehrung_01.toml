@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn die Bedingung hinter `if` zu `false` ausgewertet wird?"
+prompt.distractors = [
+  "Der Code in den geschweiften Klammern wird trotzdem einmal ausgeführt.",
+  "Das Programm bricht mit einem Fehler ab.",
+  "Der Code wird ausgeführt, aber nichts angezeigt."
+]
+answer.answer = "Der Code in den geschweiften Klammern unter `if` wird komplett übersprungen."
+context = "Nur wenn die Bedingung zu true ausgewertet wird, wird der Code im `if`-Block ausgeführt."
+id = "f3bf8883-5b6e-4de5-8485-d976f43ca06f"

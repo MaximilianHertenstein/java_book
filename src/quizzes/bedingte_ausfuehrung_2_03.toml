@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum kann man verschachtelte `if-else`-Statements oft durch `&&` und `||` vereinfachen?"
+prompt.distractors = [
+  "Weil `&&` und `||` Verschachtelungen komplett verbieten.",
+  "Weil verschachtelte `if-else`-Statements syntaktisch nicht erlaubt sind.",
+  "Weil `&&` und `||` automatisch alle Bedingungen kombinieren, auch falsche."
+]
+answer.answer = "Weil mehrere Bedingungen, die nacheinander geprüft werden, oft direkt mit `&&` oder `||` zu einer einzigen Bedingung kombiniert werden können."
+context = "Verschachtelte Bedingungen lassen sich häufig durch logische Verknüpfungen in eine einzige Bedingung umwandeln."
+id = "dbead4d3-6017-4567-b260-11797005fd11"

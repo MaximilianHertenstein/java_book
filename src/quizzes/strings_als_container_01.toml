@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welchen Index hat der erste Buchstabe eines Strings?"
+prompt.distractors = [
+  "1",
+  "-1",
+  "Es kommt auf die Länge des Strings an."
+]
+answer.answer = "0, weil die Indizierung in Java bei 0 beginnt."
+context = "Die Indizierung von Strings beginnt immer bei 0, nicht bei 1."
+id = "b323b504-66b4-41ba-be44-f41c380a81e1"

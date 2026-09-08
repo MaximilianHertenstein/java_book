@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum heißen die beiden Hilfsmethoden nicht beide `getFirst`?"
+prompt.distractors = [
+  "Weil Methodennamen immer eindeutig sein müssen, auch bei verschiedenen Parametern.",
+  "Weil `getFirst` ein reserviertes Schlüsselwort ist.",
+  "Weil generische Methoden keine Überladung erlauben."
+]
+answer.answer = "Weil nach dem Löschen der Typangaben beide Köpfe gleich aussähen (`getFirst(List)`) und der Compiler das ablehnt."
+context = "Überladung braucht unterschiedliche Parametertypen. `List<Integer>` und `List<Boolean>` zählen dafür nicht als verschieden."
+id = "f38d10b3-b28b-490d-955b-4b95ebe42a6b"

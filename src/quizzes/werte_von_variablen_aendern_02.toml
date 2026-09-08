@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit `y`, wenn nach `int y = x;` die Variable `x` einen neuen Wert bekommt (`x = 5;`)?"
+prompt.distractors = [
+  "`y` bekommt automatisch denselben neuen Wert wie `x`.",
+  "Es entsteht ein Fehler, weil `y` von `x` abhängt.",
+  "`y` und `x` sind jetzt für immer miteinander verbunden."
+]
+answer.answer = "`y` behält seinen alten Wert, weil bei der Zuweisung nur der damalige Wert von `x` kopiert wurde."
+context = "Bei `int y = x;` wird nur der aktuelle Wert von `x` übernommen, nicht eine dauerhafte Verbindung zu `x` hergestellt."
+id = "fa167f63-d5d8-4f59-94a4-e71f1e2cdd23"

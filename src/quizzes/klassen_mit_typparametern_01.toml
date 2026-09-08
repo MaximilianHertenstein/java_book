@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `Box<T>` in `record Box<T>(T content)`?"
+prompt.distractors = [
+  "Dass die Box genau einen `String` enthält.",
+  "Dass `T` immer für `Integer` steht.",
+  "Dass die Box leer bleiben muss."
+]
+answer.answer = "Dass `T` ein Platzhalter für einen beliebigen Typ ist, der beim Erzeugen festgelegt wird."
+context = "Mit `new Box<>(7)` wird `T` zu `Integer`, mit `new Box<>(\"hello\")` zu `String`."
+id = "725b7d79-3150-493a-8823-e78ccb1032f1"

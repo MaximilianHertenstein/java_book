@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann braucht man für `square` kein Objekt der Klasse `Utils`?"
+prompt.distractors = [
+  "Nie, Methoden brauchen immer ein Objekt.",
+  "Nur wenn die Methode `private` ist.",
+  "Nur wenn die Klasse leer ist."
+]
+answer.answer = "Wenn die Methode mit `static` deklariert ist und keine Eigenschaften nutzt."
+context = "Statische Methoden werden auf der Klasse selbst aufgerufen: `Utils.square(3)`."
+id = "bc79a5b4-e504-45f0-b7b4-c63f44b86f65"

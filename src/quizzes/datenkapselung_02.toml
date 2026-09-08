@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `apple.priceInEuro`, wenn das Feld `private` ist?"
+prompt.distractors = [
+  "Der Wert wird trotzdem ausgegeben, `private` ist nur ein Hinweis.",
+  "Es wird automatisch die Methode `enoughEuros` aufgerufen.",
+  "Das Feld wird dadurch öffentlich und bleibt es."
+]
+answer.answer = "Es entsteht ein Fehler, weil von außen nicht auf private Eigenschaften zugegriffen werden darf."
+context = "Mit `private` ist der Zugriff nur innerhalb der Klasse erlaubt, also z. B. in `enoughEuros`."
+id = "bd6f0f65-c03e-421e-8272-f6aef824475e"

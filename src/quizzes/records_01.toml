@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist ein `Article`-Wert besser als zwei getrennte Variablen für Name und Preis?"
+prompt.distractors = [
+  "Weil zwei Variablen grundsätzlich einen Fehler erzeugen.",
+  "Weil ein Record schneller rechnet als zwei Variablen.",
+  "Weil man mit zwei Variablen keine Methoden aufrufen kann."
+]
+answer.answer = "Weil zusammengehörige Werte so immer gemeinsam übergeben werden und kein Vertauschen wie bei `showArticle(nameOfFirstArticle, priceOfSecondArticle)` möglich ist."
+context = "Ein Record verbindet zusammengehörige Werte zu einem einzigen Wert, der nur als Ganzes weitergegeben wird."
+id = "1116050a-eb06-4559-bb11-d9c9d29611ff"

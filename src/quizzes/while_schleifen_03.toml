@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gehört zum Schleifenkörper einer `while`-Schleife?"
+prompt.distractors = [
+  "Nur die erste Zeile im Block.",
+  "Alle Zeilen des restlichen Programms.",
+  "Nur Zeilen, die eine Zuweisung enthalten."
+]
+answer.answer = "Alle Zeilen, die im Block in den geschweiften Klammern unter der Kopfzeile stehen."
+context = "Die geschweiften Klammern bestimmen, welche Zeilen bei jedem Schleifendurchlauf wiederholt werden."
+id = "f14ff1fd-9327-4d43-9bb3-97eac83e7ee9"

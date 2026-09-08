@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht man für Lehrer und Schüler je eine eigene `...GreetTwoTimes`-Methode, solange es kein Interface gibt?"
+prompt.distractors = [
+  "Weil Lehrer und Schüler unterschiedlich grüßen und das der Compiler verbietet.",
+  "Weil Methoden mit gleichem Körper grundsätzlich verboten sind.",
+  "Weil `greet` nur einmal pro Programm definiert werden darf."
+]
+answer.answer = "Weil die Parametertypen verschieden sind und `letStudentGreetTwoTimes` keinen `Teacher` annimmt."
+context = "Ohne gemeinsamen Typ muss jede Variante einzeln geschrieben werden. Das Interface liefert den gemeinsamen Typ."
+id = "fc77aff9-d6ef-4716-aad6-44e31b860d84"

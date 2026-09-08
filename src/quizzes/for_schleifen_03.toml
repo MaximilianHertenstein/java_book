@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen einer `for`-Schleife und einer `while`-Schleife bezüglich der Zählervariable?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied.",
+  "`for`-Schleifen können keine Zählervariable haben.",
+  "Bei `while`-Schleifen wird die Variable automatisch erhöht, bei `for`-Schleifen nicht."
+]
+answer.answer = "Bei einer `for`-Schleife steht die Erhöhung in der Kopfzeile, bei einer `while`-Schleife muss man sie selbst in den Schleifenkörper schreiben."
+context = "Startwert, Bedingung und Erhöhung in einer Zeile zu haben, ist einer der Hauptvorteile von `for`-Schleifen gegenüber `while`-Schleifen."
+id = "5d313440-ae6b-4c82-aa2e-0556fd4e5541"

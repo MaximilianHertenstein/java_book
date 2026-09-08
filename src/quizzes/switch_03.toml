@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `case 6, 7 -> IO.println(\"Wochenende\");`?"
+prompt.distractors = [
+  "Die Zahlen 6 bis 7 werden als Bereich geprüft, also auch 6.5.",
+  "Es werden zwei verschachtelte `switch`-Statements geöffnet.",
+  "Der Zweig läuft nur, wenn der Wert gleichzeitig 6 und 7 ist."
+]
+answer.answer = "Beide Werte teilen sich einen Zweig: Bei 6 oder 7 erscheint dieselbe Ausgabe."
+context = "Mehrere Labels pro `case`, getrennt durch Kommas, ersparen doppelten Code für gleiche Fälle."
+id = "07baa3b8-2756-44cd-bc9b-571211aa8475"

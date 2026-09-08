@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit `count`, wenn `pana.gameOver()` und `nino.gameOver()` laufen?"
+prompt.distractors = [
+  "Nichts, nicht-statische Methoden können `count` nicht ändern.",
+  "Es entsteht ein Fehler, weil `gameOver` nicht statisch ist.",
+  "Der Zähler wird zurückgesetzt und neu aufgebaut."
+]
+answer.answer = "Er sinkt zweimal, weil auch nicht-statische Methoden auf statische Eigenschaften zugreifen dürfen."
+context = "Nach zwei Objekten und zwei `gameOver`-Aufrufen steht der Zähler wieder auf 0."
+id = "a15cd7b5-a949-4a6c-9ad0-4b163006065d"

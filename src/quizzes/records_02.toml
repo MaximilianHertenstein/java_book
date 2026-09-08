@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was erzeugt `new Article(\"Apfel\", 3)`?"
+prompt.distractors = [
+  "Zwei einzelne Variablen `name` und `price`.",
+  "Einen Fehler, weil Records nicht mit `new` erzeugt werden.",
+  "Eine Liste mit den Elementen Apfel und 3."
+]
+answer.answer = "Ein Objekt des Records `Article`, dessen Komponenten den übergebenen Werten entsprechen."
+context = "Der Konstruktor wird bei der Record-Definition automatisch erzeugt und mit `new` aufgerufen."
+id = "cfa79d0e-fbee-448b-a783-ee2fd5e88e48"

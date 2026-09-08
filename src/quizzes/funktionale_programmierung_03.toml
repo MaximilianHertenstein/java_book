@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum steht bei gespeicherten Methoden `x.accept(3)` statt `x(3)`?"
+prompt.distractors = [
+  "Weil `x` keine Methode mehr ist, sondern eine Zahl.",
+  "Weil Klammern in Java grundsätzlich verboten sind.",
+  "Weil `accept` schneller ist als ein direkter Aufruf."
+]
+answer.answer = "Weil `x` ein `Consumer`-Objekt ist und dessen Aufruf-Methode `accept` heißt."
+context = "Gespeicherte Methoden ruft man über `accept` auf, nicht mit runden Klammern direkt."
+id = "24b3aa3f-a7ab-4e77-a594-6905dfe38063"

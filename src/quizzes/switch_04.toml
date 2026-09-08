@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `switch` als Statement und als Ausdruck?"
+prompt.distractors = [
+  "Als Ausdruck darf `switch` kein `default` enthalten.",
+  "Als Statement gibt `switch` immer einen String zurück.",
+  "Es gibt keinen Unterschied, beide Varianten geben Werte zurück."
+]
+answer.answer = "Als Statement führt es Code aus, als Ausdruck gibt es einen Wert zurück, z. B. hinter `return`."
+context = "`switch (day) { case 1 -> ...; }` als Statement ruft z. B. `IO.println` auf. Mit `return switch ...` liefert jeder `->`-Zweig einen Wert."
+id = "eb50caeb-9335-4af7-93fd-9a320f63825c"

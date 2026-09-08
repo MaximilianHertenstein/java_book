@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Ein Schüler denkt: „Wenn die erste Bedingung nicht erfüllt ist, wird das Programm beendet.“ Was stimmt daran nicht?"
+prompt.distractors = [
+  "Das Programm läuft tatsächlich nie weiter, das stimmt.",
+  "`if`-Statements können nur einmal pro Programm verwendet werden.",
+  "Nur die letzte Bedingung in einem Programm wird jemals geprüft."
+]
+answer.answer = "Nur der Code im `if`-Block wird übersprungen, danach läuft das Programm ganz normal weiter."
+context = "Ein nicht erfülltes `if` beendet nicht das ganze Programm, sondern überspringt nur den Code im Block darunter."
+id = "2fab6def-3913-4cfc-9180-99a8de57a8d9"

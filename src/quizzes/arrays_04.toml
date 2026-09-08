@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann passt ein Array besser als `List.of` oder `ArrayList`?"
+prompt.distractors = [
+  "Wenn die Sammlung ständig wachsen muss.",
+  "Wenn man Methoden wie `add` und `contains` braucht.",
+  "Immer, Arrays ersetzen Listen vollständig."
+]
+answer.answer = "Wenn die Anzahl der Elemente von Anfang an feststeht und es einfach bleiben soll."
+context = "Faustregel: Normalerweise `List.of` und `ArrayList`, Arrays nur bei fester Länge."
+id = "4ff91112-75eb-46ff-a9b3-fc79aa5c0dfc"

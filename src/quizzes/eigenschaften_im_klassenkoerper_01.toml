@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wofür werden beim Aufruf `new Article(\"Banane\", 3)` Werte übergeben?"
+prompt.distractors = [
+  "Für alle Methoden im Recordkörper, also auch `priceInCents`.",
+  "Für keine Eigenschaft, die Werte entstehen von selbst.",
+  "Für Name, Preis und zusätzlich den Cent-Preis."
+]
+answer.answer = "Nur für die Eigenschaften in der Kopfzeile (`name`, `priceInEuros`)."
+context = "`priceInCents()` wird bei jedem Aufruf neu aus dem Euro-Preis berechnet, nicht übergeben."
+id = "418c3312-d714-4e04-8049-ea92ec881cfd"

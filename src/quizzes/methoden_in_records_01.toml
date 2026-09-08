@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ändert sich, wenn `enoughMoney` in den Record eingebaut wird?"
+prompt.distractors = [
+  "Die Methode braucht danach gar kein Objekt mehr.",
+  "Der Preis wird automatisch auf 0 gesetzt.",
+  "Es ändert sich nichts, beide Varianten sind identisch."
+]
+answer.answer = "Der `Article`-Parameter entfällt. Dafür wird die Methode mit einem Punkt an einem Objekt aufgerufen."
+context = "Statt `enoughMoney(apple, 4)` heißt es `banana.enoughMoney(4)`. Die Komponenten sind im Methodenkörper direkt verfügbar."
+id = "196fb462-81ba-4183-b455-96b4ff8383c7"

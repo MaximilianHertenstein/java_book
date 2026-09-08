@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum wird bei einem reinen `if`-Statement ohne `else` manchmal ungewollt zusätzlicher Code ausgeführt?"
+prompt.distractors = [
+  "Weil `if` immer beide Fälle ausführt.",
+  "Weil `else` Pflicht ist und sonst ein Fehler entsteht.",
+  "Weil Java Code nach `if` immer zweimal ausführt."
+]
+answer.answer = "Weil `IO.println` (im Gegensatz zu `return`) die Methode nicht verlässt, sodass der Code nach dem `if` trotzdem ausgeführt wird."
+context = "Ohne `return` oder `else` wird der Code nach dem `if`-Block unabhängig von der Bedingung weiter ausgeführt."
+id = "50ad861b-0fbd-414d-bc17-1da03bab12ba"

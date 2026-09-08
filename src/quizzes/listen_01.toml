@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie wird eine Liste mit den Werten `true` und `false` erzeugt?"
+prompt.distractors = [
+  "`List xs = (true, false);`",
+  "`List<boolean> xs = List.of(true, false);`",
+  "`List<Boolean> xs = {true, false};`"
+]
+answer.answer = "`List<Boolean> xs = List.of(true, false);`, mit Objekttyp in spitzen Klammern und `List.of`."
+context = "Der Elementtyp steht in spitzen Klammern (für Wahrheitswerte `Boolean`), die Elemente in `List.of(...)`."
+id = "cd9e78f6-3f47-4821-9249-7df2e135342c"

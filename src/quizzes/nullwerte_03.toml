@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `nothing.equals('w')`, wenn `nothing` den Wert `null` hat?"
+prompt.distractors = [
+  "Es wird `false` zurückgegeben.",
+  "Es wird `true` zurückgegeben, weil nichts gleich nichts ist.",
+  "Der Aufruf wartet, bis `nothing` einen Wert bekommt."
+]
+answer.answer = "Eine `NullPointerException`, weil auf `null` keine Methode aufgerufen werden kann."
+context = "Methoden brauchen ein Objekt davor. Bei `null` gibt es keines, also bricht der Aufruf ab."
+id = "fb23d3f9-f049-4ca5-9722-b9a5537e2ce3"

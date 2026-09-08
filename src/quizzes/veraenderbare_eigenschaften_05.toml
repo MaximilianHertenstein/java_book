@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was unterscheidet `nextAge` von `getOlder` bei `Student`?"
+prompt.distractors = [
+  "Nichts, beide ändern das Objekt und geben den neuen Wert zurück.",
+  "`nextAge` ändert das Objekt, `getOlder` gibt nur einen Wert zurück.",
+  "Beide geben nichts zurück und ändern auch nichts."
+]
+answer.answer = "`nextAge` gibt einen Wert zurück und ändert nichts. `getOlder` ändert das Objekt und gibt nichts zurück."
+context = "Rückgabewert und Effekt sind unabhängig: Es gibt alle vier Kombinationen aus Ändern und Zurückgeben."
+id = "3d8b5c6f-25a2-4268-8256-1017aaff671f"

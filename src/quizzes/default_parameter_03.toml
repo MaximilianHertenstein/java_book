@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie ruft man in Java die `friendly`-Variante mit Standardnamen, aber `friendly = true` auf?"
+prompt.distractors = [
+  "Mit `greet(friendly = true)`, also einem benannten Argument.",
+  "Mit `greet(true)`, der Compiler erkennt den Parameter am Typ.",
+  "Gar nicht, das ist in Java unmöglich."
+]
+answer.answer = "Mit `greet(\"Benutzerin\", true)`, also beiden Argumenten in der richtigen Reihenfolge."
+context = "Benannte Argumente gibt es in Java nicht. Wer den Standardwert des ersten Parameters will, muss ihn trotzdem hinschreiben."
+id = "c41dae29-f25c-4b6e-af9c-2162918d5cde"

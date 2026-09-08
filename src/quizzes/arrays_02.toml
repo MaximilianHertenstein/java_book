@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie liest man die Länge eines Arrays `xs` aus?"
+prompt.distractors = [
+  "Mit `xs.length()`.",
+  "Mit `xs.size()`.",
+  "Mit `len(xs)`."
+]
+answer.answer = "Mit `xs.length`, ohne Klammern."
+context = "Die Array-Länge ist keine Methode: `length` ohne Klammern, im Gegensatz zu `length()` bei Strings und `size()` bei Listen."
+id = "8d9ad9a3-a272-4f60-bc5a-026b271c0a3c"

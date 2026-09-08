@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welchen Typ hat `zs`, wenn `xs` und `ys` den Typ `List<Character>` haben und `zs = List.of(xs, ys)` gilt?"
+prompt.distractors = [
+  "`List<Character>`, genau wie `xs` und `ys`.",
+  "`List<String>`, weil Listen immer Strings enthalten.",
+  "`Character`, weil die Ebenen zusammenfallen."
+]
+answer.answer = "`List<List<Character>>`, weil die Elemente von `zs` selbst Listen sind."
+context = "Da die Elemente in `zs` den Typ `List<Character>` haben, steht dieser Typ in den spitzen Klammern."
+id = "448cedf1-dd60-44ae-9450-1fae3f1d0f9b"

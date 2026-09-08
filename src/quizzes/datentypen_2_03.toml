@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Typvariable `T` in `<T> T getFirst(List<T> xs)`?"
+prompt.distractors = [
+  "Sie legt fest, dass nur Integer in der Liste stehen dürfen.",
+  "Sie zählt die Elemente der Liste.",
+  "Sie speichert das erste Element für spätere Aufrufe."
+]
+answer.answer = "Sie ist ein Platzhalter für einen konkreten Typ und vermeidet eine eigene Methode pro Elementtyp."
+context = "Mit `T` funktioniert dieselbe Methode für `List<Integer>`, `List<Boolean>` und alle anderen Elementtypen."
+id = "c497a51b-5f7e-436e-b1cc-3b2a37d5c5c8"

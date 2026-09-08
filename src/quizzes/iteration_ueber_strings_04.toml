@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "In welcher Reihenfolge gibt die Schleife über `\"hi\"` die Buchstaben aus?"
+prompt.distractors = [
+  "Zuerst `'i'`, dann `'h'`.",
+  "Beide Buchstaben gleichzeitig in einer Zeile.",
+  "Nur den ersten Buchstaben `'h'`."
+]
+answer.answer = "Zuerst `'h'`, dann `'i'`, in der Reihenfolge, in der die Buchstaben im String stehen."
+context = "Die Schleife durchläuft die Zeichen eines Strings immer von links nach rechts."
+id = "e6c78c82-56f9-4341-95a4-341930619e7d"

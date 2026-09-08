@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet es, dass Integer unveränderlich sind?"
+prompt.distractors = [
+  "Man kann keiner Variablen mehr einen neuen Wert zuweisen.",
+  "Integer können nicht in Rechnungen verwendet werden.",
+  "Integer-Variablen können nur einmal im Programm verwendet werden."
+]
+answer.answer = "Der Wert selbst (z. B. die Zahl `5`) kann nicht verändert werden. Man kann aber den Wert einer Variablen durch einen neuen Wert ersetzen."
+context = "Unveränderlichkeit bezieht sich auf den Wert selbst, nicht auf die Möglichkeit, einer Variablen einen neuen Wert zuzuweisen."
+id = "94fab73d-4119-4cf7-bcf5-17bf7113b696"

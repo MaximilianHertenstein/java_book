@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was zeigt die String-Darstellung von `banana`?"
+prompt.distractors = [
+  "Alle Methoden des Records mit ihren Rückgabewerten.",
+  "Nur den Namen, der Preis steht nie dabei.",
+  "Name, Euro-Preis und Cent-Preis."
+]
+answer.answer = "Nur die Kopfzeilen-Eigenschaften, also Name und Euro-Preis."
+context = "Berechnete Methoden wie `priceInCents()` erscheinen nicht in der String-Darstellung."
+id = "a1bc3425-3d7f-47b0-88af-f203abbdb9ab"

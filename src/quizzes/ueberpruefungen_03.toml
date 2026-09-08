@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum steht die Rabatt-Prüfung im Rabatt-Konstruktor und nicht nur im Haupt-Konstruktor?"
+prompt.distractors = [
+  "Weil der Haupt-Konstruktor keine Prüfungen enthalten darf.",
+  "Weil Prüfungen grundsätzlich in jeden Konstruktor kopiert werden müssen.",
+  "Weil der Rabatt-Konstruktor den Haupt-Konstruktor nie aufruft."
+]
+answer.answer = "Weil der Rabatt nur in dieser Variante vorkommt und dort geprüft werden muss."
+context = "Jeder Konstruktor prüft seine eigenen Zusatzargumente. Der Preis selbst wird weiter vom Haupt-Konstruktor geprüft."
+id = "9e123002-04ec-443d-89a1-df3c3d610602"

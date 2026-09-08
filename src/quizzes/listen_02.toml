@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie fügt man einer mit `List.of` erzeugten Liste ein neues Element hinzu?"
+prompt.distractors = [
+  "Mit `xs.add(Element)` direkt auf der Liste.",
+  "Man kann solche Listen nur bei der Erstellung befüllen.",
+  "Mit `xs + Element`."
+]
+answer.answer = "Indem man die Variable mit einer neuen Liste überschreibt, z. B. über eine `ArrayList`-Kopie mit `add`."
+context = "Mit `List.of` erzeugte Listen lassen sich nicht verändern. Erweitern geht nur, indem man sie durch eine neue Liste ersetzt."
+id = "10e793e1-0c3d-4010-8710-4c83d5c62a1b"

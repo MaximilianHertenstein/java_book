@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `Utils::showNumber`?"
+prompt.distractors = [
+  "Den Aufruf von `showNumber` ohne Argumente.",
+  "Eine Liste mit allen Methoden von `Utils`.",
+  "Den Rückgabewert des letzten `showNumber`-Aufrufs."
+]
+answer.answer = "Die Methode selbst als Wert, ohne sie aufzurufen."
+context = "Mit `Klasse::methode` wird eine Methode übergeben statt ausgeführt, z. B. an `doWithOneToThree`."
+id = "c8362321-f72f-453c-9d13-357200a061e4"

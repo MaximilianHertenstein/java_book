@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was für ein Typ ist das Ergebnis von `5 / 2`?"
+prompt.distractors = [
+  "`double`, weil das Ergebnis eine Kommazahl sein könnte.",
+  "`String`, weil Zahlen mit Rest als Text gespeichert werden.",
+  "`boolean`, weil das Ergebnis größer als 1 ist."
+]
+answer.answer = "`int`, weil beide Operanden Integer sind und ganzzahlig geteilt wird."
+context = "Der Operator `/` liefert nur dann ein Double, wenn mindestens eine Seite ein Double ist."
+id = "425f2e7e-00cc-4e6a-abd6-cc7363c99d6c"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Bleibt `new Article(\"Apfel\", 3)` nutzbar, nachdem der Rabatt-Konstruktor ergänzt wurde?"
+prompt.distractors = [
+  "Nein, der neue Konstruktor ersetzt alle bisherigen.",
+  "Nein, danach sind immer drei Argumente nötig.",
+  "Nur wenn der Rabatt 0 beträgt."
+]
+answer.answer = "Ja, alle definierten Konstruktoren bleiben nebeneinander nutzbar."
+context = "Jeder Konstruktor ist eine eigene Variante zur Objekterzeugung. Der Aufruf entscheidet über die Argumente."
+id = "5729410c-90be-494e-971a-0060d4fe99d1"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Woher weiß der Compiler bei `inc(5)` und `inc(\"5\")`, welche Methode gemeint ist?"
+prompt.distractors = [
+  "Er nimmt immer die zuerst definierte Methode.",
+  "Er fragt bei jedem Aufruf den Benutzer.",
+  "Beide Methoden werden nacheinander ausgeführt."
+]
+answer.answer = "Er prüft die Typen der Argumente und ruft die Methode mit den passenden Parametertypen auf."
+context = "Überladene Methoden unterscheiden sich in den Parametertypen. Der Aufruf entscheidet über die Typen der Argumente."
+id = "24662bc6-6ae6-416e-9f80-c60eb6849dcf"

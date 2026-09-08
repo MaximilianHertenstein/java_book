@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie wird ein Array mit den Werten `true` und `false` erzeugt?"
+prompt.distractors = [
+  "`boolean xs = {true, false};`",
+  "`boolean[] xs = List.of(true, false);`",
+  "`Array<boolean> xs = {true, false};`"
+]
+answer.answer = "`boolean[] xs = {true, false};`, mit eckigen Klammern hinter dem Elementtyp und geschweiften Klammern für die Elemente."
+context = "Hinter den Elementtyp schreibt man `[]`, die Elemente stehen in `{...}`."
+id = "b7c2d8c2-8a92-4803-b5e7-4d36a8be32f8"

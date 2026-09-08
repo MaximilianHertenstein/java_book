@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu schreibt man `public` vor den kompakten Konstruktor?"
+prompt.distractors = [
+  "Es ist Pflicht bei jedem Konstruktor in Java.",
+  "Es macht den Record unveränderlich.",
+  "Es ersetzt den Aufruf mit `new`."
+]
+answer.answer = "Damit der Konstruktor in der Ausführungsumgebung überall nutzbar ist."
+context = "Ohne `public` meldet die Ausführungsumgebung beim Erzeugen einen Zugriffsfehler. Mit `public` läuft es."
+id = "a28c9ae6-ad6c-49f2-af42-965b04840b1d"

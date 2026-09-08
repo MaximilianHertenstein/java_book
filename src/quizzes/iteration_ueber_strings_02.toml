@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `weirdGreeting = greeting.charAt(i) + weirdGreeting;` in jedem Schleifendurchlauf?"
+prompt.distractors = [
+  "`weirdGreeting` bleibt immer leer.",
+  "Nur der letzte Buchstabe von `greeting` bleibt am Ende übrig.",
+  "Das Zeichen wird jedes Mal überschrieben und geht verloren."
+]
+answer.answer = "Das aktuelle Zeichen wird vorne an `weirdGreeting` angehängt, wodurch sich am Ende die Reihenfolge umkehrt."
+context = "Da das Zeichen immer links addiert wird, entsteht am Ende der umgekehrte String."
+id = "d06d1ec9-364a-43a8-b2e0-7c5f4fdbc827"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `char c = 'w'; c = null;`?"
+prompt.distractors = [
+  "`c` enthält danach den Wert `null`.",
+  "`c` wird automatisch zu einem `Character`.",
+  "Der alte Wert bleibt einfach stehen."
+]
+answer.answer = "Es entsteht ein Fehler, weil `null` kein `char` ist."
+context = "Einfache Typen wie `char` können nie `null` sein. Dafür braucht es den Objekttyp `Character`."
+id = "880f3729-81ca-449b-9647-0ce5304deddf"

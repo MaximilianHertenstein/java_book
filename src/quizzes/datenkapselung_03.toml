@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu ist `calcPriceInCents` privat, wenn `enoughCents` öffentlich bleibt?"
+prompt.distractors = [
+  "Damit `enoughCents` schneller läuft.",
+  "Damit niemand mehr Cent-Preise berechnen kann, auch nicht innen.",
+  "Private Methoden sind Pflicht in jeder Klasse."
+]
+answer.answer = "Damit die Hilfsmethode nur innen genutzt wird und außen nur das Ergebnis über `enoughCents` sichtbar ist."
+context = "Was nur innen gebraucht wird, wird privat. Die öffentliche Methode bleibt die einzige Schnittstelle nach außen."
+id = "41cb9e1a-aa36-4a1f-a117-7853275c13ea"

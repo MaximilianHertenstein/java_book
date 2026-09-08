@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `new Article(\"Apfel\", 3)` zusätzlich zum Objekt aus, wenn der Init-Code eine Zeile druckt?"
+prompt.distractors = [
+  "Nichts, Konstruktoren geben nie etwas aus.",
+  "Den kompletten Quelltext des Records.",
+  "Die Ausgabe erscheint erst beim zweiten Erzeugen."
+]
+answer.answer = "Genau einmal die Zeile aus dem kompakten Konstruktor."
+context = "Der Init-Code läuft pro Erzeugung genau einmal, direkt bei `new`."
+id = "10f8ad5e-8bec-42c0-a7d3-ccf4ff9e2701"

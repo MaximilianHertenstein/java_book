@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `(int) 10.7`?"
+prompt.distractors = [
+  "Es wird auf 11 aufgerundet.",
+  "Es entsteht ein Fehler, weil 10.7 keine ganze Zahl ist.",
+  "Das Ergebnis ist weiterhin 10.7."
+]
+answer.answer = "Es wird zu 10 abgerundet, weil bei der Konvertierung von Double zu Integer immer abgerundet wird."
+context = "Bei der Umwandlung eines Doubles in einen Integer wird der Nachkommateil immer abgeschnitten, nicht gerundet."
+id = "e8f69750-9c49-4fec-9f26-b5072520b9d0"

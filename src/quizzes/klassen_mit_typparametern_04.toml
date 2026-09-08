@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wo dürfen die Typparameter `L` und `R` in `class Tuple<L, R>` überall stehen?"
+prompt.distractors = [
+  "Nur hinter dem Klassennamen, sonst nirgends.",
+  "Nur im Konstruktor, nicht in Methoden.",
+  "Nur bei `private` Feldern."
+]
+answer.answer = "In Eigenschaften, Methoden und Konstruktoren der Klasse."
+context = "Einmal am Klassennamen definiert, gelten `L` und `R` im ganzen Klassenkörper."
+id = "92315342-0cfa-4296-b1ce-05a5bca1d131"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum kann eine Methode eine Liste, die ihr übergeben wird, dauerhaft verändern?"
+prompt.distractors = [
+  "Weil Listen beim Methodenaufruf automatisch kopiert werden.",
+  "Weil Methoden grundsätzlich alle Variablen außerhalb verändern dürfen.",
+  "Weil das nur bei Methoden mit Rückgabewert `void` möglich ist."
+]
+answer.answer = "Weil der Parameter auf dieselbe veränderliche Liste zeigt wie das Argument, sodass Änderungen im Methodenkörper auch außerhalb sichtbar sind."
+context = "Listen werden beim Methodenaufruf nicht kopiert, deshalb wirken sich Änderungen im Methodenkörper auch nach außen aus."
+id = "1733a117-ce96-424c-8ce7-eac2ae5adca2"

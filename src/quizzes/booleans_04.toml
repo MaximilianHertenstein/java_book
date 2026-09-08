@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ergibt `true || false && false` und warum?"
+prompt.distractors = [
+  "`false`, weil `||` zuerst ausgewertet wird: `(true || false) && false`.",
+  "`false`, weil `||` und `&&` immer links nach rechts ohne Vorrang gelten.",
+  "Einen Fehler, weil `&&` und `||` nicht gemischt werden dürfen."
+]
+answer.answer = "`true`, weil `&&` vor `||` gilt: `true || (false && false)`."
+context = "Es gilt die `&&`-vor-`||`-Regel. Klammern erzwingen eine andere Reihenfolge, z. B. `(true || false) && false` ergibt `false`."
+id = "15f4834f-465a-44e7-8717-8c4186aac7f5"

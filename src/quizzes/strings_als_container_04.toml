@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist bei `for (int i = 0; i < greeting.length(); i = i + 1)` der höchste Wert von `i` immer ein gültiger Index?"
+prompt.distractors = [
+  "Weil `length` immer eins zu wenig zurückgibt.",
+  "Weil Indizes in Java bei 1 beginnen.",
+  "Weil die Schleife automatisch alle Indizes verdoppelt."
+]
+answer.answer = "Weil die Schleife nur bis `greeting.length() - 1` zählt, was dem höchsten gültigen Index entspricht."
+context = "Die Bedingung `i < greeting.length()` schließt die Länge selbst aus, deshalb passt sie genau zum höchsten Index."
+id = "3ef7a411-ffa9-49e6-8f22-4a49fab507be"

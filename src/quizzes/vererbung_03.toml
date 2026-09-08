@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum läuft bei `Utils.letGreetNTimes(pana, 2)` die `Student`-Version von `greet`?"
+prompt.distractors = [
+  "Weil der Compiler immer die längste Methode nimmt.",
+  "Weil `Person` keine eigene `greet`-Methode hat.",
+  "Weil `pana` heimlich in einen `Teacher` umgewandelt wird."
+]
+answer.answer = "Weil erst zur Laufzeit entschieden wird und das tatsächliche Objekt ein `Student` ist."
+context = "Der Parametertyp `Person` erlaubt den Aufruf. Die Version bestimmt der Objekttyp: Polymorphie."
+id = "52a07446-6c6d-43eb-bab9-8fd7928af554"

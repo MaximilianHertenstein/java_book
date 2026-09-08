@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn die Bedingung einer `while`-Schleife von Anfang an `false` ist?"
+prompt.distractors = [
+  "Die Schleife wird trotzdem einmal ausgeführt.",
+  "Es entsteht ein Fehler.",
+  "Java überspringt das ganze restliche Programm."
+]
+answer.answer = "Der Schleifenkörper wird kein einziges Mal ausgeführt."
+context = "Wie bei einem `if`-Statement wird der Code im Block nur ausgeführt, wenn die Bedingung `true` ist."
+id = "161d3f48-69da-4c6b-84d5-568d76ba34cf"

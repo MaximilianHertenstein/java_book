@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `weekdayNameFallthrough(1)` aus dem Kapitel aus?"
+prompt.distractors = [
+  "Nur `\"Montag\"`, weil jeder `case` für sich steht.",
+  "Nur `\"Dienstag\"`, weil `case 1` leer ist.",
+  "Nichts, weil ohne `break` im ersten Zweig ein Fehler entsteht."
+]
+answer.answer = "Zwei Zeilen (`\"Montag\"` und `\"Dienstag\"`), weil das fehlende `break` in den nächsten Zweig durchfällt."
+context = "Fall-through: Ohne `break` wird der folgende `case`-Block ebenfalls ausgeführt."
+id = "40425ce5-4684-4310-b29b-cf4765ff8274"

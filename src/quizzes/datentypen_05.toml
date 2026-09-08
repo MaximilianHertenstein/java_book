@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was unterscheidet `g == h` bei `int` von `g == h` bei `Integer` mit jeweils 150?"
+prompt.distractors = [
+  "Nichts, beides prüft inhaltliche Gleichheit.",
+  "Bei `int` entsteht ein Fehler, nur Objekte lassen sich vergleichen.",
+  "Beides prüft, ob es dasselbe Objekt ist."
+]
+answer.answer = "Bei `int` zählt der Inhalt (`true`), bei `Integer` die Identität (`false`, zwei Objekte)."
+context = "`==` prüft bei primitiven Typen Inhalte, bei Objekten Referenzen. Für Inhalte nimmt man `equals`."
+id = "74222b33-39c0-43a5-9f97-6e5530fb1c63"

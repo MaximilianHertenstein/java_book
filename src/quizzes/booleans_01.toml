@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was wird bei der Auswertung von `2 < 3` zurückgegeben?"
+prompt.distractors = [
+  "`false`.",
+  "Der String `\"true\"`.",
+  "Ein Fehler, weil `<` nur für Strings gilt."
+]
+answer.answer = "`true`, weil 2 kleiner als 3 ist."
+context = "Ein Vergleich mit `<`, `==`, `!=` usw. wird zu einem Boolean (`true` oder `false`) ausgewertet."
+id = "d93a5976-7453-4865-87c4-ebfb3d8bcb48"

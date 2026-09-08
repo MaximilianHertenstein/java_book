@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht Datenkapselung eine `class` statt einem `record`?"
+prompt.distractors = [
+  "Weil Records keine Methoden haben dürfen.",
+  "Weil Klassen schneller sind als Records.",
+  "Weil Records grundsätzlich verboten sind, sobald Methoden im Spiel sind."
+]
+answer.answer = "Weil sich im Record der Zugriff auf Komponenten nicht einschränken lässt, in der Klasse schon."
+context = "Zum Regeln des Zugriffs braucht es eine `class` mit `private`. Das ist neben Veränderlichkeit der zweite Fall dafür."
+id = "c10921a5-c872-41cb-8504-e24cda053ea2"

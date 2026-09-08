@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was lässt sich bei einem Array nachträglich ändern?"
+prompt.distractors = [
+  "Die Länge, mit `xs.length = xs.length + 1`.",
+  "Alles, auch Anhängen geht mit `xs.add(...)`.",
+  "Nichts, Arrays sind komplett unveränderlich."
+]
+answer.answer = "Einzelne Elemente per Index, z. B. `xs[0] = 99;`. Die Länge steht fest."
+context = "Elemente austauschen geht, die Anzahl der Elemente nicht."
+id = "48f64bbf-017f-4af4-aa53-669f833d0b01"

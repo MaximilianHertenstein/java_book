@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welche Gleichung gilt immer für Dividend, Divisor, Quotient und Rest?"
+prompt.distractors = [
+  "`dividend = quotient + rest`",
+  "`dividend = quotient / divisor + rest`",
+  "`dividend = divisor / quotient * rest`"
+]
+answer.answer = "`dividend = quotient * divisor + rest`, also z. B. `(14 / 5) * 5 + (14 % 5) = 14`."
+context = "Quotient und Rest zusammen ergeben immer wieder den ursprünglichen Dividenden, wenn man sie richtig kombiniert."
+id = "5cdc0cfc-5018-4d72-947e-a6397d4501ec"

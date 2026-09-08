@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu begrenzt man `T` mit `extends Greetable`?"
+prompt.distractors = [
+  "Damit die Methode schneller läuft.",
+  "Damit `T` nur noch `String` sein kann.",
+  "Damit gemischte Listen automatisch sortiert werden."
+]
+answer.answer = "Damit die Methode für `List<Student>` und `List<Teacher>` funktioniert und der genaue Typ erhalten bleibt."
+context = "`T` darf nur ein `Greetable`-Typ sein. So nimmt die Methode reine Listen an und gibt z. B. wirklich `Student` zurück."
+id = "8ca36bcf-a893-4aa4-905f-8a576b3da24e"

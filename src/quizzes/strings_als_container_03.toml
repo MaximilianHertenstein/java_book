@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was berechnet `\"hello\".length()`?"
+prompt.distractors = [
+  "Den höchsten gültigen Index des Strings.",
+  "Den ersten Buchstaben des Strings.",
+  "Ob der String leer ist oder nicht."
+]
+answer.answer = "Die Anzahl der Zeichen im String, hier 5."
+context = "`length` gibt immer die Anzahl der Zeichen zurück, nicht den höchsten Index."
+id = "c5d6ae31-ec64-44bd-93e8-77eab56a7beb"

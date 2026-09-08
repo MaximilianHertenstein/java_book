@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `new Article(\"Teelichter\")`, wenn zusätzlich `Article(String name) { this(name, 1); }` definiert ist?"
+prompt.distractors = [
+  "Es entsteht ein Fehler, weil immer beide Argumente nötig sind.",
+  "Der Preis bleibt leer und wird später ergänzt.",
+  "Es wird ein Artikel ohne Preis erzeugt."
+]
+answer.answer = "Es wird ein Artikel mit Preis `1` erzeugt, weil der kurze Konstruktor den langen mit dem Standardwert aufruft."
+context = "Der zusätzliche Konstruktor ergänzt den fehlenden Preis selbst über `this(name, 1)`."
+id = "93c768fe-370d-44b0-8e89-9933015ca67e"

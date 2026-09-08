@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was macht der `default`-Zweig in einem `switch`?"
+prompt.distractors = [
+  "Er wird immer ausgeführt, egal welcher `case` passt.",
+  "Er wird als Erstes geprüft, vor allen `case`-Zweigen.",
+  "Er beendet das `switch` ohne jede Ausgabe."
+]
+answer.answer = "Er fängt alle Werte ab, die zu keinem `case` passen."
+context = "`default` entspricht dem letzten `else`: Es läuft nur, wenn kein `case` getroffen hat."
+id = "da96d8cb-bc29-4d69-9752-98cb8ccce33b"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie erhält `greet()` ohne Argument einen Standardwert, wenn Java keine Default-Parameter kennt?"
+prompt.distractors = [
+  "Mit `String greet(String name = \"Benutzerin\")`, genau wie in anderen Sprachen.",
+  "Gar nicht, in Java muss immer ein Argument übergeben werden.",
+  "Mit einer globalen Variable, die den Standardwert enthält."
+]
+answer.answer = "Mit einer zweiten, parameterlosen Methode, die die erste mit dem Standardwert aufruft."
+context = "Überladung ersetzt Default-Parameter: `greet()` ruft innen `greet(\"Benutzerin\")` auf."
+id = "f6d56b95-958c-4f8c-950a-3ee0d39025dd"

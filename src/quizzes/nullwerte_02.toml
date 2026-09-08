@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Braucht man in Java ein Fragezeichen am Typ, damit eine Variable `null` sein kann?"
+prompt.distractors = [
+  "Ja, ohne `Character?` ist `null` verboten.",
+  "Ja, aber nur bei `String`, nicht bei `Character`.",
+  "Nur in Methoden, nicht in normalen Blöcken."
+]
+answer.answer = "Nein, jedes Objekt kann in Java auch `null` sein."
+context = "Ein Fragezeichen wie in manchen anderen Sprachen gibt es in Java nicht. `Character` allein genügt."
+id = "a1999dcd-c3f5-4c12-b2ab-4eece1477481"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn vor `for (int i = 1; i < 4; i = i + 1) { sumValue = sumValue + i; }` die Zeile `int sumValue = 0;` fehlt?"
+prompt.distractors = [
+  "`sumValue` beginnt automatisch bei 1.",
+  "Die Schleife läuft trotzdem fehlerfrei durch.",
+  "Es wird automatisch 0 als Ergebnis angezeigt."
+]
+answer.answer = "Es entsteht ein Fehler, weil `sumValue` verwendet wird, bevor es definiert wurde."
+context = "Ein Akkumulator muss immer vor der Schleife mit einem Startwert initialisiert werden."
+id = "dd6649dd-c979-4430-b08b-4c5a83bda52a"

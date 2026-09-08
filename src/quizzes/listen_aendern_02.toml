@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `xs.set(2, false);`?"
+prompt.distractors = [
+  "Es wird ein neues Element an Position 2 eingefügt, alle folgenden rücken nach hinten.",
+  "Es entsteht ein Fehler, weil man Listenelemente nicht ändern kann.",
+  "Die gesamte Liste wird durch `false` ersetzt."
+]
+answer.answer = "Das Element an Index 2 wird direkt durch `false` ersetzt, die Länge der Liste bleibt gleich."
+context = "Bei `set` mit einem Index wird nur genau dieses eine Element ersetzt."
+id = "d80bc33a-5f33-406c-9aaa-dab40a7b04cc"

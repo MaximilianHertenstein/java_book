@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `this.name = name;` im Konstruktor?"
+prompt.distractors = [
+  "Es werden zwei verschiedene Objekte miteinander verglichen.",
+  "Es wird eine neue lokale Variable `this` angelegt.",
+  "Es wird der Parameter mit sich selbst überschrieben."
+]
+answer.answer = "Es weist dem Feld `this.name` den Wert des Parameters `name` zu."
+context = "`this` bezeichnet das gerade erzeugte Objekt. So lassen sich gleichnamige Felder und Parameter unterscheiden."
+id = "9db7ee2a-5b8a-479d-b0a2-e24c1eb2a7c4"

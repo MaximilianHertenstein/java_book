@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `1 == \"1\"`?"
+prompt.distractors = [
+  "`true`, weil beide den Wert 1 haben.",
+  "`false`, weil die Werte unterschiedlich sind.",
+  "Der Vergleich ergibt `0`."
+]
+answer.answer = "Ein Fehler, weil `==` keine Werte mit unterschiedlichen Typen vergleichen kann."
+context = "Werte mit verschiedenen Typen (hier `int` und `String`) lassen sich mit `==` gar nicht erst vergleichen."
+id = "bc1aa8bc-518a-4922-b343-b6f0ab328474"

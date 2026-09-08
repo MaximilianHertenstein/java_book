@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was wird beim ersten Durchlauf der Schleife über `\"hello\"` ausgegeben?"
+prompt.distractors = [
+  "Der gesamte String `\"hello\"`.",
+  "Die Zahl `0`.",
+  "Der letzte Buchstabe `'o'`."
+]
+answer.answer = "`'h'`, der erste Buchstabe des Strings."
+context = "Die Schleife beginnt bei Index `0` und durchläuft die Buchstaben von links nach rechts, beginnend beim ersten Zeichen."
+id = "3920e202-e3f8-4a73-89cb-39208fe1273a"

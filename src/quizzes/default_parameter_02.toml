@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `String greet() { return greet(); }`?"
+prompt.distractors = [
+  "Es wird automatisch die Variante mit Parameter aufgerufen.",
+  "Es entsteht ein Fehler, weil zwei Methoden nicht gleich heißen dürfen.",
+  "Es wird einmal `\"Hallo Benutzerin\"` zurückgegeben."
+]
+answer.answer = "Endlose Selbstaufrufe, bis die Umgebung mit einem Fehler abbricht."
+context = "Ohne Argument ruft sich die parameterlose Methode immer wieder selbst auf, statt die Variante mit Parameter zu nutzen."
+id = "7bf15a07-438c-49b4-a839-97eb241a7d70"

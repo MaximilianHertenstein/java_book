@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `xs.get(3)` zurück, wenn `xs` die Liste `[true, false, true]` ist?"
+prompt.distractors = [
+  "`false`, das letzte Element.",
+  "Einen leeren Wert.",
+  "`true`, das erste Element."
+]
+answer.answer = "Einen Fehler, weil der höchste gültige Index bei dieser Liste 2 ist."
+context = "Bei einer Liste mit drei Elementen sind nur die Indizes 0, 1 und 2 gültig."
+id = "9d720870-56bc-4387-bdc1-5f83495bf5ba"

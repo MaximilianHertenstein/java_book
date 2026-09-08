@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht `isRetired` ein `protected`-Feld `age` statt `private`?"
+prompt.distractors = [
+  "Weil `private` Felder grundsätzlich verbietet.",
+  "Weil `protected` schneller ist als `private`.",
+  "Weil `isRetired` sonst gar nicht definiert werden dürfte."
+]
+answer.answer = "Weil auf `private` Felder nur die eigene Klasse zugreifen darf, auf `protected` auch abgeleitete Klassen."
+context = "Mit `private` scheitert der Zugriff aus `Teacher`. Mit `protected` gelingt er."
+id = "79225a75-a916-456e-a74c-3fc0a152982a"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wem gehört die statische Eigenschaft `count`?"
+prompt.distractors = [
+  "Jedem Objekt einzeln, jedes hat seinen eigenen Zähler.",
+  "Nur dem zuerst erzeugten Objekt.",
+  "Niemandem, sie existiert nur im Konstruktor."
+]
+answer.answer = "Der gesamten Klasse. Alle Objekte teilen sich denselben Zähler."
+context = "Jeder Konstruktor-Aufruf erhöht denselben `count`. Deshalb zählt er alle Objekte."
+id = "638341bf-0da5-4a90-a3d7-96ed776bef69"

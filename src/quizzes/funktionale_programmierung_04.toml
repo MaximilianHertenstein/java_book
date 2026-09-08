@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was unterscheidet Java-Lambdas mit Rückgabewert von Kotlin-Lambdas?"
+prompt.distractors = [
+  "In Java gibt es gar keine Lambdas mit Rückgabewert.",
+  "In Java steht der Rückgabewert vor dem Pfeil.",
+  "Es gibt keinen Unterschied, beides geht ohne `return`."
+]
+answer.answer = "In Java braucht ein Block-Lambda ein explizites `return`. Die letzte Zeile allein genügt nicht."
+context = "`x -> { ...; return x + 1; }` mit Typ `Function<Integer, Integer>`. Ohne `return` meldet der Compiler einen Fehler."
+id = "bd13a1c8-70c4-4b6f-b35f-017994009cf5"

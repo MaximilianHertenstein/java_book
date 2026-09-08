@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Variable `total` in einer `while`-Schleife, die eine Summe berechnet?"
+prompt.distractors = [
+  "Sie zählt, wie oft die Schleife durchlaufen wird.",
+  "Sie speichert nur den letzten addierten Wert.",
+  "Sie wird nur einmal am Ende der Schleife verwendet."
+]
+answer.answer = "Sie speichert die bisher aufgelaufene Summe über alle Schleifendurchläufe hinweg."
+context = "Der Akkumulator sammelt in jedem Durchlauf ein Zwischenergebnis, bis am Ende das Gesamtergebnis feststeht."
+id = "74cce03a-18a3-444f-a48b-459ec4621efc"

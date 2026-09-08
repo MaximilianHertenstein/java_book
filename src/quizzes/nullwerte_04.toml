@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum prüft `isDigitOrFalse` erst `maybeChar != null`?"
+prompt.distractors = [
+  "Weil `if` in Java sonst nicht funktioniert.",
+  "Weil `Character.isDigit` nur mit `null` arbeitet.",
+  "Weil die Prüfung den Wert automatisch in eine Ziffer verwandelt."
+]
+answer.answer = "Weil der Aufruf danach garantiert nicht auf `null` trifft und somit nicht abstürzen kann."
+context = "Nach der Prüfung ist der Wert in den geschweiften Klammern garantiert nicht `null`."
+id = "f58f41a7-1e8e-4248-83a2-8f1a2f38502f"

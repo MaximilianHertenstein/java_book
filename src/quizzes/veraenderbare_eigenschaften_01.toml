@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `banana.price = 2;` bei einer Klasse mit offenem Feld?"
+prompt.distractors = [
+  "Es wird eine neue Banane mit Preis 2 erzeugt.",
+  "Es wird geprüft, ob der Preis 2 beträgt.",
+  "Es entsteht grundsätzlich ein Fehler, Felder lassen sich nie ändern."
+]
+answer.answer = "Der Wert des Feldes im vorhandenen Objekt wird auf 2 geändert."
+context = "Ohne `private` lässt sich der Zustand eines Objekts nachträglich direkt ändern."
+id = "1f3f5ce5-9b99-4c4b-9a69-805b2b50900c"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann passt `switch` besser als eine `if`-Kette?"
+prompt.distractors = [
+  "Wenn Bereiche wie `count >= 15` geprüft werden.",
+  "Wenn zwei Bedingungen mit `&&` kombiniert werden.",
+  "Wenn ein `boolean` mit `true` verglichen wird."
+]
+answer.answer = "Wenn immer derselbe Wert mit `==` gegen viele feste Werte verglichen wird."
+context = "`switch` springt direkt zum passenden `case`. Für Bereiche und logische Verknüpfungen bleibt `if` zuständig."
+id = "5c2030b9-2b4d-44f1-b036-e2e611cc71d7"

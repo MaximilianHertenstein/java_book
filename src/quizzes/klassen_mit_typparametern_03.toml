@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was beschreibt `Tuple<L, R>` mit `Box<L> left` und `Box<R> right`?"
+prompt.distractors = [
+  "Ein Tupel aus zwei gleichen Typen, mehr geht nicht.",
+  "Eine Liste mit genau zwei Zahlen.",
+  "Eine Box, die sich selbst enthält."
+]
+answer.answer = "Ein Paar aus zwei Boxen mit zwei unabhängigen Typen `L` und `R`."
+context = "Typparameter lassen sich schachteln: `Tuple<String, Integer>` fasst eine String-Box und eine Integer-Box."
+id = "0262c586-9efb-4d41-8e71-5158dba330f2"

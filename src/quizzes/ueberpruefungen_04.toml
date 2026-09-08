@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was prüft `if (price < 0)` im Konstruktor?"
+prompt.distractors = [
+  "Ob der Preis bereits vergeben wurde.",
+  "Ob der Name zum Preis passt.",
+  "Ob der Preis eine Kommazahl ist."
+]
+answer.answer = "Ob der übergebene Preis ungültig ist, bevor das Objekt entsteht."
+context = "Die Prüfung läuft vor den Zuweisungen. Bei Verstoß gibt es gar kein Objekt."
+id = "50c7eb80-2c31-4dfa-8ca8-4d76683cff66"

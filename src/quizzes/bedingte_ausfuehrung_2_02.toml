@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann wird der Code unter `else` ausgeführt?"
+prompt.distractors = [
+  "Immer, egal was die Bedingung ergibt.",
+  "Nur wenn die Bedingung hinter `if` ebenfalls `true` ist.",
+  "Nur beim ersten Durchlauf eines Programms."
+]
+answer.answer = "Nur dann, wenn die Bedingung hinter `if` zu `false` ausgewertet wird."
+context = "`if` und `else` schließen sich gegenseitig aus: Es wird immer genau einer der beiden Blöcke ausgeführt."
+id = "3a074961-fd8a-44ed-b741-b4e804dab8fe"

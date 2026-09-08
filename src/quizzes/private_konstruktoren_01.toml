@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `new Article(\"Banane\", 3, 2)`, wenn der Rabatt-Konstruktor `private` ist?"
+prompt.distractors = [
+  "Es wird ein Artikel mit Rabatt 2 erzeugt, `private` wird ignoriert.",
+  "Es wird automatisch der öffentliche Konstruktor mit zwei Argumenten genommen.",
+  "Der Aufruf wartet, bis der Konstruktor öffentlich wird."
+]
+answer.answer = "Es entsteht ein Fehler, weil der private Konstruktor von außen nicht nutzbar ist."
+context = "Mit `private` lässt sich festlegen, welche Wege zur Objekterzeugung außen offenstehen."
+id = "b8f459e0-3a97-4fc0-b041-17b786f052ed"

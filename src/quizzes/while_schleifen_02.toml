@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum bricht `while (x < 5) { IO.println(x); }` (ohne Erhöhung von `x`) niemals ab?"
+prompt.distractors = [
+  "Weil `while`-Schleifen sich immer nach 5 Durchläufen selbst beenden.",
+  "Weil `IO.println` die Bedingung automatisch auf `false` setzt.",
+  "Weil `x` bei jedem Durchlauf automatisch um 1 sinkt."
+]
+answer.answer = "Weil sich der Wert von `x` im Schleifenkörper nie ändert und die Bedingung deshalb immer `true` bleibt."
+context = "Eine `while`-Schleife bricht nur ab, wenn sich die geprüfte Bedingung irgendwann zu `false` ändert."
+id = "23add2eb-dbbf-4d2f-a49d-a73c230ca380"

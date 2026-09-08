@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `zs.get(1)` zurück?"
+prompt.distractors = [
+  "Das Zeichen `'E'`.",
+  "Die Zahl `1`.",
+  "Einen Fehler, weil `get` bei 2D-Listen nicht funktioniert."
+]
+answer.answer = "Die Liste an Index 1, also die zweite Zeile der 2D-Liste."
+context = "Der erste Zugriff liefert eine ganze Zeile. Erst ein zweites `get` liefert ein einzelnes Zeichen."
+id = "80b649cc-bb45-40cf-8dce-216933536e4e"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum wird bei mehreren `if`-Statements hintereinander nach dem ersten erreichten `return` nicht mehr weitergeprüft?"
+prompt.distractors = [
+  "Weil Java nur ein `if` pro Methode erlaubt.",
+  "Weil alle folgenden `if` automatisch übersprungen werden, egal was drinsteht.",
+  "Weil `return` eine Fehlermeldung auslöst."
+]
+answer.answer = "Weil `return` die Methode sofort verlässt, sodass der restliche Code der Methode nicht mehr ausgeführt wird."
+context = "Sobald ein `return`-Statement ausgeführt wird, endet die Methode sofort."
+id = "cff1cd24-9a30-4ee7-8d12-8086aeb11e5b"

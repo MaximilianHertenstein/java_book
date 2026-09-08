@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was besagt der Typ `Consumer<Integer>`?"
+prompt.distractors = [
+  "Dass genau drei Integer verarbeitet werden.",
+  "Dass ein Integer zurückgegeben und nichts übergeben wird.",
+  "Dass die Methode automatisch dreimal läuft."
+]
+answer.answer = "Dass ein Integer übergeben wird und nichts zurückkommt."
+context = "`Consumer` verbraucht ein Argument ohne Rückgabewert. Genau das passt zu `showNumber` und `incAcc`."
+id = "08082f85-992a-4f05-9e54-cb6ecf6f6148"

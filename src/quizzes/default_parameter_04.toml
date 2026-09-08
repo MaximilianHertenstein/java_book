@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum sollte man Überladungen für Standardwerte sparsam verwenden?"
+prompt.distractors = [
+  "Weil Überladung in Java grundsätzlich verboten ist.",
+  "Weil überladene Methoden immer langsamer sind.",
+  "Weil der Compiler nur zwei Varianten pro Name erlaubt."
+]
+answer.answer = "Weil die Varianten schnell viele werden, sobald mehrere Parameter Standardwerte bekommen sollen."
+context = "Zwei Schalter mit je einem Standardwert bräuchten schon vier Varianten. Weniger ist hier mehr."
+id = "df58c8dc-cddd-4188-a6e6-0f641793ddee"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann ist `A && B` wahr?"
+prompt.distractors = [
+  "Wenn mindestens einer der beiden Teilausdrücke wahr ist.",
+  "Wenn beide Teilausdrücke falsch sind.",
+  "Wenn genau einer der beiden Teilausdrücke wahr ist."
+]
+answer.answer = "Nur wenn beide Teilausdrücke zu `true` ausgewertet werden."
+context = "`&&` verknüpft zwei boolesche Ausdrücke. Das Ergebnis ist nur dann `true`, wenn beide Seiten `true` sind."
+id = "b75c7213-9c26-4b1f-8ed7-f8be650ad5cb"

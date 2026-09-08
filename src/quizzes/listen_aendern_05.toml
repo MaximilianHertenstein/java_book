@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `List.of(1, 3, 5).add(7)`?"
+prompt.distractors = [
+  "Die 7 wird angehängt, `add` geht immer.",
+  "Es wird still ignoriert und die Liste bleibt gleich.",
+  "Die Liste wird automatisch in eine `ArrayList` umgewandelt."
+]
+answer.answer = "Ein Fehler zur Laufzeit: Mit `List.of` erzeugte Listen lassen sich nicht ändern."
+context = "Lesen (`get`, `size`) geht, Ändern nicht. Dafür braucht es eine `ArrayList`."
+id = "21543302-7afc-483b-830e-9f4dfa152e9c"

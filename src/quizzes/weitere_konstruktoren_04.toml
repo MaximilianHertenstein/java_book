@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum muss `this(...)` die erste Zeile im Konstruktor sein?"
+prompt.distractors = [
+  "Weil Konstruktoren grundsätzlich nur eine Zeile haben dürfen.",
+  "Weil `this` nur in der ersten Zeile definiert ist.",
+  "Es muss nicht, die Reihenfolge ist egal."
+]
+answer.answer = "Weil das Objekt zuerst vollständig über den anderen Konstruktor erzeugt werden muss."
+context = "Erst nach dem `this`-Aufruf steht das Objekt. Eigene Logik folgt danach."
+id = "281ffcce-85e7-4891-939c-ddae6cc108f2"

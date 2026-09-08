@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `xs.add(false)` bei einer mit `new ArrayList<>(...)` erzeugten Liste?"
+prompt.distractors = [
+  "Es erzeugt eine komplett neue Liste, die alte bleibt unverändert.",
+  "Es ersetzt das erste Element der Liste durch `false`.",
+  "Es gibt eine neue Liste zurück, ohne `xs` zu verändern."
+]
+answer.answer = "Es verändert die Liste `xs` direkt, indem `false` am Ende hinzugefügt wird."
+context = "`add` verändert die vorhandene Liste selbst, im Gegensatz zum Ersetzen durch eine neue Liste."
+id = "8eaec72a-4456-4af1-ba89-f7ab43707323"

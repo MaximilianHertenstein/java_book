@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeuten die beiden Indizes in `zs.get(1).get(0)`?"
+prompt.distractors = [
+  "Beide zählen dieselben Elemente, der zweite Aufruf wiederholt nur den ersten.",
+  "Der erste ist die Spalte, der zweite die Zeile.",
+  "Es sind zwei unabhängige Listen, die nichts miteinander zu tun haben."
+]
+answer.answer = "Der erste ist der Zeilenindex in `zs`, der zweite der Spaltenindex in der Zeile."
+context = "Jedes Zeichen hat genau einen Zeilen- und einen Spaltenindex, wie Punkte in der Ebene."
+id = "cd0eb473-cd96-445f-8c59-48e2103b3031"

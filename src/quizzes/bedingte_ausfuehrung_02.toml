@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert, wenn die Methode nur `if (points >= 50) { return \"Passed\"; }` enthält und danach kein weiteres `return` folgt?"
+prompt.distractors = [
+  "Die Methode gibt automatisch `\"Failed\"` zurück.",
+  "Bei `testResult(49)` wird `49` zurückgegeben.",
+  "Bei `testResult(49)` wird `null` zurückgegeben und alles läuft normal."
+]
+answer.answer = "Der Code lässt sich gar nicht ausführen: Es entsteht ein Fehler, weil ein `return` fehlt (`missing return statement`)."
+context = "Eine Methode mit Rückgabetyp muss in jedem Fall etwas zurückgeben. Ohne zweites `return` meldet die Umgebung einen Fehler."
+id = "9a8cf451-dd57-4aa4-9ca9-f6d254c99b85"

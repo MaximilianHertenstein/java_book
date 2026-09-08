@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann läuft der Code im kompakten Konstruktor?"
+prompt.distractors = [
+  "Einmal beim Definieren des Records.",
+  "Nur beim ersten Erzeugen eines Objekts.",
+  "Nie, er dient nur der Dokumentation."
+]
+answer.answer = "Bei jedem Aufruf des Konstruktors, also bei jeder Objekterzeugung."
+context = "Der kompakte Konstruktor läuft bei jedem `new` einmal mit den übergebenen Werten."
+id = "3515d0b9-2cd9-48df-9d7f-801ae6f19597"

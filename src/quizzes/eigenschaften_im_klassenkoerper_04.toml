@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum gibt es hier keine veränderbare Eigenschaft `available`?"
+prompt.distractors = [
+  "Weil `boolean` in Records verboten ist.",
+  "Weil veränderbare Eigenschaften grundsätzlich nutzlos sind.",
+  "Weil der Name `available` reserviert ist."
+]
+answer.answer = "Weil Records unveränderlich sind. Veränderbar geht erst mit einer `class`."
+context = "Im Record lassen sich nur berechnete Methoden ergänzen. Echte Zustandsänderung braucht eine Klasse."
+id = "733a8edc-027a-4bbe-aaf8-74ed2a8e3b8e"

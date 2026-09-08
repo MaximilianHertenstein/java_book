@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie teilen sich in der klassischen Form mehrere Werte einen Zweig?"
+prompt.distractors = [
+  "Mit Kommas hinter einem `case`, genau wie bei der Pfeilform.",
+  "Mit einem Bereich wie `case 1 bis 5:`.",
+  "Gar nicht, jeder Wert braucht einen eigenen Block mit eigenem Code."
+]
+answer.answer = "Durch gestapelte `case`-Zeilen ohne eigenen Code, die alle bis zum ersten Block durchfallen."
+context = "Leere `case`-Zeilen nutzen Fall-through absichtlich: `case 1:` bis `case 5:` laufen alle in denselben Block."
+id = "0fca7ccc-5ef1-4ba1-a774-b5747041340e"

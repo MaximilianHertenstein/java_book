@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann nimmt man eine `class` statt einem `record`?"
+prompt.distractors = [
+  "Immer, Records sind nur eine alte Schreibweise für Klassen.",
+  "Wenn mehr als zwei Komponenten nötig sind.",
+  "Wenn die Werte zusätzlich in einer Liste gespeichert werden sollen."
+]
+answer.answer = "Nur wenn sich der Wert selbst ändern muss. Solange nichts geändert wird, reicht ein `record`."
+context = "Records sind unveränderlich. Veränderlichkeit gibt es erst mit einer `class`."
+id = "66a7d525-df0c-478b-9bb2-f237b118d245"

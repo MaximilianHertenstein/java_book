@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Worauf kann der kompakte Konstruktor zugreifen?"
+prompt.distractors = [
+  "Nur auf feste Texte, nicht auf die Argumente.",
+  "Auf alle Variablen des gesamten Programms.",
+  "Auf nichts, er läuft isoliert."
+]
+answer.answer = "Auf die Konstruktor-Argumente wie `name` und `price`."
+context = "Im kompakten Konstruktor stehen die übergebenen Werte unter ihren Komponentennamen bereit."
+id = "c59f2237-1cb5-4a73-9661-cf90a88543ce"

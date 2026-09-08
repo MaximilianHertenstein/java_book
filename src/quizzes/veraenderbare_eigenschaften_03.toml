@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient `getPrice`, wenn `price` privat ist?"
+prompt.distractors = [
+  "Es setzt den Preis auf einen neuen Wert.",
+  "Es löscht das Feld `price` nach dem Lesen.",
+  "Es umgeht die Konstruktor-Prüfung nachträglich."
+]
+answer.answer = "Es erlaubt das Lesen des Werts, ohne das Feld selbst freizugeben."
+context = "Getter geben kontrolliert Einblick, ohne die Kapselung aufzuheben."
+id = "43090036-3953-456d-8fb4-431862ddeecd"

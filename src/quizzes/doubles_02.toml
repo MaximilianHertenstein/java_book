@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist das Ergebnis von `10.7 - 12.3` nicht exakt `-1.6`?"
+prompt.distractors = [
+  "Weil Java bei Subtraktion immer aufrundet.",
+  "Weil negative Zahlen in Java nicht unterstützt werden.",
+  "Weil Doubles nur mit ganzen Zahlen kombiniert werden dürfen."
+]
+answer.answer = "Weil Kommazahlen im Computer nicht immer exakt dargestellt werden können, wodurch kleine Rundungsfehler entstehen."
+context = "Doubles werden intern als Binärzahlen mit begrenzter Genauigkeit gespeichert, was zu kleinen Abweichungen führen kann."
+id = "c9d696e4-a0cb-4c23-87f0-2c7b3987c6d6"

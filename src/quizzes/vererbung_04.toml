@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu deklariert man `Person` als `abstract`?"
+prompt.distractors = [
+  "Damit `Person` schneller instanziiert wird.",
+  "Damit Unterklassen keine Methoden mehr überschreiben müssen.",
+  "Damit `Person` automatisch alle Methoden von `Teacher` bekommt."
+]
+answer.answer = "Damit niemand mehr reine `Person`-Objekte erzeugen kann und Unterklassen fehlende Methoden implementieren müssen."
+context = "Abstrakte Klassen sind Baupläne: `new Person(...)` geht nicht mehr, `greet` muss jede Unterklasse selbst liefern."
+id = "e755295c-924b-473e-94c3-dc9337b2569f"

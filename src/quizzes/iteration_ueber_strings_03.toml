@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum muss `String weirdGreeting = \"\";` vor der Schleife stehen?"
+prompt.distractors = [
+  "Weil sonst `charAt` nicht funktioniert.",
+  "Weil `for`-Schleifen ohne Initialisierung nicht starten.",
+  "Weil Strings immer mit einem Leerzeichen beginnen müssen."
+]
+answer.answer = "Weil `weirdGreeting` als Akkumulator verwendet wird und vor der Schleife einen Startwert (hier einen leeren String) benötigt."
+context = "Wie bei Zahlen-Akkumulatoren muss auch ein String-Akkumulator vor der Schleife initialisiert werden."
+id = "6d5c14b8-3768-4de9-9ec5-5ccff2281886"

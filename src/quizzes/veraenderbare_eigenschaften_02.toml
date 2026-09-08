@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum reicht die Prüfung im Konstruktor nicht, sobald das Feld offen ist?"
+prompt.distractors = [
+  "Weil Konstruktoren grundsätzlich nie geprüft werden.",
+  "Weil offene Felder automatisch negativ werden.",
+  "Weil die Prüfung im Konstruktor dann gar nicht mehr ausgeführt wird."
+]
+answer.answer = "Weil sich der Wert danach trotzdem direkt setzen lässt, z. B. `banana.price = -1;`."
+context = "Die Konstruktor-Prüfung schützt nur die Erzeugung. Ohne `private` bleibt jede spätere Zuweisung ungeprüft."
+id = "92e08bf0-434f-4365-b02b-1b459b0e4afe"

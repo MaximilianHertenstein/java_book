@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welchen Index hat das erste Element einer Liste?"
+prompt.distractors = [
+  "1",
+  "-1",
+  "Es kommt auf die Länge der Liste an."
+]
+answer.answer = "0, genau wie bei Strings beginnt die Indizierung bei 0."
+context = "Listen und Strings werden in Java auf dieselbe Weise indiziert, beginnend bei 0."
+id = "a70be745-808e-4611-a2e8-6b759a9defa7"

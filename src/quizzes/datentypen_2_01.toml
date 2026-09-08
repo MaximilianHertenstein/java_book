@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `String z = 4;`?"
+prompt.distractors = [
+  "Die Zahl wird automatisch in den String `\"4\"` umgewandelt.",
+  "`z` enthält danach den Wert `4` als Integer.",
+  "Der String wird automatisch in die Zahl 4 umgewandelt."
+]
+answer.answer = "Es entsteht ein Fehler, weil der Typ `String` nicht zum Wert `4` passt."
+context = "Bei expliziter Typangabe prüft der Compiler, ob Typ und Wert zusammenpassen."
+id = "930919f5-5b94-4b0c-a51c-08ab3c532587"

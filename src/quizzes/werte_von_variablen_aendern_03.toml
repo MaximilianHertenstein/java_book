@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ändert `x = 5;` nicht den Wert von `y`, wenn vorher `int y = x;` ausgeführt wurde?"
+prompt.distractors = [
+  "Weil `y` automatisch gelöscht wird.",
+  "Weil `x` und `y` sich gegenseitig überschreiben.",
+  "Weil Java `y` nach jeder Änderung von `x` neu berechnet."
+]
+answer.answer = "Weil bei der Zuweisung `int y = x;` der damalige Wert von `x` kopiert wird und Variablen danach unabhängig voneinander sind."
+context = "Nach der Zuweisung sind zwei Variablen unabhängig, auch wenn sie zuvor denselben Wert hatten."
+id = "bd24324b-c5f2-428e-ae79-4c19b812a0c0"

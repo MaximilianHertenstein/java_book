@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit `xs`, wenn `var ys = xs;` ausgeführt wird und danach `ys.set(2, false);`?"
+prompt.distractors = [
+  "`xs` bleibt komplett unverändert, weil `ys` eine eigene Kopie ist.",
+  "Es entsteht ein Fehler, weil zwei Namen nicht auf dieselbe Liste zeigen dürfen.",
+  "Nur `ys` wird geändert, `xs` bleibt beim alten Wert."
+]
+answer.answer = "`xs` ändert sich ebenfalls, weil `xs` und `ys` auf dieselbe veränderliche Liste zeigen."
+context = "Im Gegensatz zu Integern und Strings wird bei Listen mit `ys = xs` keine Kopie erstellt, sondern dieselbe Liste referenziert."
+id = "fecc3058-8762-458b-bf21-5abe9abfda35"

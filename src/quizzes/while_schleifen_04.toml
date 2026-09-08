@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert mit einer Zeile, die nach dem Schleifenkörper nicht mehr in den geschweiften Klammern steht?"
+prompt.distractors = [
+  "Sie wird bei jedem Schleifendurchlauf mit ausgeführt.",
+  "Sie wird komplett ignoriert.",
+  "Sie erzeugt automatisch einen Fehler."
+]
+answer.answer = "Sie gehört nicht mehr zur Schleife und wird erst ausgeführt, nachdem die Schleife komplett beendet ist."
+context = "Zeilen außerhalb der geschweiften Klammern gehören nicht zum Schleifenkörper und werden nur einmal nach der Schleife ausgeführt."
+id = "c343e1a2-d2e9-4084-b3ae-356d7a798305"

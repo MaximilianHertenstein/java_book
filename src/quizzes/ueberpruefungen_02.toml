@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Fehlermeldung in `throw new IllegalArgumentException(\"...\")`?"
+prompt.distractors = [
+  "Sie verhindert den Fehler automatisch.",
+  "Sie ersetzt die Prüfung im Konstruktor.",
+  "Sie wird nur in Dateien geschrieben, nie angezeigt."
+]
+answer.answer = "Sie erklärt beim Abbruch, welche Regel verletzt wurde."
+context = "Ohne Text sähe man nur den Fehlertyp. Mit Text steht da z. B., dass der Preis positiv sein muss."
+id = "c5a77c3c-ea1a-429c-af37-b8011444952a"

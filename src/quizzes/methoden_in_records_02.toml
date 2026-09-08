@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wofür steht `this` in `cheaperArticle`?"
+prompt.distractors = [
+  "Für das übergebene Argument `other`.",
+  "Für den Rückgabetyp der Methode.",
+  "Für den Klassennamen `Article`."
+]
+answer.answer = "Für das Objekt, an dem die Methode aufgerufen wurde."
+context = "Bei `strawberry.cheaperArticle(kiwi)` ist `this` die Erdbeere. Ist sie billiger, wird sie selbst zurückgegeben."
+id = "0e3d4a34-c224-4bd1-86ce-1aa8c0372697"

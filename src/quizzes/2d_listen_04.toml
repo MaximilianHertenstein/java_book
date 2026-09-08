@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum erzeugt `xxs.add(5)` einen Fehler, wenn `xxs` den Typ `ArrayList<ArrayList<Integer>>` hat?"
+prompt.distractors = [
+  "Weil `add` bei 2D-Listen grundsätzlich verboten ist.",
+  "Weil die Zahl 5 zu groß für eine Liste ist.",
+  "Weil `xxs` mit `List.of` erzeugt wurde und unveränderlich ist."
+]
+answer.answer = "Weil `add` ein Element vom Typ `ArrayList<Integer>` erwartet, `5` aber ein `Integer` ist."
+context = "Die Ebenen müssen stimmen: An eine Liste von Listen lässt sich nur eine ganze Liste anhängen."
+id = "f85e72c5-fb73-4718-9384-bd9ac8f55c7a"

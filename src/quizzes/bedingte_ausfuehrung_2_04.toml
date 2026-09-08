@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `isTeenagerShorter(25)` zurück, wenn die Methode `return age >= 13 && age < 20;` enthält?"
+prompt.distractors = [
+  "`true`, weil 25 größer als 13 ist.",
+  "Einen Fehler, weil zwei Bedingungen nicht in einem `return` stehen dürfen.",
+  "`13`, weil das die kleinere Bedingung ist."
+]
+answer.answer = "`false`, weil `age < 20` für `25` nicht erfüllt ist und damit die gesamte `&&`-Verknüpfung `false` ergibt."
+context = "Bei einer `&&`-Verknüpfung müssen beide Teilbedingungen erfüllt sein, damit das Ergebnis `true` ist."
+id = "0640a9c2-c7e7-4778-bbfd-6e26486ec055"

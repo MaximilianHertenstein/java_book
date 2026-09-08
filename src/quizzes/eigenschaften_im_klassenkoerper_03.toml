@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie greift `enoughCents` auf `priceInCents` zu?"
+prompt.distractors = [
+  "Über den Konstruktor mit `this(300)`.",
+  "Über eine globale Variable `priceInCents`.",
+  "Gar nicht, beide Methoden sind unabhängig."
+]
+answer.answer = "Direkt per Methodenaufruf im Körper, wie auf alle anderen Methoden des Records."
+context = "Methoden im Recordkörper können einander ohne Umweg aufrufen."
+id = "780bd4f6-00d4-4965-acb9-b7177807e7cb"

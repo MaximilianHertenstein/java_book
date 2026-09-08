@@ -66,6 +66,72 @@ werden.
 Integer.parseInt("hello")
 ```
 
+## Primitive Typen und Objekttypen
+
+In Java gibt es neben den primitiven Typen wie `int` und `boolean`
+entsprechende Klassen wie `Integer` und `Boolean`.
+
+```java, java-exec
+Integer c = 5;
+```
+
+| primitiver Typ | Klasse      |
+|:---------------|:------------|
+| `int`          | `Integer`   |
+| `boolean`      | `Boolean`   |
+| `char`         | `Character` |
+| `float`        | `Float`     |
+| `double`       | `Double`    |
+|                | `String`    |
+
+Im Gegensatz zu den primitiven Datentypen können wir auf Objekten
+dieser Klassen Methoden nutzen.
+
+```java, java-exec
+String d = c.toString();
+```
+
+Der Vergleich mit `==` prüft bei primitiven Typen, ob zwei Werte
+inhaltlich gleich sind.
+
+```java, java-exec
+int e = 3;
+int f = 3;
+e == f
+```
+
+Bei Objekten wird mit `==` geprüft, ob es sich um dasselbe Objekt
+handelt.
+
+```java, java-exec
+Integer g = 150;
+Integer h = 150;
+g == h
+```
+
+Objekte können mit der `equals`-Methode auf inhaltliche Gleichheit
+geprüft werden.
+
+```java, java-exec
+g.equals(h)
+```
+
+Primitive Datentypen und die entsprechenden Klassen werden automatisch
+konvertiert.
+
+```java, java-exec
+Integer i = 5;
+int j = i;
+j
+```
+
+Im Gegensatz zu primitiven Typen können Werte von Klassen immer `null`
+sein.
+
+```java, java-exec
+Integer noInt = null;
+```
+
 ## Aufgaben
 
 [Zu den Aufgaben zu diesem Kapitel](./datentypen_aufgaben.md)

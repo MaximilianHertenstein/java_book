@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `super(name, age)` im `Teacher`-Konstruktor?"
+prompt.distractors = [
+  "Es erzeugt ein zusätzliches `Person`-Objekt neben dem Teacher.",
+  "Es kopiert alle Methoden von `Person` in `Teacher`.",
+  "Es prüft, ob `name` und `age` gültig sind."
+]
+answer.answer = "Es ruft den Konstruktor der Oberklasse auf und setzt dadurch `name` und `age`."
+context = "Die abgeleitete Klasse muss die geerbten Eigenschaften über `super` initialisieren."
+id = "5c909802-e1a5-43f7-97a2-214f6b78fe18"

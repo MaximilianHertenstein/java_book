@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was verspricht eine Klasse mit `implements Greetable`?"
+prompt.distractors = [
+  "Dass sie genau eine Methode hat und nie mehr bekommt.",
+  "Dass sie von `Greetable` alle Felder erbt.",
+  "Dass `greet` automatisch aufgerufen wird, sobald ein Objekt entsteht."
+]
+answer.answer = "Dass sie die Methode `greet` ohne Parameter und ohne Rückgabewert implementiert."
+context = "Das Interface schreibt den Methodenkopf vor. Jede implementierende Klasse füllt ihn mit eigenem Verhalten."
+id = "b59ba6e0-8efe-40f2-9c2d-837366aa2ced"

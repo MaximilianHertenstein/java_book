@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum sollte man die spitzen Klammern bei `new Box<>(7)` immer dazuschreiben?"
+prompt.distractors = [
+  "Weil der Code sonst grundsätzlich nicht läuft.",
+  "Weil eckige Klammern in Java verboten sind.",
+  "Weil der Compiler sonst immer `String` annimmt."
+]
+answer.answer = "Damit klar bleibt, dass bewusst ein Typparameter im Spiel ist, auch wenn der Compiler ihn selbst erschließt."
+context = "Der Compiler erkennt den Typ aus den Argumenten. Die Klammern dokumentieren die Absicht."
+id = "e655ce71-53a8-477b-b819-6b5ce9a7e4fb"

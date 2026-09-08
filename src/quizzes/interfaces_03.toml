@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum geht `greetingAlex.firstName()` nicht, obwohl `alex.firstName()` ginge?"
+prompt.distractors = [
+  "Weil `firstName` nach der Zuweisung gelöscht wird.",
+  "Weil `Greetable`-Referenzen grundsätzlich keine Methodenaufrufe erlauben.",
+  "Weil `alex` und `greetingAlex` verschiedene Objekte sind."
+]
+answer.answer = "Weil über eine `Greetable`-Referenz nur die Interface-Methoden sichtbar sind."
+context = "Der Typ der Referenz bestimmt, was aufrufbar ist. `greet` geht, `firstName` nicht."
+id = "df52e54c-e008-4875-babc-fdc9f7fb85f0"

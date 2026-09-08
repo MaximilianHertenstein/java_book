@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu schützt man einen Konstruktor mit `private`?"
+prompt.distractors = [
+  "Damit die Klasse schneller geladen wird.",
+  "Damit niemand mehr Methoden der Klasse aufrufen kann.",
+  "Damit Unterklassen automatisch entstehen."
+]
+answer.answer = "Damit nur bestimmte, geprüfte Wege zur Objekterzeugung übrig bleiben."
+context = "`private` steuert wie bei Feldern und Methoden, was von außen nutzbar ist – hier die Erzeugung selbst."
+id = "a5be67f2-a4e7-45c3-9e08-521aacfb66f7"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist eine `IllegalArgumentException` in Java?"
+prompt.distractors = [
+  "Ein Schlüsselwort, das Prüfungen automatisch erzeugt.",
+  "Ein Kommentar, der vor ungültigen Werten warnt.",
+  "Ein Rückgabewert für ungültige Argumente."
+]
+answer.answer = "Ein Fehlerobjekt, das mit `throw` geworfen wird, um ungültige Aufrufe abzubrechen."
+context = "Fehler sind Klassen. Mit `new` erzeugt und mit `throw` geworfen, melden sie Regelverstöße."
+id = "5622ade5-417e-467f-a64b-2c1f4231594f"

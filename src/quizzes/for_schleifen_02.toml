@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Bis zu welcher Zahl zählt `for (int i = 3; i < 8; i = i + 1)` tatsächlich?"
+prompt.distractors = [
+  "Bis 8.",
+  "Bis 9.",
+  "Bis 3."
+]
+answer.answer = "Bis 7, weil die Variable beim letzten Durchlauf immer eins kleiner als die Grenze in der Bedingung ist."
+context = "Mit `i < 8` werden die Werte 3, 4, 5, 6, 7 durchlaufen - die 8 selbst wird nicht mehr erreicht."
+id = "78cff820-8dba-4b1c-80b4-29e292f228ad"

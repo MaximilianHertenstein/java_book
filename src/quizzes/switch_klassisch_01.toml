@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient `break` am Ende eines klassischen `case`-Zweigs?"
+prompt.distractors = [
+  "Es beendet das ganze Programm.",
+  "Es springt zurück zum `switch` und prüft den nächsten `case`.",
+  "Es gibt den Wert des `case` automatisch zurück."
+]
+answer.answer = "Es beendet das `switch`, sodass kein weiterer `case` mehr ausgeführt wird."
+context = "Ohne `break` läuft die Ausführung im nächsten `case` weiter (Fall-through)."
+id = "15b2cf96-f388-4425-ab88-947a82a8490b"

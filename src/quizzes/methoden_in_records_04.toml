@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum braucht `banana.enoughMoney(4)` trotzdem einen `Article`, obwohl kein Parameter übergeben wird?"
+prompt.distractors = [
+  "Es braucht keinen, der Aufruf funktioniert auch ohne Objekt.",
+  "Weil `myMoney` heimlich ein Artikel ist.",
+  "Weil jede Methode mindestens zwei Argumente braucht."
+]
+answer.answer = "Weil die Methode an einem Objekt aufgerufen wird und dessen Komponenten im Körper verwendet."
+context = "Das Objekt vor dem Punkt ersetzt den `Article`-Parameter der freien Variante."
+id = "4d95ad23-8073-4916-8888-73eee6b8e954"

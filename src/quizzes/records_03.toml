@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `==` und `equals` bei Records?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide vergleichen die Inhalte.",
+  "`==` vergleicht die Inhalte, `equals` die Referenzen.",
+  "Beide erzeugen grundsätzlich einen Fehler bei Records."
+]
+answer.answer = "`==` vergleicht nur, ob es dasselbe Objekt ist. `equals` vergleicht die Inhalte."
+context = "Zwei getrennt erzeugte Records mit gleichen Werten sind per `equals` gleich, per `==` nicht."
+id = "d3f09cbb-188d-464c-95fc-70cc91482a80"

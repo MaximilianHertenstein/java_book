@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `this(name, price - discount);` im Rabatt-Konstruktor?"
+prompt.distractors = [
+  "Es wird eine Methode namens `this` aufgerufen.",
+  "Es wird der Rabatt als neues Objekt gespeichert.",
+  "Es wird der kurze Konstruktor mit nur einem Namen aufgerufen."
+]
+answer.answer = "Es ruft den Haupt-Konstruktor mit reduziertem Preis auf."
+context = "Mit `this(...)` delegiert ein Konstruktor an einen anderen. Der Aufruf muss an erster Stelle stehen."
+id = "fe179796-98cc-4f37-9da2-638d9d7642e3"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was prüft `setPrice`, bevor es den Wert übernimmt?"
+prompt.distractors = [
+  "Ob der neue Preis größer als der alte ist.",
+  "Ob der Name zum Preis passt.",
+  "Ob die Methode schon einmal aufgerufen wurde."
+]
+answer.answer = "Ob der neue Preis gültig ist. Bei `-2` bricht der Aufruf ab, bei `3` gelingt er."
+context = "Der Setter ist die einzige Stelle zum Ändern. Dort steht die Prüfung genau einmal und gilt immer."
+id = "54a6d3ac-3827-49a4-86b9-2afd6542bac5"

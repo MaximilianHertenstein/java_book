@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum darf `getCount` statisch sein, obwohl es `count` liest?"
+prompt.distractors = [
+  "Weil statische Methoden alles dürfen.",
+  "Weil `count` in Wahrheit gar nicht statisch ist.",
+  "Weil `getCount` nie aufgerufen wird."
+]
+answer.answer = "Weil `count` selbst statisch ist. Auf statische Eigenschaften darf auch statischer Code zugreifen."
+context = "Statisch passt zu statisch: `Student.getCount()` liest den Klassenzähler ohne Objekt."
+id = "da4c6a35-1b7a-44ac-888c-eafcd46d5943"

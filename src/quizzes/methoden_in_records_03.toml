@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gibt `strawberry.cheaperArticle(kiwi)` aus dem Kapitel zurück?"
+prompt.distractors = [
+  "Die Kiwi, weil sie teurer ist.",
+  "`true`, weil die Erdbeere billiger ist.",
+  "Einen Fehler, weil man Objekte nicht vergleichen kann."
+]
+answer.answer = "Die Erdbeere, weil 2 kleiner als 4 ist und deshalb `this` zurückgegeben wird."
+context = "Die Methode vergleicht die Preise und gibt den billigeren der beiden Artikel zurück."
+id = "d44f8b3a-8cf7-4453-92f3-db1c674ab373"

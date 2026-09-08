@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `new Article(\"Banane\", -2)`, wenn der Konstruktor negative Preise ablehnt?"
+prompt.distractors = [
+  "Es wird ein Artikel mit Preis 0 erzeugt.",
+  "Der Preis wird automatisch positiv gemacht.",
+  "Es wird ein Artikel erzeugt und der Fehler nur protokolliert."
+]
+answer.answer = "Die Erzeugung bricht mit einer `IllegalArgumentException` ab. Es entsteht kein Objekt."
+context = "Wer im Konstruktor prüft und bei Verstoß wirft, verhindert ungültige Objekte von Anfang an."
+id = "898f03a7-14e2-41de-8726-67f307c448ee"

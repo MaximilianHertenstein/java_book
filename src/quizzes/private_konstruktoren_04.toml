@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Gilt `private` auch für den `this(...)`-Aufruf im Rabatt-Konstruktor?"
+prompt.distractors = [
+  "Nein, von außen ist deshalb trotzdem alles nutzbar.",
+  "Ja, deshalb scheitert auch der Aufruf von innen.",
+  "Der `this`-Aufruf umgeht alle Prüfungen des Haupt-Konstruktors."
+]
+answer.answer = "Nein, innerhalb der Klasse sind alle Konstruktoren nutzbar. `private` wirkt nur nach außen."
+context = "Der Rabatt-Konstruktor ruft innen ganz normal den privaten Haupt-Konstruktor auf."
+id = "299ba158-a600-453f-a09c-808113161407"

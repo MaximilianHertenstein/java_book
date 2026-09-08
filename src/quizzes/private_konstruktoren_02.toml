@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet ein privater Haupt-Konstruktor wie bei `Article2`?"
+prompt.distractors = [
+  "Es lassen sich gar keine Objekte mehr erzeugen.",
+  "Der Reihe nach werden alle Konstruktoren automatisch privat.",
+  "Private Haupt-Konstruktoren sind verboten und erzeugen immer einen Fehler."
+]
+answer.answer = "Objekte entstehen nur noch über die übrigen, öffentlichen Konstruktoren."
+context = "Bei `Article2` geht das nur noch über die Rabatt-Variante. Der direkte Weg mit zwei Argumenten ist versperrt."
+id = "36252555-0aa9-47ba-b488-c5f8b4249dec"
