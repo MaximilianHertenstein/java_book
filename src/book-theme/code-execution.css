@@ -1,37 +1,59 @@
-/* Ausführbare Java-Blöcke (Jupyter, Java 25): Zelle wie mdBook-Codeblock
-   (Hintergrund = hljs-Theme), nur mit Run-Button bei Hover. */
+/* Ausführbare Java-Blöcke (Jupyter, Java 25): Optik wie Python-Buch (runner.js/additional.css).
+   Zelle = Karte (var(--bg)), Editor = Innen-Box (hljs-Theme), Ausgabe = .py-output-Kante. */
 
-/* --- Zelle: Hintergrund je hljs-Theme (highlight/tomorrow-night/ayu) ------- */
-.thebelab-cell {
-  position: relative;
-  margin: 1em 0;
-  padding: 0;
-  border: none;
-  border-radius: 4px;
-  overflow: hidden;
-  background: #f6f7f6;
-  color: #000;
+:root {
+  --py-accent: #2e8b40;
+  --py-info: #008cba;
+  --py-error: #c0392b;
+  --py-radius: 8px;
+  --py-output-bg: hsl(197, 37%, 96%); /* Pythons Hellblau, fix wie dessen Editor-Innenleben */
+  --py-output-fg: #1f2328;
 }
 
-:is(html.coal, html.navy) .thebelab-cell {
-  background: #1d1f21;
+/* --- Zelle: wie `py-editor .py-editor-box` -------------------------------- */
+.thebelab-cell {
+  position: relative;
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--table-border-color);
+  border-radius: 10px;
+  background: var(--bg);
+  overflow: hidden;
+  color: var(--fg);
+}
+
+/* --- Editor: wie `.py-editor-input` (innen), Farben je hljs-Theme ----------
+   (relativ: Anker für die Button-Leiste, exakt wie mdBooks `pre`) */
+.thebelab-input {
+  position: relative;
+}
+
+.thebelab-input .CodeMirror {
+  height: auto !important;
+  padding: 1rem; /* wie `pre > code` */
+  border: 1px solid var(--table-border-color);
+  border-bottom: none;
+  border-radius: var(--py-radius) var(--py-radius) 0 0;
+  background: #f6f7f6 !important;
+  color: #000;
+  font-family: var(--mono-font, monospace) !important;
+  font-size: var(--code-font-size, 0.875em) !important;
+  line-height: normal; /* wie `pre` (statt Jupyter-Default 1.307) */
+}
+
+/* CodeMirrors 4px-Innenpadding aushebeln (hat `pre > code` nicht) */
+.thebelab-input .CodeMirror-lines {
+  padding: 0;
+}
+
+:is(html.coal, html.navy) .thebelab-input .CodeMirror {
+  background: #1d1f21 !important;
   color: #c5c8c6;
 }
 
-html.ayu .thebelab-cell {
-  background: #191f26;
+html.ayu .thebelab-input .CodeMirror {
+  background: #191f26 !important;
   color: #e6e1cf;
-}
-
-/* --- Editor: wie `pre > code` -------------------------------------------- */
-.thebelab-input .CodeMirror {
-  height: auto !important;
-  padding: 1rem;
-  background: transparent !important;
-  color: inherit;
-  font-family: var(--mono-font, monospace) !important;
-  font-size: var(--code-font-size, 0.875em) !important;
-  line-height: 1.6 !important;
 }
 
 .thebelab-input :is(.CodeMirror-code, .CodeMirror-line, .CodeMirror-lines, pre.CodeMirror-line, pre.CodeMirror-line-like) {
@@ -56,55 +78,107 @@ html.ayu .cm-s-default :is(.cm-variable, .cm-variable-2) { color: #e6e1cf; }
 :is(html.coal, html.navy, html.ayu) .cm-s-default .cm-operator { color: #8abeb7; }
 :is(html.coal, html.navy, html.ayu) .cm-s-default .cm-type { color: #f0c674; }
 
-/* --- Run-Button: wie mdBooks `pre > .buttons button` (nötig: mdBook-Selektor
-   greift hier nicht, Zelle liegt nicht unter `pre > .buttons`) -------------- */
-.thebelab-cell .thebelab-button {
+/* --- Buttons: mdBooks `pre > .buttons`-Regeln 1:1 auf die Zelle gespiegelt ---
+   (Selektoren angepasst, Werte exakt; Run grün wie `.py-play-btn` im Python-Buch) */
+.thebelab-cell .buttons {
   position: absolute;
-  top: 2px;
-  right: 0;
   z-index: 100;
-  margin: 0 5px;
-  padding: 2px 3px 0 4px;
-  font-size: 23px;
-  line-height: 1;
+  right: 0;
+  top: 2px;
+  margin: 0;
+  padding: 2px 0;
+  color: var(--sidebar-fg);
   cursor: pointer;
-  border: 1px solid var(--icons);
-  border-radius: 4px;
-  background-color: var(--theme-popup-bg);
-  color: var(--icons);
   visibility: hidden;
   opacity: 0;
+  transition: visibility 0.1s linear, opacity 0.1s linear;
 }
 
-.thebelab-cell:hover .thebelab-run-button {
+.thebelab-cell:hover .buttons {
   visibility: visible;
   opacity: 1;
 }
 
-.thebelab-cell .thebelab-button:hover {
+.thebelab-cell .buttons :hover {
   color: var(--sidebar-active);
   border-color: var(--icons-hover);
   background-color: var(--theme-hover);
+}
+
+.thebelab-cell .buttons button {
+  cursor: inherit;
+  margin: 0 5px;
+  padding: 2px 3px 0 4px;
+  font-size: 23px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: var(--icons);
+  background-color: var(--theme-popup-bg);
+  transition: 100ms;
+  transition-property: color, border-color, background-color;
+  color: var(--icons);
+}
+
+.thebelab-cell .buttons button.thebelab-run-button {
+  color: var(--py-accent);
+}
+
+.thebelab-cell .buttons button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.thebelab-cell .buttons button:focus-visible {
+  outline: 2px solid var(--sidebar-active);
+  outline-offset: 2px;
+}
+
+.thebelab-cell .buttons button.clip-button {
+  padding: 2px 4px 0 6px;
+}
+
+.thebelab-cell .buttons button.clip-button::before {
+  /* clipboard image from octicons (https://github.com/primer/octicons/tree/v2.0.0) MIT license */
+  content: url('data:image/svg+xml,<svg width="21" height="20" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" aria-label="Copy to clipboard"><path d="M18 20h2v3c0 1-1 2-2 2H2c-.998 0-2-1-2-2V5c0-.911.755-1.667 1.667-1.667h5A3.323 3.323 0 0 1 10 0a3.323 3.323 0 0 1 3.333 3.333h5C19.245 3.333 20 4.09 20 5v8.333h-2V9H2v14h16v-3zM3 7h14c0-.911-.793-1.667-1.75-1.667H13.5c-.957 0-1.75-.755-1.75-1.666C11.75 2.755 10.957 2 10 2s-1.75.755-1.75 1.667c0 .911-.793 1.666-1.75 1.666H4.75C3.793 5.333 3 6.09 3 7z"/><path d="M4 19h6v2H4zM12 11H4v2h8zM4 17h4v-2H4zM15 15v-3l-4.5 4.5L15 21v-3l8.027-.032L23 15z"/></svg>');
+  filter: var(--copy-button-filter);
+}
+
+.thebelab-cell .buttons button.clip-button:hover::before {
+  filter: var(--copy-button-filter-hover);
+}
+
+@media (pointer: coarse) {
+  .thebelab-cell .buttons button {
+    /* On mobile, make it easier to tap buttons. */
+    padding: 0.3rem 1rem;
+  }
 }
 
 .thebelab-cell :is(.thebelab-restart-button, .thebelab-restartall-button) {
   display: none !important;
 }
 
-/* --- Ausgabe: wie mdBooks `pre > .result` --------------------------------- */
+/* --- Ausgabe: leicht blau unterlegt, eckig ---------------------------------- */
 .thebelab-cell :is(.jp-OutputArea, .jp-OutputArea-output, .jp-OutputArea-child) {
   background: transparent !important;
 }
 
 .thebelab-cell .jp-OutputArea-output {
   margin: 0;
-  padding: 0 1rem 1rem;
-  color: inherit;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--py-info);
+  border-radius: 0;
+  background: var(--py-output-bg);
+  color: var(--py-output-fg);
+  color: var(--fg);
   font-family: var(--mono-font, monospace);
   font-size: var(--code-font-size, 0.875em);
   line-height: 1.6;
   white-space: pre-wrap;
-  overflow-x: auto;
+  overflow-wrap: anywhere;
+  overflow: auto;
+  max-height: 24rem;
 }
 
 .thebelab-cell .jp-OutputArea-output pre {
@@ -117,8 +191,12 @@ html.ayu .cm-s-default :is(.cm-variable, .cm-variable-2) { color: #e6e1cf; }
   white-space: pre-wrap;
 }
 
+.thebelab-cell :is(.jp-OutputArea-stderr, .jp-OutputArea-output[data-mime-type="application/vnd.jupyter.stderr"]) {
+  border-left-color: var(--py-error);
+}
+
 .thebelab-cell :is(.jp-OutputArea-stderr, .jp-OutputArea-output[data-mime-type="application/vnd.jupyter.stderr"]) pre {
-  color: #e53e3e;
+  color: var(--py-error);
 }
 
 /* --- Menüleisten-Button: deaktiviert = Start läuft (Rest via `.icon-button`) */
@@ -128,9 +206,31 @@ html.ayu .cm-s-default :is(.cm-variable, .cm-variable-2) { color: #e6e1cf; }
 .thebe-kernel-status {
   margin: 1em 0 0.5em;
   padding: 0.4em 0.8em;
-  border-radius: 4px;
+  border-radius: var(--py-radius);
   background: var(--quote-bg, #f6f7f6);
-  border-left: 3px solid #3182ce;
+  border-left: 3px solid var(--py-info);
   font-size: var(--code-font-size, 0.875em);
 }
-.thebe-kernel-status-error { border-left-color: #e53e3e; }
+.thebe-kernel-status-error { border-left-color: var(--py-error); }
+
+@media print {
+  .thebelab-cell .thebelab-button {
+    display: none;
+  }
+
+  .thebelab-cell .jp-OutputArea-output {
+    max-height: none;
+  }
+}
+
+/* --- Thebe-Defaults aushebeln (Thebe lädt sein CSS zur Laufzeit nach,
+   daher höhere Spezifität als Thebes `.thebelab-cell:focus-within` und
+   `.jp-OutputArea > :first-child`) ------------------------------------------ */
+div.thebelab-cell:focus-within {
+  border-color: var(--table-border-color);
+}
+
+.thebelab-cell .jp-OutputArea > :first-child {
+  padding-top: 0;
+  border-top: none;
+}

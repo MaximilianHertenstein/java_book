@@ -37,8 +37,42 @@
   };
 
   // ponytail: kein MutationObserver – bootstrap() rendert synchron; Nachzügler via Reload.
-  const styleRuns = () =>
-    document.querySelectorAll('.thebelab-run-button').forEach((b) => { b.innerHTML = '▶'; });
+  // Leiste wie mdBooks `pre > .buttons`: Run (fa-play, grün wie Python) + Copy nebeneinander.
+  const styleCells = () =>
+    document.querySelectorAll('.thebelab-cell').forEach((cell) => {
+      let bar = cell.querySelector('.buttons');
+      if (!bar) {
+        bar = document.createElement('div');
+        bar.className = 'buttons';
+        const run = cell.querySelector('.thebelab-run-button');
+        if (run) bar.appendChild(run);
+        (cell.querySelector('.thebelab-input') ?? cell).prepend(bar);
+      }
+      const run = bar.querySelector('.thebelab-run-button');
+      if (run) run.innerHTML = document.getElementById('fa-play')?.innerHTML ?? '▶';
+      if (!bar.querySelector('.clip-button')) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'clip-button';
+        btn.title = 'Copy to clipboard';
+        btn.setAttribute('aria-label', btn.title);
+        btn.addEventListener('click', () => {
+          const code = cell.querySelector('.CodeMirror-code')?.innerText ?? '';
+          if (navigator.clipboard?.writeText) navigator.clipboard.writeText(code).catch(() => fallbackCopy(code));
+          else fallbackCopy(code);
+        });
+        bar.appendChild(btn);
+      }
+    });
+
+  // ponytail: execCommand-Fallback für nicht-sichere Kontexte; weg damit, sobald überall https.
+  const fallbackCopy = (code) => {
+    const ta = Object.assign(document.createElement('textarea'), { value: code });
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch { /* ignorieren */ }
+    ta.remove();
+  };
 
   function activate() {
     if (started) return;
@@ -62,7 +96,7 @@
         kernelOptions: { name: 'java' },
         codeMirrorConfig: { mode: 'text/x-java' },
       });
-      styleRuns();
+      styleCells();
     } catch (e) { fail(`✗ Thebe-Fehler: ${e?.message ?? e}`); }
   }
 
