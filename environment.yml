@@ -1,7 +1,6 @@
 # Binder-Umgebung für die Jupyter-Blöcke (Thebe + jjava-Kernel, Java 25).
 # Wird von mybinder.org aus diesem Repo gebaut (environment.yml im Repo-Root).
-# Der Kernel "java" wird zusätzlich in postBuild installiert (Garantie, auch
-# wenn sich das pip-Paket ändert).
+# Der Kernel "java" kommt aus postBuild (jjava-kernelspec.zip) – kein Python-Paket nötig.
 name: java_book_binder
 channels:
   - conda-forge
@@ -9,8 +8,5 @@ dependencies:
   # Java 25 (LTS): für Records, Sealed Classes, Pattern Matching und
   # java.lang.IO (IO.println / IO.readln).
   - openjdk=25
-  - pip
-  - pip:
-    # jjava gibt es nur als Pre-Release -> Version pinnen (sonst findet pip
-    # keine passende Distribution).
-    - jjava==1.0a8
+  # Entpackt den Kernelspec in postBuild (ohne Python).
+  - unzip
