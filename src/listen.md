@@ -59,6 +59,7 @@ List<Boolean> xs = List.of(true, false, true);
 
 ![variable_xs](variable_xs.svg)
 ```java, java-exec
+import java.util.ArrayList;
 var longer = new ArrayList<>(xs);
 longer.add(false);
 xs = longer;

@@ -29,7 +29,7 @@ Auf der linken Seite des *Zuweisungsoperators* (`=`) steht zuerst der
 ein *Ausdruck*. Der *Wert* des *Ausdrucks* muss zu dem angegebenen *Typ*
 passen.
 
-## Typerschließung mit `var`
+## Typinferenz mit `var`
 
 Statt den *Typ* hinzuschreiben, können wir ihn mit dem Schlüsselwort
 `var` vom Anfangswert erschließen lassen. Das nennt man *Inferenz*.

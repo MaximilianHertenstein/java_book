@@ -17,6 +17,10 @@ greetBavarian("Grace")
 
 ![funktionsaufruf_strings_grafik_grace](funktionsaufruf_strings_grafik_grace.svg)
 
+Da die Methode noch nicht definiert ist, meldet die Umgebung beim
+Ausführen einen Fehler. Aus den beiden Aufrufen lesen wir trotzdem ab,
+wie die Methode aussehen muss.
+
 Beim Lesen der beiden Methodenaufrufe wird deutlich, dass der Methode
 immer genau ein *String* als *Argument* übergeben wird. Sie muss also
 einen *Parameter* mit dem Typ *String* (`String`) haben. Wir sehen auch,
