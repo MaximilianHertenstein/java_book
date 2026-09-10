@@ -40,6 +40,36 @@ Utils.cube(3)
 `Integer.parseInt`, `List.of` und `IO.println`: Auch das sind
 *statische Methoden* von *Klassen*.
 
+## Private Methoden
+
+Die Methode `square` wird nur innerhalb der Klasse `Utils` gebraucht,
+nämlich von `cube`. Mit `private` kann die Verwendung außerhalb der
+Klasse verboten werden.
+
+```java, java-exec
+class Utils {
+    static int cube(int x) {
+        return square(x) * x;
+    }
+    private static int square(int x) {
+        return x * x;
+    }
+}
+```
+
+```java, java-exec
+Utils.cube(3)
+```
+
+Von außen bleibt nur nutzbar, was nicht `private` ist.
+
+```java, java-exec
+Utils.square(3)
+```
+
+Die Fehlermeldung sagt aus, dass `square` außerhalb von `Utils` nicht
+verwendet werden darf.
+
 Eigenschaften, Objekte und Konstruktoren kommen erst in den folgenden
 Kapiteln dazu.
 

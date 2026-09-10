@@ -15,3 +15,7 @@
 - Spätere Stellen bauen darauf auf: `src/datentypen_2.md` (allgemein
   primitiv vs. Objekt) und `src/nullwerte.md` (`NullPointerException`
   bei `equals` auf `null`).
+
+
+- statische methoden überarbeiten
+- private vor records für statische methoden

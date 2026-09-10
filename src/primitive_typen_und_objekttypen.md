@@ -27,6 +27,26 @@ Integer c = 5;
 String d = c.toString();
 ```
 
+## Nicht alle Werte sind Objekte
+
+Im Gegensatz zu manchen anderen Sprachen sind in Java nicht alle Werte
+Objekte. Die einfachen Typen (`int`, `char`, `boolean`, `double`) kennen
+keine Punktnotation. `String`, `List` und `Record` dagegen schon, wie
+man an ihren Methoden sieht.
+
+```java, java-exec
+"hello".length()
+```
+```java, java-exec
+List.of(1, 3, 5).size()
+```
+```java, java-exec
+(int) 'a'
+```
+```java, java-exec
+Integer.signum(-3)
+```
+
 Der Vergleich mit `==` prüft bei primitiven Typen, ob zwei Werte
 inhaltlich gleich sind.
 

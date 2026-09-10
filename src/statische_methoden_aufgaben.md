@@ -38,7 +38,7 @@ Utils.square(4)
 
 ### 3. Ergänze die Lücke
 
-Ergänze die Lücke, sodass die Methode ohne Objekt aufrufbar ist.
+Ergänze die Lücke, sodass die Methode über die Klasse aufrufbar ist.
 
 ```java, java-exec
 class Utils {
@@ -60,4 +60,24 @@ class Utils {
     }
 }
 Utils.square(4)
+```
+
+### 5. Prüfe deine Idee
+
+Sage voraus, welcher Aufruf funktioniert und welcher einen Fehler erzeugt, bevor du den Code ausführst.
+
+```java, java-exec
+class Utils {
+    static int cube(int x) {
+        return square(x) * x;
+    }
+    private static int square(int x) {
+        return x * x;
+    }
+}
+Utils.cube(3)
+```
+
+```java, java-exec
+Utils.square(3)
 ```

@@ -43,9 +43,8 @@ sinnvoller, einen Artikel mit **nur einem** Wert darzustellen.
 ## Records
 
 Mit dem Schlüsselwort `record` kann ein neuer Datentyp erstellt werden.
-Da sich die Eigenschaften eines Artikels nachträglich nicht ändern
-müssen, reicht ein *Record*. Eine `class` wäre nur nötig, wenn
-Veränderlichkeit gebraucht würde.
+Die Eigenschaften eines solchen Datentyps können nachträglich nicht
+geändert werden.
 
 ```java, java-exec
 record Article(String name, int price) {
@@ -161,43 +160,22 @@ Article combineArticles(Article firstArticle, Article secondArticle) {
 combineArticles(firstApple, banana)
 ```
 
-## Nicht alle Werte sind Objekte
+## Unveränderliche Eigenschaften
 
-Im Gegensatz zu manchen anderen Sprachen sind in Java nicht alle Werte
-Objekte. Die einfachen Typen (`int`, `char`, `boolean`, `double`) kennen
-keine Punktnotation. `String`, `List` und `Record` dagegen schon, wie
-man an ihren Methoden sieht.
-
-```java, java-exec
-"hello".length()
-```
-```java, java-exec
-List.of(1, 3, 5).size()
-```
-```java, java-exec
-(int) 'a'
-```
-```java, java-exec
-Integer.signum(-3)
-```
-
-## Veränderlich geht nur mit class
-
-*Records* sind unveränderlich: `apple.price = 4;` erzeugt einen Fehler.
-Wer andere Werte will, erzeugt einen neuen *Record*. Erst wenn sich der
-Wert selbst ändern muss, nimmt man eine `class`.
+*Records* sind unveränderlich: Die Eigenschaften eines *Records*
+können nach dem Erzeugen nicht mehr geändert werden. Wer andere Werte
+will, erzeugt einen neuen *Record*.
 
 ```java, java-exec
-class CartPosition {
-    int amount;
-}
-var pos = new CartPosition();
-pos.amount = 3;
-pos.amount
+var apple = new Article("Apfel", 3);
 ```
 
-Als Faustregel: `record`, solange nichts geändert werden muss. `class`
-nur, wenn Mutability nötig ist.
+```java, java-exec
+apple.price = 4;
+```
+
+Die Fehlermeldung sagt aus, dass die Eigenschaft `price` nicht neu
+gesetzt werden kann.
 
 ## Aufgaben
 
