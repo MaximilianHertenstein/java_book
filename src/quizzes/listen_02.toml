@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Wie fügt man einer mit `List.of` erzeugten Liste ein neues Element hinzu?"
+prompt.prompt = "Welchen Index hat das erste Element einer Liste?"
 prompt.distractors = [
-  "Mit `xs.add(Element)` direkt auf der Liste.",
-  "Man kann solche Listen nur bei der Erstellung befüllen.",
-  "Mit `xs + Element`."
+  "1",
+  "-1",
+  "Es kommt auf die Länge der Liste an."
 ]
-answer.answer = "Indem man die Variable mit einer neuen Liste überschreibt, z. B. über eine `ArrayList`-Kopie mit `add`."
-context = "Mit `List.of` erzeugte Listen lassen sich nicht verändern. Erweitern geht nur, indem man sie durch eine neue Liste ersetzt."
-id = "10e793e1-0c3d-4010-8710-4c83d5c62a1b"
+answer.answer = "0, genau wie bei Strings beginnt die Indizierung bei 0."
+context = "Listen und Strings werden in Java auf dieselbe Weise indiziert, beginnend bei 0."
+id = "a70be745-808e-4611-a2e8-6b759a9defa7"
