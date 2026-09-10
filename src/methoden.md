@@ -59,7 +59,7 @@ mit *3* zurück. Wenn z. B. der *Input* die Zahl *4* ist, kann man den
 Funktionsterm einsetzt. Das Ergebnis ist dann
 $$g(4) = 3 \cdot 4 = 12$$
 
-<img src="funktionsaufruf_g_4.svg" style="width: 50%; background-color: white;" alt="functionmachine" />
+<img src="funktionsaufruf_g_4.svg" style="width: 50%;" alt="functionmachine" />
 
 ## Methoden definieren und aufrufen
 
@@ -73,7 +73,7 @@ int yardToFeet(int lengthInYard) {
 }
 ```
 
-<img src="skizze_syntax_funktionen.svg" style="width: 80%; background-color: white; display: block; margin: 0 auto;" alt="functionmachine" />
+<img src="skizze_syntax_funktionen.svg" style="width: 80%;" alt="functionmachine" />
 
 Anschließend kann sie folgendermaßen im Code aufgerufen werden:
 

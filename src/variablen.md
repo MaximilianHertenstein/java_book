@@ -36,9 +36,7 @@ nutzen.
 Man kann sich eine *Variable* als Box mit einem Namen und einem Inhalt
 vorstellen.
 
-<div align="center">
 <img src="variable_box.svg" alt="variable_box" style="width: 50%;">
-</div>
 
 Eine Variable wird mit einem *Zuweisungs-Statement* *initialisiert*
 (erstellt). Dabei brauchen wir `var` oder einen *Typ* (mehr dazu im

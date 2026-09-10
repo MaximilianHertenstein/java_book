@@ -2,9 +2,8 @@
 
 ## Grundlagen
 
-Strings bestehen aus einzelnen Zeichen. Ein einzelnes Zeichen hat den
-*Typ* `char` und steht in einfachen Anführungszeichen (im Gegensatz zu
-*Strings* in doppelten). Mit einer `for`-Schleife können wir die
+Strings bestehen aus einzelnen Zeichen vom *Typ* `char` (siehe
+letztes Kapitel). Mit einer `for`-Schleife können wir die
 Zeichen eines *Strings* nacheinander durchlaufen. Dafür macht
 `toCharArray()` aus dem *String* ein Zeichen-Array, das die Schleife
 Zeichen für Zeichen durchläuft.

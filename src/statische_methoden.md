@@ -1,128 +1,47 @@
-# Statische Methoden und Eigenschaften
+# Statische Methoden
 
-## Statische Methoden
+## Motivation
 
-Mit dem folgenden Code wird eine Methode definiert, die das Quadrat
-einer Zahl berechnet.
+Aufrufe wie `Integer.parseInt("052")`, `List.of(1, 2, 3)` oder
+`IO.println("Hello")` kennst du schon: Die *Methode* gehört zu einer
+*Klasse*, deshalb steht vor dem Punkt der Klassenname. In diesem Kapitel
+schreiben wir selbst solche *Methoden*.
 
-```java, java-exec
-class Utils {
-    int square(int x) {
-        return x * x;
-    }
-}
-```
+## Klassen als Container
 
-Um diese aufzurufen, müssen wir zunächst ein Objekt der Klasse `Utils`
-erzeugen.
-
-```java, java-exec
-var utils = new Utils();
-utils.square(3)
-```
-
-Die Methode verwendet keine Eigenschaften. Deshalb können wir sie auch
-als statische Methode deklarieren. Dazu schreiben wir das Schlüsselwort
-`static` an den Anfang der Methodendefinition.
+Mit `class` fassen wir *Methoden* zusammen, die zusammengehören. Eine
+*Klasse* ist hier erst einmal nur ein Container für *Methoden*.
 
 ```java, java-exec
 class Utils {
     static int square(int x) {
         return x * x;
     }
+    static int cube(int x) {
+        return x * x * x;
+    }
 }
 ```
 
-Statische Methoden werden nicht auf einem Objekt aufgerufen, sondern
-auf der Klasse selbst.
+Das Schlüsselwort `static` drückt aus, dass die *Methode* zur *Klasse*
+als Ganzes gehört. Sie wird deshalb nicht allein, sondern mit dem
+Klassennamen aufgerufen.
 
 ```java, java-exec
 Utils.square(3)
 ```
 
-## Statische Eigenschaften
-
-Genauso können wir *statische* Eigenschaften definieren, die nicht zu
-den einzelnen Objekten, sondern der gesamten Klasse gehören. Im
-folgenden Beispiel wird eine *statische* Eigenschaft `count` definiert.
-Diese wird bei jedem Aufruf des Konstruktors der Klasse erhöht.
-
 ```java, java-exec
-class Student {
-    static int count;
-    Student() {
-        count = count + 1;
-    }
-}
+Utils.cube(3)
 ```
 
-```java, java-exec
-IO.println(Student.count);
-```
-```java, java-exec
-var pana = new Student();
-IO.println(Student.count);
-```
-```java, java-exec
-var nino = new Student();
-IO.println(Student.count);
-```
+`Utils.square(3)` bedeutet also: *Rufe die Methode `square` der Klasse
+`Utils` mit dem Argument `3` auf.* Genauso funktionieren
+`Integer.parseInt`, `List.of` und `IO.println`: Auch das sind
+*statische Methoden* von *Klassen*.
 
-Im Gegensatz zu Objekteigenschaften kann auch in statischen Methoden
-auf statische Eigenschaften zugegriffen werden.
-
-```java, java-exec
-class Student {
-    private static int count;
-    Student() {
-        count = count + 1;
-    }
-    static int getCount() {
-        return count;
-    }
-}
-```
-
-```java, java-exec
-var pana = new Student();
-var nino = new Student();
-IO.println(Student.getCount());
-```
-
-Wir können aber auch in nicht-statischen Methoden auf statische
-Eigenschaften zugreifen.
-
-```java, java-exec
-class Student {
-    private static int count;
-    Student() {
-        count = count + 1;
-    }
-    static int getCount() {
-        return count;
-    }
-    void gameOver() {
-        count = count - 1;
-    }
-}
-```
-
-```java, java-exec
-var pana = new Student();
-var nino = new Student();
-IO.println(Student.getCount());
-```
-
-```java, java-exec
-pana.gameOver();
-nino.gameOver();
-IO.println(Student.getCount());
-```
-
-Statische Eigenschaften werden wie statische Methoden im
-Klassendiagramm unterstrichen.
-
-![kd_student](kd_student.png)
+Eigenschaften, Objekte und Konstruktoren kommen erst in den folgenden
+Kapiteln dazu.
 
 ## Aufgaben
 

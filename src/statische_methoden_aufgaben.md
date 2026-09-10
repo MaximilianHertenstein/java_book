@@ -1,22 +1,10 @@
-# Aufgaben: Statische Methoden und Eigenschaften
+# Aufgaben: Statische Methoden
 
 ## Quiz
 
 ### Quiz 1
 
 {{#quiz ./quizzes/statische_methoden_01.toml}}
-
-### Quiz 2
-
-{{#quiz ./quizzes/statische_methoden_02.toml}}
-
-### Quiz 3
-
-{{#quiz ./quizzes/statische_methoden_03.toml}}
-
-### Quiz 4
-
-{{#quiz ./quizzes/statische_methoden_04.toml}}
 
 ## Übungen
 
@@ -63,7 +51,7 @@ Utils.square(4)
 
 ### 4. Fehler finden und reparieren
 
-Der Code erzeugt einen Fehler, weil `square` kein `static` ist und deshalb ein Objekt braucht. Ergänze das Schlüsselwort.
+Der Code erzeugt einen Fehler, weil `square` kein `static` ist. Ergänze das Schlüsselwort.
 
 ```java, java-exec
 class Utils {
@@ -72,40 +60,4 @@ class Utils {
     }
 }
 Utils.square(4)
-```
-
-### 5. Prüfe deine Idee
-
-Sage voraus, was in jeder Zeile ausgegeben wird, bevor du den Code ausführst.
-
-```java, java-exec
-class Student {
-    private static int count;
-    Student() {
-        count = count + 1;
-    }
-    static int getCount() {
-        return count;
-    }
-}
-var pana = new Student();
-IO.println(Student.getCount())
-```
-
-```java, java-exec
-class Student {
-    private static int count;
-    Student() {
-        count = count + 1;
-    }
-    static int getCount() {
-        return count;
-    }
-    void gameOver() {
-        count = count - 1;
-    }
-}
-var pana = new Student();
-pana.gameOver();
-IO.println(Student.getCount())
 ```

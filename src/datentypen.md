@@ -19,11 +19,10 @@ kennenlernen werden, sind in der folgenden Abbildung dargestellt.
 ## Typfehler
 
 *Operationen* sind immer nur für bestimmte Kombinationen von *Typen*
-definiert. Wir haben schon gesehen, dass man einen *String* mit
-`repeat` vervielfachen kann.
+definiert. Z. B. können wir zwei Interger subtrahieren
 
 ```java, java-exec
-"good bye ".repeat(3)
+5 - 3
 ```
 
 Wir können aber **nicht** einen *String* und ein *Integer* subtrahieren.
@@ -49,6 +48,34 @@ umgewandelt.
 Deshalb brauchen wir in Java keine Umwandlung, um eine Zahl in einen
 Text einzubauen.
 
+## int und Integer
+
+Für ganze Zahlen haben wir bisher den *Typ* `int` verwendet. `int`
+ist ein *primitiver Typ*: Die *Werte* sind direkt die Zahlen selbst.
+
+Daneben gibt es die *Klasse* `Integer`. Sie steht für dieselben Zahlen,
+bringt aber zusätzlich Hilfsmethoden mit. Eine davon brauchen wir gleich
+für die Umwandlung von *Strings*.
+
+## Statische Methoden mit Punkt aufrufen
+
+Manche *Methoden* gehören nicht zu einem einzelnen *Wert*, sondern zu
+einer *Klasse* als Ganzes. Solche *Methoden* nennt man *statisch*.
+Man ruft sie mit dem Klassennamen auf, danach kommt ein Punkt und dann
+der Methodenname:
+
+`Klassenname.methodenname(...)`
+
+`Integer.parseInt` ist so eine *statische Methode* der *Klasse*
+`Integer`. Der Aufruf
+
+```java, java-exec
+Integer.parseInt("052")
+```
+
+bedeutet also: *Rufe die Methode `parseInt` der Klasse `Integer` mit
+dem Argument `"052"` auf.*
+
 ## Typumwandlung von String nach Integer
 
 Umgekehrt geht das nicht automatisch: Ein *String*, der eine Zahl
@@ -64,72 +91,6 @@ werden.
 
 ```java, java-exec
 Integer.parseInt("hello")
-```
-
-## Primitive Typen und Objekttypen
-
-In Java gibt es neben den primitiven Typen wie `int` und `boolean`
-entsprechende Klassen wie `Integer` und `Boolean`.
-
-```java, java-exec
-Integer c = 5;
-```
-
-| primitiver Typ | Klasse      |
-|:---------------|:------------|
-| `int`          | `Integer`   |
-| `boolean`      | `Boolean`   |
-| `char`         | `Character` |
-| `float`        | `Float`     |
-| `double`       | `Double`    |
-|                | `String`    |
-
-Im Gegensatz zu den primitiven Datentypen können wir auf Objekten
-dieser Klassen Methoden nutzen.
-
-```java, java-exec
-String d = c.toString();
-```
-
-Der Vergleich mit `==` prüft bei primitiven Typen, ob zwei Werte
-inhaltlich gleich sind.
-
-```java, java-exec
-int e = 3;
-int f = 3;
-e == f
-```
-
-Bei Objekten wird mit `==` geprüft, ob es sich um dasselbe Objekt
-handelt.
-
-```java, java-exec
-Integer g = 150;
-Integer h = 150;
-g == h
-```
-
-Objekte können mit der `equals`-Methode auf inhaltliche Gleichheit
-geprüft werden.
-
-```java, java-exec
-g.equals(h)
-```
-
-Primitive Datentypen und die entsprechenden Klassen werden automatisch
-konvertiert.
-
-```java, java-exec
-Integer i = 5;
-int j = i;
-j
-```
-
-Im Gegensatz zu primitiven Typen können Werte von Klassen immer `null`
-sein.
-
-```java, java-exec
-Integer noInt = null;
 ```
 
 ## Aufgaben

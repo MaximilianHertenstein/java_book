@@ -213,3 +213,10 @@ div.thebelab-cell:focus-within {
   padding-top: 0;
   border-top: none;
 }
+
+/* --- SVGs: weißer Hintergrund + zentriert (lesbar in Dark-Themes) --- */
+img[src$=".svg"] {
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+}
