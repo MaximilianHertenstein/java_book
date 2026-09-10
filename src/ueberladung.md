@@ -1,27 +1,4 @@
-# Datentypen 2
-
-## Explizite Typangabe
-
-In Java ist es oft nicht nötig, den Typ einer Variable anzugeben.
-
-```java, java-exec
-var x = 2;
-```
-
-Es ist aber **möglich**, den Typ einer Variablen beim Initialisieren
-anzugeben. Dafür schreibt man den Typ vor den Namen der Variablen.
-
-```java, java-exec
-int y = 3;
-```
-
-Wenn der Typ nicht zu dem Wert passt, wird eine Fehlermeldung angezeigt.
-
-```java, java-exec
-String z = 4;
-```
-
-## Methoden mit dem gleichen Namen
+# Überladung
 
 Es ist möglich, mehrere Methoden mit denselben Namen zu definieren.
 Die Voraussetzung dafür ist, dass sich die Typen oder die Anzahl der
@@ -75,4 +52,4 @@ Konstruktoren](./weitere_konstruktoren.md)).
 
 ## Aufgaben
 
-[Zu den Aufgaben zu diesem Kapitel](./datentypen_2_aufgaben.md)
+[Zu den Aufgaben zu diesem Kapitel](./ueberladung_aufgaben.md)

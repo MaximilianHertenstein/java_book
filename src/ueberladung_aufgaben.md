@@ -1,14 +1,10 @@
-# Aufgaben: Datentypen 2
+# Aufgaben: Überladung
 
 ## Quiz
 
 ### Quiz 1
 
-{{#quiz ./quizzes/datentypen_2_01.toml}}
-
-### Quiz 2
-
-{{#quiz ./quizzes/datentypen_2_02.toml}}
+{{#quiz ./quizzes/ueberladung_01.toml}}
 
 ## Übungen
 
@@ -26,12 +22,4 @@ String inc(String s) {
     return s + " + 1";
 }
 inc(____)
-```
-
-### 2. Fehler finden und reparieren
-
-Der Code erzeugt einen Fehler, weil Typ und Wert nicht zusammenpassen. Repariere die Zeile.
-
-```java, java-exec
-String z = 4;
 ```
