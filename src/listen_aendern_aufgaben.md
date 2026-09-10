@@ -22,6 +22,10 @@
 
 {{#quiz ./quizzes/listen_aendern_05.toml}}
 
+### Quiz 6
+
+{{#quiz ./quizzes/listen_aendern_06.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
@@ -91,4 +95,17 @@ var xs = new ArrayList<>(List.of(1, 2, 3));
 var ys = xs;
 ys.set(0, 100);
 xs
+```
+
+### 6. Ergänze die Lücke
+
+Ergänze die Lücke, sodass `ys` aus allen Elementen von `xs` und einem zusätzlichen Element `"d"` besteht.
+
+```java, java-exec
+import java.util.ArrayList;
+import java.util.List;
+List<String> xs = List.of("a", "b", "c");
+var ys = new ArrayList<>(xs);
+ys.add(____);
+ys
 ```

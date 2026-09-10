@@ -22,14 +22,13 @@ Auch ein Leerzeichen ist also ein *Character*.
 
 ## Keine Addition von zwei Characters
 
-Es ist **nicht** möglich, zwei *Character* zu addieren.
+Zwei *Character* sollten **nicht** mit `+` verbunden werden.
 
 ```java, java-exec
 'a' + 'b'
 ```
 
-Die Fehlermeldung sagt aus, dass der *Operator* `+` für zwei
-*Character* nicht definiert ist.
+Das Ergebnis ist `195`. So rechnet man mit *Characters* also nicht.
 
 ## Character und String verbinden
 

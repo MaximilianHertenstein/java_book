@@ -18,10 +18,6 @@
 
 {{#quiz ./quizzes/listen_04.toml}}
 
-### Quiz 5
-
-{{#quiz ./quizzes/listen_05.toml}}
-
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
@@ -46,20 +42,7 @@ List<String> xs = List.of("a", "b", "c");
 xs.get(1)
 ```
 
-### 3. Ergänze die Lücke
-
-Ergänze die Lücke, sodass `ys` aus allen Elementen von `xs` und einem zusätzlichen Element `"d"` besteht.
-
-```java, java-exec
-import java.util.ArrayList;
-import java.util.List;
-List<String> xs = List.of("a", "b", "c");
-var ys = new ArrayList<>(xs);
-ys.add(____);
-ys
-```
-
-### 4. Fehler finden und reparieren
+### 3. Fehler finden und reparieren
 
 Der Code erzeugt einen Fehler. Ändere den Index so, dass ein gültiges Element ausgegeben wird.
 
@@ -69,7 +52,7 @@ List<String> xs = List.of("a", "b", "c");
 xs.get(3)
 ```
 
-### 5. Prüfe deine Idee
+### 4. Prüfe deine Idee
 
 Sage voraus, was in jeder Zeile ausgegeben wird, bevor du den Code ausführst.
 
@@ -81,7 +64,7 @@ for (int x : xs) {
 }
 ```
 
-### 6. Ergänze die Lücke
+### 5. Ergänze die Lücke
 
 Ergänze die Lücke, sodass die Methode jedes Element verdoppelt und die neue Liste zurückgibt.
 

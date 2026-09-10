@@ -1,5 +1,10 @@
 # java_book
 
+## Offen
+
+- Das Kapitel `Primitive Typen und Objekttypen`
+  (`src/primitive_typen_und_objekttypen.md`) muss noch überarbeitet werden.
+
 ## Notiz: Erste Erklärung von `equals`
 
 - Erste Stelle im Buch: `src/records.md`, Abschnitt „Arbeiten mit Objekten“

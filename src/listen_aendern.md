@@ -107,6 +107,34 @@ xs.add(7);
 Lesen geht trotzdem: `get` und `size` funktionieren wie gewohnt. Wer
 ändern will, nimmt eine `ArrayList`.
 
+## Elemente hinzufügen
+
+Mit `List.of` erzeugte *Listen* lassen sich nicht verändern. Wenn wir
+trotzdem eine längere *Liste* wollen, ersetzen wir die *Liste* durch
+eine neue *Liste*, die aus der alten *Liste* und dem neuen Element
+besteht.
+
+```java, java-exec
+List<Boolean> xs = List.of(true, false, true);
+```
+
+![variable_xs](variable_xs.svg)
+```java, java-exec
+import java.util.ArrayList;
+var longer = new ArrayList<>(xs);
+```
+
+```java, java-exec
+longer.add(false);
+```
+
+```java, java-exec
+xs = longer;
+xs
+```
+
+![variable_xs_updated](variable_xs_updated.svg)
+
 ## Aufgaben
 
 [Zu den Aufgaben zu diesem Kapitel](./listen_aendern_aufgaben.md)

@@ -17,6 +17,9 @@ getrennt in `List.of(...)` auflisten.
 ```java, java-exec
 import java.util.List;
 List<Boolean> xs = List.of(true, false, true);
+```
+
+```java, java-exec
 xs
 ```
 
@@ -45,28 +48,6 @@ for (boolean x : xs) {
 Hinter `for` steht in runden Klammern der *Typ* und ein Name für das
 aktuelle Element, gefolgt von einem Doppelpunkt und der *Liste*. Bei
 jedem Durchlauf enthält die Variable das nächste Element.
-
-## Elemente hinzufügen
-
-Mit `List.of` erzeugte *Listen* lassen sich nicht verändern. Wenn wir
-trotzdem eine längere *Liste* wollen, ersetzen wir die *Liste* durch
-eine neue *Liste*, die aus der alten *Liste* und dem neuen Element
-besteht.
-
-```java, java-exec
-List<Boolean> xs = List.of(true, false, true);
-```
-
-![variable_xs](variable_xs.svg)
-```java, java-exec
-import java.util.ArrayList;
-var longer = new ArrayList<>(xs);
-longer.add(false);
-xs = longer;
-xs
-```
-
-![variable_xs_updated](variable_xs_updated.svg)
 
 ## Listen als Container
 
@@ -143,6 +124,9 @@ for (int i = 1; i < xs.size() - 1; i = i + 1) {
 ```java, java-exec
 import java.util.ArrayList;
 import java.util.List;
+```
+
+```java, java-exec
 List<Integer> mapTimesTwo(List<Integer> xs) {
     var result = new ArrayList<Integer>();
     for (int x : xs) {

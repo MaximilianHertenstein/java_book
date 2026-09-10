@@ -14,7 +14,7 @@ Schreibe zuerst das Ergebnis auf. Führe dann den Code aus und überprüfe deine
 
 ### 2. Vorhersage → Ausführen
 
-Schreibe zuerst auf, ob du einen Wert oder einen Fehler erwartest. Führe den Code danach aus und erkläre die Fehlermeldung.
+Schreibe zuerst auf, was du erwartest. Führe den Code danach aus. Merke dir: So rechnet man mit *Characters* nicht.
 
 ```java, java-exec
 'a' + 'b'
@@ -22,7 +22,7 @@ Schreibe zuerst auf, ob du einen Wert oder einen Fehler erwartest. Führe den Co
 
 ### 3. Verändere die Eingabe
 
-Ändere nur ein Zeichen, sodass kein Fehler mehr entsteht, sondern der String `"ab"` herauskommt.
+Ändere nur ein Zeichen, sodass der String `"ab"` herauskommt.
 
 ```java, java-exec
 'a' + 'b'

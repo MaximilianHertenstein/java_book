@@ -1,7 +1,6 @@
 # Veränderbare Eigenschaften
 
-Mit Feldern ohne `private` können wir veränderliche Eigenschaften
-definieren.
+Mit einer `class` können wir veränderliche Eigenschaften definieren.
 
 ```java, java-exec
 class Article {
