@@ -3,14 +3,26 @@
 ## Motivation
 
 Aufrufe wie `Integer.parseInt("052")`, `List.of(1, 2, 3)` oder
-`IO.println("Hello")` kennst du schon: Die *Methode* gehört zu einer
-*Klasse*, deshalb steht vor dem Punkt der Klassenname. In diesem Kapitel
+`IO.println("Hello")` kennst du schon: Diese *Methoden* gehört zu einer
+*Klasse*, deshalb steht vor dem Punkt der Klassenname. 
+ Eine
+*Klasse* ist hier erst einmal nur ein Container für *Methoden*.
+
+
+
+In diesem Kapitel
 schreiben wir selbst solche *Methoden*.
 
 ## Klassen als Container
 
-Mit `class` fassen wir *Methoden* zusammen, die zusammengehören. Eine
-*Klasse* ist hier erst einmal nur ein Container für *Methoden*.
+Mit `class` kannst du eine Klasse erstellen. Hinter `class` steht der Name der Klasse.
+Hinter
+```java, java-exec
+class Utils {
+}
+```
+
+In einer Klasse kannst du Methoden definieren. Das geht wie bisher. Man muss an den Anfang das Schlüsselwort `static` schreiben.
 
 ```java, java-exec
 class Utils {
@@ -23,9 +35,7 @@ class Utils {
 }
 ```
 
-Das Schlüsselwort `static` drückt aus, dass die *Methode* zur *Klasse*
-als Ganzes gehört. Sie wird deshalb nicht allein, sondern mit dem
-Klassennamen aufgerufen.
+Diese statischen Methoden werden dann folgendermaßen aufgerufen.
 
 ```java, java-exec
 Utils.square(3)
@@ -42,7 +52,7 @@ Utils.cube(3)
 
 ## Private Methoden
 
-Die Methode `square` wird nur innerhalb der Klasse `Utils` gebraucht,
+Im folgenden Beispiel wird die Methode `square` nur innerhalb der Klasse `Utils` gebraucht,
 nämlich von `cube`. Mit `private` kann die Verwendung außerhalb der
 Klasse verboten werden.
 
@@ -61,7 +71,7 @@ class Utils {
 Utils.cube(3)
 ```
 
-Von außen bleibt nur nutzbar, was nicht `private` ist.
+Private Methoden sind **nicht** außerhalb der Klasse nutzbar.
 
 ```java, java-exec
 Utils.square(3)
@@ -70,8 +80,6 @@ Utils.square(3)
 Die Fehlermeldung sagt aus, dass `square` außerhalb von `Utils` nicht
 verwendet werden darf.
 
-Eigenschaften, Objekte und Konstruktoren kommen erst in den folgenden
-Kapiteln dazu.
 
 ## Aufgaben
 
