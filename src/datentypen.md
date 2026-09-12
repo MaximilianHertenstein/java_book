@@ -19,7 +19,7 @@ kennenlernen werden, sind in der folgenden Abbildung dargestellt.
 ## Typfehler
 
 *Operationen* sind immer nur für bestimmte Kombinationen von *Typen*
-definiert. Z. B. können wir zwei Interger subtrahieren
+definiert. Z. B. können wir zwei Integer subtrahieren
 
 ```java, java-exec
 5 - 3
@@ -28,70 +28,42 @@ definiert. Z. B. können wir zwei Interger subtrahieren
 Wir können aber **nicht** einen *String* und ein *Integer* subtrahieren.
 
 ```java, java-exec
-1 - "2"
+5 - "3"
 ```
 
 Die Fehlermeldung sagt aus, dass der *Operator* `-` nicht definiert ist,
 wenn der linke *Operand* ein *Integer* und der rechte *Operand* ein
 *String* ist.
 
-## Automatische Umwandlung bei Strings
+## Typkonversion
 
-Mit `+` funktioniert das trotzdem: Steht ein *String* links oder rechts,
-wird die andere Seite automatisch in einen *String*
-umgewandelt.
-
-```java, java-exec
-"The value of number is: " + 3
-```
-
-Deshalb brauchen wir in Java keine Umwandlung, um eine Zahl in einen
-Text einzubauen.
-
-## int und Integer
-
-Für ganze Zahlen haben wir bisher den *Typ* `int` verwendet. `int`
-ist ein *primitiver Typ*: Die *Werte* sind direkt die Zahlen selbst.
-
-Daneben gibt es die *Klasse* `Integer`. Sie steht für dieselben Zahlen,
-bringt aber zusätzlich Hilfsmethoden mit. Eine davon brauchen wir gleich
-für die Umwandlung von *Strings*.
-
-## Statische Methoden mit Punkt aufrufen
-
-Manche *Methoden* gehören nicht zu einem einzelnen *Wert*, sondern zu
-einer *Klasse* als Ganzes. Solche *Methoden* nennt man *statisch*.
-Man ruft sie mit dem Klassennamen auf, danach kommt ein Punkt und dann
-der Methodenname:
-
-`Klassenname.methodenname(...)`
-
-`Integer.parseInt` ist so eine *statische Methode* der *Klasse*
-`Integer`. Der Aufruf
+Es kommt häufig vor, dass ein *Wert* einen *Typ* hat, mit dem eine
+gewünschte *Operation* nicht durchgeführt werden kann. Um den *Typ*
+eines *Werts* zu ändern, können die passenden Methoden genutzt werden.
 
 ```java, java-exec
-Integer.parseInt("052")
+Integer.parseInt("3")
 ```
 
-bedeutet also: *Rufe die Methode `parseInt` der Klasse `Integer` mit
-dem Argument `"052"` auf.*
-
-## Typumwandlung von String nach Integer
-
-Umgekehrt geht das nicht automatisch: Ein *String*, der eine Zahl
-darstellt, kann mit `Integer.parseInt` in einen *Integer* umgewandelt
-werden.
+Nach der Umwandlung können wir die Subtraktion durchführen.
 
 ```java, java-exec
-Integer.parseInt("052")
+5 - Integer.parseInt("3")
 ```
 
-Aber natürlich kann nicht jeder *String* zu einem *Integer* konvertiert
-werden.
+Ein *Integer* kann auch in einen *String* umgewandelt werden.
+
+```java, java-exec
+String.valueOf(3)
+```
+
+Fast jeder *Wert* kann in einen *String* umgewandelt werden. Aber
+nicht jeder *String* kann zu einem *Integer* konvertiert werden.
 
 ```java, java-exec
 Integer.parseInt("hello")
 ```
+
 
 ## Aufgaben
 

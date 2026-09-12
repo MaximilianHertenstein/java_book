@@ -1,11 +1,22 @@
 # Primitive Typen und Objekttypen
 
-Bei *Records* hast du *Objekte* schon kennengelernt: Auf `banana`
-rufen wir Komponenten wie `banana.price()` mit Punkt auf, und zwei
-*Artikel* mit gleichem Inhalt vergleichen wir mit `equals`, weil `==`
-bei *Objekten* nur prüft, ob es dasselbe *Objekt* ist. Dasselbe gilt
-allgemein: Neben den *primitiven Typen* gibt es entsprechende *Klassen*,
-deren *Werte* *Objekte* sind.
+Auf einem `String` können wir mit `wert.methodenname(...)` Methoden aufrufen.
+
+```java, java-exec
+var s = "hello";
+```
+```java, java-exec
+s.length()
+```
+```java, java-exec
+s.charAt(0)
+```
+
+Solche Typen nennt man *Klassen*. Die Werte einer Klasse nennt man
+*Objekte*.
+
+Für viele *primitive Typen* gibt es passende *Klassen*,
+deren *Werte* ebenfalls *Objekte* sind.
 
 | primitiver Typ | Klasse      |
 |:---------------|:------------|
@@ -16,8 +27,8 @@ deren *Werte* *Objekte* sind.
 | `double`       | `Double`    |
 |                | `String`    |
 
-Im Gegensatz zu den primitiven *Werten* können wir auf *Objekten*
-dieser Klassen *Methoden* mit Punkt aufrufen, genau wie bei *Records*.
+Auf den *Objekten* dieser Klassen können wir Methoden mit Punkt
+aufrufen.
 
 ```java, java-exec
 Integer c = 5;
@@ -27,28 +38,24 @@ Integer c = 5;
 String d = c.toString();
 ```
 
+Java wandelt primitive Werte und die passenden Klassen bei Bedarf
+automatisch ineinander um.
+
+```java, java-exec
+int converted = c;
+```
+```java, java-exec
+converted
+```
+
 ## Nicht alle Werte sind Objekte
 
-Im Gegensatz zu manchen anderen Sprachen sind in Java nicht alle Werte
-Objekte. Die einfachen Typen (`int`, `char`, `boolean`, `double`) kennen
-keine Punktnotation. `String`, `List` und `Record` dagegen schon, wie
-man an ihren Methoden sieht.
+Java unterscheidet zwischen primitiven Werten und Objekten. Die
+einfachen Typen (`int`, `char`, `boolean`, `double`) haben keine Methoden,
+die mit Punktnotation genutzt werden können.
 
-```java, java-exec
-"hello".length()
-```
-```java, java-exec
-List.of(1, 3, 5).size()
-```
-```java, java-exec
-(int) 'a'
-```
-```java, java-exec
-Integer.signum(-3)
-```
 
-Der Vergleich mit `==` prüft bei primitiven Typen, ob zwei Werte
-inhaltlich gleich sind.
+Mit `==` vergleicht Java bei primitiven Typen die Werte selbst.
 
 ```java, java-exec
 int e = 3;
@@ -56,33 +63,21 @@ int f = 3;
 e == f
 ```
 
-Bei Objekten wird mit `==` geprüft, ob es sich um dasselbe Objekt
-handelt, wie du es schon von *Records* kennst.
+Bei Objekten prüft `==`, ob beide Variablen auf dasselbe Objekt zeigen.
 
 ```java, java-exec
-Integer g = 150;
-Integer h = 150;
+Integer g = 300;
+Integer h = 300;
 g == h
 ```
 
-Objekte können mit der `equals`-Methode auf inhaltliche Gleichheit
-geprüft werden.
+Für den Vergleich des Inhalts gibt es bei Objekten die `equals`-Methode.
 
 ```java, java-exec
 g.equals(h)
 ```
 
-Primitive Datentypen und die entsprechenden Klassen werden automatisch
-konvertiert.
-
-```java, java-exec
-Integer i = 5;
-int j = i;
-j
-```
-
-Im Gegensatz zu primitiven Typen können Werte von Klassen immer `null`
-sein.
+Variablen mit einem Klassentyp können außerdem `null` enthalten.
 
 ```java, java-exec
 Integer noInt = null;

@@ -42,9 +42,9 @@ sinnvoller, einen Artikel mit **nur einem** Wert darzustellen.
 
 ## Records
 
-Mit dem Schlüsselwort `record` kann ein neuer Datentyp erstellt werden.
-Die Eigenschaften eines solchen Datentyps können nachträglich nicht
-geändert werden.
+Mit dem Schlüsselwort `record` kann eine *Klasse* und damit
+ein neuer Datentyp erstellt werden. Die Eigenschaften eines solchen
+Datentyps können nachträglich nicht geändert werden.
 
 ```java, java-exec
 record Article(String name, int price) {
@@ -57,7 +57,7 @@ record Article(String name, int price) {
    Artikel zusammensetzt.
     1. Die erste Komponente eines `Article` ist ein `String` und heißt
        `name`.
-    2. Die zweite Komponente eines `Article` ist ein `Integer` und heißt
+    2. Die zweite Komponente eines `Article` ist ein `int` und heißt
        `price`.
 
 ## Werte von selbst definierten Datentypen erzeugen
@@ -69,8 +69,8 @@ wir die folgende Zeile:
 `Article(String name, int price)`
 
 Dabei handelt es sich fast um einen Methodenkopf ohne Rückgabetyp. Eine
-solche Methode heißt *Konstruktor* und gibt beim Aufruf einen Wert des
-Datentyps zurück. Den Konstruktor müssen wir aber nicht selbst
+solche Methode heißt *Konstruktor* und erzeugt beim Aufruf ein Objekt
+des Datentyps. Den Konstruktor müssen wir aber nicht selbst
 implementieren, er wird bei der Definition des Records erzeugt. Wie jede
 Methode rufen wir diesen auf, indem wir konkrete Werte für die Parameter
 übergeben. Davor steht zusätzlich `new`.
@@ -79,15 +79,15 @@ Methode rufen wir diesen auf, indem wir konkrete Werte für die Parameter
 new Article("Apfel", 3)
 ```
 
-Der Rückgabewert ist ein `Article`, dessen Eigenschaften den übergebenen
-Werten entsprechen. Werte, die zu einem Record gehören, nennt man
-*Objekte* oder *Instanzen* des Records.
+Der Rückgabewert ist ein Objekt der Klasse `Article`, dessen
+Eigenschaften den übergebenen Werten entsprechen. Werte, die zu einem
+Record gehören, nennt man *Objekte* oder *Instanzen* des Records.
 
 ## Arbeiten mit Objekten
 
-Mit Objekten können wir alles machen, was wir mit den Werten von
-vordefinierten Datentypen machen können. Wir können diese in Variablen
-speichern.
+Mit Objekten eines *Records* können wir alles machen, was wir mit den
+Werten von vordefinierten Datentypen machen können. Wir können diese in
+Variablen speichern.
 
 ```java, java-exec
 var firstApple = new Article("Apfel", 3);
@@ -105,8 +105,8 @@ firstApple.equals(secondApple)
 secondApple.equals(banana)
 ```
 
-Vorsicht: Der *Operator* `==` vergleicht bei Objekten nur, ob es
-dasselbe Objekt ist, nicht ob die Inhalte gleich sind.
+Vorsicht: Der *Operator* `==` vergleicht bei Objekten nur, ob es sich um
+dasselbe Objekt handelt, nicht ob die Inhalte gleich sind.
 
 ```java, java-exec
 firstApple == secondApple
@@ -135,7 +135,7 @@ firstApple.name()
 
 Wie Werte mit vordefinierten Datentypen können Objekte Argumente von
 Methoden sein. Damit lässt sich die Methode aus dem Eingangsbeispiel
-vereinfachen. Ein Verwechseln wie oben ist jetzt unmöglich, weil Name
+vereinfachen. Eine Verwechslung wie oben ist jetzt unmöglich, weil Name
 und Preis immer gemeinsam übergeben werden.
 
 ```java, java-exec
@@ -170,12 +170,6 @@ will, erzeugt einen neuen *Record*.
 var apple = new Article("Apfel", 3);
 ```
 
-```java, java-exec
-apple.price = 4;
-```
-
-Die Fehlermeldung sagt aus, dass die Eigenschaft `price` nicht neu
-gesetzt werden kann.
 
 ## Aufgaben
 

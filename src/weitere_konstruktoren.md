@@ -1,7 +1,7 @@
 # Weitere Konstruktoren
 
 Wir haben bereits gesehen, dass in der ersten Zeile der Definition
-eines Records auch ein Konstruktor definiert wird.
+eines Records auch ein Konstruktor definiert wird. Diesem muss für jede Eigenschaft ein Wert übergeben werden.
 
 ```java, java-exec
 record Article(String name, int price) {
@@ -21,7 +21,7 @@ Mit `this(...)` rufen wir darin den ersten Konstruktor auf.
 
 ```java, java-exec
 record Article(String name, int price) {
-    Article(String name) {
+    public Article(String name) {
         this(name, 1);
     }
 }
@@ -46,7 +46,7 @@ steht ein Aufruf eines anderen Konstruktors mit `this(...)`.
 
 ```java, java-exec
 record Article(String name, int price) {
-    Article(String name, int price, int discount) {
+    public Article(String name, int price, int discount) {
         this(name, price - discount);
     }
 }
@@ -64,6 +64,37 @@ Voraussetzungen sind:
 - Jeder weitere Konstruktor muss mit `this(...)` einen anderen
   Konstruktor aufrufen.
 - Es darf keine zwei Konstruktoren mit denselben Parametertypen geben.
+
+Nach dem Aufruf von `this(...)` kann in jedem weiteren Konstruktor
+zusätzlicher Code eingebaut werden. Dieser Code wird ausgeführt, wenn
+das Objekt mit diesem Konstruktor erzeugt wird.
+
+```java, java-exec
+record Article(String name, int price) {
+    public Article(String name) {
+        this(name, 1);
+        IO.println("Ein Artikel mit dem Namen " + name + " wurde erzeugt.");
+    }
+}
+```
+
+Der Konstruktor, der aus dem Recordkopf entsteht, wird automatisch
+definiert. Auch in diesen Konstruktor können wir zusätzlichen Code
+einbauen. Dafür verwenden wir einen kompakten Konstruktor im
+Recordkörper. Das `public` steht dabei, damit der Konstruktor überall
+nutzbar ist.
+
+```java, java-exec
+record Article(String name, int price) {
+    public Article {
+        IO.println("Ein Artikel mit dem Namen " + name + " wurde erzeugt.");
+    }
+}
+```
+
+```java, java-exec
+new Article("Apfel", 3)
+```
 
 ## Aufgaben
 

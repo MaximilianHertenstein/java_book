@@ -37,20 +37,10 @@ Klassenkörper definiert.
 class MutableStudent {
     String name;
     int age;
-    MutableStudent(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
 }
 ```
 
-```java, java-exec
-var pana = new MutableStudent("Pana", 17);
-```
 
-```java, java-exec
-pana.age
-```
 
 ## Konstruktoren definieren
 
@@ -68,6 +58,14 @@ class MutableStudent {
         age = pAge;
     }
 }
+```
+
+```java, java-exec
+var pana = new MutableStudent("Pana", 17);
+```
+
+```java, java-exec
+pana.age
 ```
 
 Zwischen den geschweiften Klammern kann jeder beliebige Java-Code

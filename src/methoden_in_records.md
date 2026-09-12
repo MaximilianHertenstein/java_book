@@ -1,13 +1,13 @@
 # Methoden in Records
 
-Wir haben schon gesehen, dass wir eigene Datentypen definieren können.
+Wir haben schon gesehen, wie wir eigene Klassen definieren können.
 
 ```java, java-exec
 record Article(String name, int price) {
 }
 ```
 
-Und die Werte dieser Datentypen mit Methoden verarbeiten können.
+Und die Objekte dieser Klassen mit Methoden verarbeiten können.
 
 ```java, java-exec
 boolean enoughMoney(Article article, int myMoney) {
@@ -29,7 +29,7 @@ einbauen.
 
 ```java, java-exec
 record Article(String name, int price) {
-    boolean enoughMoney(int myMoney) {
+    public boolean enoughMoney(int myMoney) {
         return price() < myMoney;
     }
 }
@@ -48,9 +48,43 @@ var banana = new Article("Banane", 5);
 banana.enoughMoney(4)
 ```
 
-Methoden, die in einem Record definiert werden, nennt man *Methoden* im
-engeren Sinn: Sie gehören zum Datentyp und werden immer an einem Objekt
-aufgerufen.
+Methoden, die in einem Record definiert werden, gehören zum Datentyp und
+werden an einem Objekt aufgerufen. Mit `public` können wir festlegen,
+dass eine Methode auch außerhalb des Records aufgerufen werden darf.
+
+## Private Methoden
+
+Manchmal wird eine Methode nur innerhalb eines Records gebraucht. Dann
+kann sie mit `private` gekennzeichnet werden. Wie bei privaten statischen
+Methoden, die wir schon kennengelernt haben, kann sie dann außerhalb des
+Records nicht aufgerufen werden.
+
+```java, java-exec
+record Article(String name, int price) {
+    public boolean enoughMoney(int myMoney) {
+        return hasPriceBelow(myMoney);
+    }
+
+    private boolean hasPriceBelow(int limit) {
+        return price() < limit;
+    }
+}
+```
+
+`enoughMoney` darf von außen aufgerufen werden. `hasPriceBelow` darf nur
+von Methoden des Records verwendet werden.
+
+```java, java-exec
+var apple = new Article("Apfel", 3);
+apple.enoughMoney(4)
+```
+
+Dabei wird `hasPriceBelow` innerhalb von `enoughMoney` aufgerufen. Ein
+direkter Aufruf von außen ist nicht möglich:
+
+```java
+apple.hasPriceBelow(4)
+```
 
 ## Zugriff auf das komplette Objekt
 
@@ -59,7 +93,7 @@ werden, mit dem die Methode aufgerufen wurde.
 
 ```java, java-exec
 record Article(String name, int price) {
-    Article cheaperArticle(Article other) {
+    public Article cheaperArticle(Article other) {
         if (price() < other.price()) {
             return this;
         } else {
@@ -75,6 +109,7 @@ var kiwi = new Article("Kiwi", 4);
 strawberry.cheaperArticle(kiwi)
 ```
 
+<!--
 ## Überladung in Records
 
 Es ist möglich, in einem Record zwei Methoden mit demselben Namen zu
@@ -111,7 +146,7 @@ nino.greet("Alex");
 Wenn in einer Klasse mehrere Methoden mit demselben Namen, aber
 unterschiedlichen Parametern definiert werden, spricht man von
 Methodenüberladung. Genau wie Methoden können auch Konstruktoren
-überladen werden.
+überladen werden. -->
 
 ## Aufgaben
 
