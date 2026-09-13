@@ -1,73 +1,34 @@
+
 # Fehlermeldungen
 
-Wenn ein ungültiger Wert in einem Objekt gespeichert werden soll, kann
-unser Programm eine Fehlermeldung ausgeben und den Vorgang abbrechen.
-Dazu wird eine Ausnahme mit `throw new IllegalArgumentException(...)`
-geworfen.
+## Fehler sind Objekte
 
-## Fehlermeldungen im Setter
-
-Ein Setter kann prüfen, ob der neue Wert gültig ist. Im folgenden
-Beispiel darf das Alter nicht kleiner als `0` sein.
+Fehler sind in Java Klassen und wir können mit einem Konstruktor
+Objekte von diesen Klassen erzeugen.
 
 ```java, java-exec
-class MutableStudent {
-    private String name;
-    private int age;
+new ArithmeticException("/ by zero")
+```
 
-    public MutableStudent(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+Fehler können mit `throw` geworfen werden. Dies führt dazu, dass die Fehlermeldung beim Programmierer
+ankommt.
 
-    public int getAge() {
-        return age;
-    }
+```java, java-exec
+throw new ArithmeticException("/ by zero")
+```
 
-    public void setAge(int age) {
-        if (age < 0) {
-            throw new IllegalArgumentException("Das Alter darf nicht negativ sein");
-        }
-        this.age = age;
+Fehlermeldungen können genutzt werden, um anzuzeigen, dass
+eine Methode mit einem ungültigen Wert aufgerufen wurde.
+
+```java, java-exec
+boolean allowedToDrinkBeer(int age) {
+    if (age < 0) {
+        throw new IllegalArgumentException("Age cannot be negative");
     }
+    return age >= 16;
 }
 ```
 
 ```java, java-exec
-var matti = new MutableStudent("Matti", 17);
-matti.setAge(-3);
+allowedToDrinkBeer(17)
 ```
-
-Der Setter speichert den neuen Wert nur, wenn er gültig ist.
-
-## Fehlermeldungen im Konstruktor
-
-Ein Setter allein reicht nicht aus. Auch beim Erzeugen eines Objekts kann
-jemand einen ungültigen Wert übergeben. Deshalb muss die Prüfung auch im
-Konstruktor stehen.
-
-```java, java-exec
-class MutableStudent {
-    private String name;
-    private int age;
-
-    public MutableStudent(String name, int age) {
-        if (age < 0) {
-            throw new IllegalArgumentException("Das Alter darf nicht negativ sein");
-        }
-        this.name = name;
-        this.age = age;
-    }
-
-    public int getAge() {
-        return age;
-    }
-}
-```
-
-```java, java-exec
-new MutableStudent("Matti", -17)
-```
-
-Die Fehlermeldung zeigt an, dass der Konstruktor mit einem ungültigen
-Wert aufgerufen wurde.

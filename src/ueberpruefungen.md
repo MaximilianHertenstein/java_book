@@ -2,17 +2,11 @@
 
 ## Motivation
 
-Wir haben bereits gesehen, wie wir Klassen definieren und Objekte
-einer Klasse erzeugen können.
+Wir haben bereits gesehen, wie wir Records definieren und Objekte
+eines Records erzeugen können.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
+record Article(String name, int price) {
 }
 ```
 
@@ -29,34 +23,22 @@ var banana = new Article("Banane", -2);
 banana
 ```
 
-## Prüfen und abbrechen
+## Prüfung im automatisch definierten Konstruktor
 
-Um dies zu verhindern, prüfen wir im Konstruktor die Werte und brechen
-mit `throw new IllegalArgumentException(...)` ab, wenn etwas nicht
-stimmt. In runden Klammern steht die Fehlermeldung.
+Wie wir im vorherigen Kapitel gesehen haben, können wir zusätzlichen
+Code in Konstruktoren einbauen.
 
-```java, java-exec
-int price = -3;
-if (price < 0) {
-    throw new IllegalArgumentException("Der Preis muss positiv sein");
-}
-```
-
-## Prüfung im Konstruktor
-
-Indem wir die Prüfung in den Konstruktor schreiben, verhindern wir,
-dass Objekte mit ungültigen Eigenschaften erzeugt werden.
+Um zu verhindern, dass Objekte mit ungültigen Werten erzeugt werden,
+prüfen wir die Werte direkt im automatisch definierten Konstruktor. Wenn
+der Wert ungültig ist, brechen wir mit
+`throw new IllegalArgumentException(...)` ab.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
 }
 ```
@@ -67,26 +49,21 @@ new Article("Banane", -2)
 
 ## Prüfung in weiteren Konstruktoren
 
-Bei der Definition eines weiteren Konstruktors können wir Code
-anhängen, der bei jedem Aufruf dieses Konstruktors ausgeführt wird.
-Ein Init-Block ist dafür nicht nötig.
+Auch in weiteren Konstruktoren können Werte geprüft werden.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
-    Article(String name, int price, int discount) {
-        this(name, price - discount);
+
+    public Article(String name, int price, int discount) {
         if (discount < 0) {
             throw new IllegalArgumentException("Der Rabatt muss positiv sein");
         }
+        this(name, price - discount);
     }
 }
 ```
@@ -95,31 +72,12 @@ class Article {
 new Article("Banane", 3, -1)
 ```
 
-## Fehler sind Objekte
-
-Fehler sind in Java Klassen und wir können mit einem Konstruktor
-Objekte von diesen Klassen erzeugen.
-
-```java, java-exec
-new ArithmeticException("/ by zero")
-```
-
-Viel wichtiger ist aber, dass Fehler mit `throw` geworfen werden
-können. Dies führt dazu, dass die Fehlermeldung beim Programmierer
-ankommt. Fehlermeldungen können genutzt werden, um anzuzeigen, dass
-eine Methode mit einem ungültigen Wert aufgerufen wurde.
+Da der zweite Konstruktor den automatisch definierten Konstruktor
+aufruft, muss hier nicht noch einmal der Wert von `price` geprüft
+werden.
 
 ```java, java-exec
-boolean allowedToDrinkBeer(int age) {
-    if (age < 0) {
-        throw new IllegalArgumentException("Age cannot be negative");
-    }
-    return age >= 16;
-}
-```
-
-```java, java-exec
-allowedToDrinkBeer(17)
+new Article("Banane", -1, 5)
 ```
 
 ## Aufgaben

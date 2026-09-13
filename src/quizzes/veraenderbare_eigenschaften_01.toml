@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Was bedeutet `banana.price = 2;` bei einer Klasse mit offenem Feld?"
+prompt.prompt = "Was passiert beim Aufruf von `luca.getOlder()`?"
 prompt.distractors = [
-  "Es wird eine neue Banane mit Preis 2 erzeugt.",
-  "Es wird geprüft, ob der Preis 2 beträgt.",
-  "Es entsteht grundsätzlich ein Fehler, Felder lassen sich nie ändern."
+  "Es wird ein neuer Student mit höherem Alter erzeugt.",
+  "Es wird das Alter ausgegeben.",
+  "Es entsteht ein Fehler, weil Methoden Eigenschaften nicht ändern dürfen."
 ]
-answer.answer = "Der Wert des Feldes im vorhandenen Objekt wird auf 2 geändert."
-context = "Ohne `private` lässt sich der Zustand eines Objekts nachträglich direkt ändern."
+answer.answer = "Das Alter im vorhandenen Objekt `luca` wird um 1 erhöht."
+context = "Methoden in Klassen können den Zustand des bestehenden Objekts direkt verändern."
 id = "1f3f5ce5-9b99-4c4b-9a69-805b2b50900c"

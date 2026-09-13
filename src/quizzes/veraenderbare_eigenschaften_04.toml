@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Was prüft `setPrice`, bevor es den Wert übernimmt?"
+prompt.prompt = "Was passiert, wenn `luca.getOlder()` zweimal hintereinander aufgerufen wird?"
 prompt.distractors = [
-  "Ob der neue Preis größer als der alte ist.",
-  "Ob der Name zum Preis passt.",
-  "Ob die Methode schon einmal aufgerufen wurde."
+  "Das Alter erhöht sich nur einmal, weil der zweite Aufruf ignoriert wird.",
+  "Es entsteht ein Fehler, weil Methoden nur einmal aufgerufen werden dürfen.",
+  "Es wird ein neues Objekt mit dem doppelten Alter erzeugt."
 ]
-answer.answer = "Ob der neue Preis gültig ist. Bei `-2` bricht der Aufruf ab, bei `3` gelingt er."
-context = "Der Setter ist die einzige Stelle zum Ändern. Dort steht die Prüfung genau einmal und gilt immer."
+answer.answer = "Das Alter im Objekt `luca` erhöht sich insgesamt um 2."
+context = "Jeder Methodenaufruf verändert das bestehende Objekt weiter."
 id = "54a6d3ac-3827-49a4-86b9-2afd6542bac5"

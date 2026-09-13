@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Wozu dient `getPrice`, wenn `price` privat ist?"
+prompt.prompt = "Welchen Rückgabetyp hat eine Methode wie `getOlder()`, wenn sie nur den Zustand ändert?"
 prompt.distractors = [
-  "Es setzt den Preis auf einen neuen Wert.",
-  "Es löscht das Feld `price` nach dem Lesen.",
-  "Es umgeht die Konstruktor-Prüfung nachträglich."
+  "`int`",
+  "`null`",
+  "`boolean`"
 ]
-answer.answer = "Es erlaubt das Lesen des Werts, ohne das Feld selbst freizugeben."
-context = "Getter geben kontrolliert Einblick, ohne die Kapselung aufzuheben."
+answer.answer = "`void`"
+context = "Wenn eine Methode keinen Wert zurückgibt, sondern nur einen Effekt hat, verwendet man `void`."
 id = "43090036-3953-456d-8fb4-431862ddeecd"

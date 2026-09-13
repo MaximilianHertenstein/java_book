@@ -18,10 +18,6 @@
 
 {{#quiz ./quizzes/veraenderbare_eigenschaften_04.toml}}
 
-### Quiz 5
-
-{{#quiz ./quizzes/veraenderbare_eigenschaften_05.toml}}
-
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
@@ -31,125 +27,129 @@ Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
 Schreibe zuerst das Ergebnis auf. Führe dann den Code aus und überprüfe deine Vermutung.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+class MutableStudent {
+    private String name;
+    private int age;
+
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
+    }
+
+    public void getOlder() {
+        age = age + 1;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
-var banana = new Article("Banane", 3);
-banana.price = 2;
-banana.price
+var luca = new MutableStudent("Luca", 18);
+luca.getOlder();
+luca.getAge()
 ```
 
 ### 2. Verändere die Eingabe
 
-Ändere nur den zugewiesenen Wert, sodass `banana.price` danach `7` ist.
+Rufe die Methode `getOlder` so oft auf, dass `luca.getAge()` danach `21` ergibt.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+class MutableStudent {
+    private String name;
+    private int age;
+
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
+    }
+
+    public void getOlder() {
+        age = age + 1;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
-var banana = new Article("Banane", 3);
-banana.price = 2;
-banana.price
+var luca = new MutableStudent("Luca", 18);
+luca.getOlder();
+luca.getAge()
 ```
 
 ### 3. Ergänze die Lücke
 
-Ergänze die Lücke, sodass das Lesen weiter möglich ist, das Feld aber geschützt ist.
+Ergänze die Methode `addAbsences`, sodass die Fehlzeiten um `count` erhöht werden.
 
 ```java, java-exec
-class SafeArticle2 {
-    String name;
-    private int price;
-    SafeArticle2(String name, int price) {
+class MutableStudent {
+    private String name;
+    private int absences = 0;
+
+    public MutableStudent(String name) {
         this.name = name;
-        this.price = price;
     }
-    ____ {
-        return price;
+
+    public void addAbsences(int count) {
+        ____;
+    }
+
+    public int getAbsences() {
+        return absences;
     }
 }
-var safeBanana = new SafeArticle2("Banane", 2);
-safeBanana.getPrice()
+var pana = new MutableStudent("Pana");
+pana.addAbsences(3);
+pana.getAbsences()
 ```
 
 ### 4. Fehler finden und reparieren
 
-Der Code erzeugt einen Fehler, weil `price` privat ist. Nutze stattdessen den Setter mit einem gültigen Wert.
+Der Code erzeugt einen Fehler, weil die Methode `getOlder` ein neues Objekt statt einer Veränderung erzeugen will. Ändere die Methode so, dass sie `age` direkt um 1 erhöht und `void` zurückgibt.
 
 ```java, java-exec
-class SafeArticle3 {
-    String name;
-    private int price;
-    SafeArticle3(String name, int price) {
+class MutableStudent {
+    private String name;
+    private int age;
+
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    void setPrice(int newPrice) {
-        if (newPrice < 0) {
-            throw new IllegalArgumentException("Der Preis muss positiv sein");
-        }
-        price = newPrice;
+
+    public int getOlder() {
+        return new MutableStudent(name, age + 1);
+    }
+
+    public int getAge() {
+        return age;
     }
 }
-var safeBanana = new SafeArticle3("Banane", 2);
-safeBanana.price = 3;
 ```
 
 ### 5. Prüfe deine Idee
 
-Sage voraus, welcher Aufruf abbricht und welcher gelingt, bevor du den Code ausführst.
+Sage voraus, was ausgegeben wird, bevor du den Code ausführst.
 
 ```java, java-exec
-class SafeArticle3 {
-    String name;
-    private int price;
-    SafeArticle3(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
-    int getPrice() {
-        return price;
-    }
-    void setPrice(int newPrice) {
-        if (newPrice < 0) {
-            throw new IllegalArgumentException("Der Preis muss positiv sein");
-        }
-        price = newPrice;
-    }
-}
-var safeBanana = new SafeArticle3("Banane", 2);
-safeBanana.setPrice(-2)
-```
+class MutableStudent {
+    private String name;
+    private int age;
 
-```java, java-exec
-class SafeArticle3 {
-    String name;
-    private int price;
-    SafeArticle3(String name, int price) {
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    int getPrice() {
-        return price;
+
+    public void getOlder() {
+        age = age + 1;
     }
-    void setPrice(int newPrice) {
-        if (newPrice < 0) {
-            throw new IllegalArgumentException("Der Preis muss positiv sein");
-        }
-        price = newPrice;
+
+    public int getAge() {
+        return age;
     }
 }
-var safeBanana = new SafeArticle3("Banane", 2);
-safeBanana.setPrice(3);
-safeBanana.getPrice()
+var luca = new MutableStudent("Luca", 18);
+luca.getOlder();
+luca.getOlder();
+luca.getAge()
 ```

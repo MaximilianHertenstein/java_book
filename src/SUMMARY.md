@@ -91,6 +91,8 @@
 - [Aufgaben zu Klassen mit class](./klassen_mit_class_aufgaben.md)
 - [Datenkapselung](./datenkapselung.md)
 - [Aufgaben zu Datenkapselung](./datenkapselung_aufgaben.md)
+- [Eigenschaften im Klassenkörper initialisieren](./eigenschaften_im_klassenkoerper.md)
+- [Aufgaben zu Eigenschaften im Klassenkörper](./eigenschaften_im_klassenkoerper_aufgaben.md)
 - [Veränderbare Eigenschaften](./veraenderbare_eigenschaften.md)
 - [Aufgaben zu Veränderbare Eigenschaften](./veraenderbare_eigenschaften_aufgaben.md)
 - [Rückgabewerte vs. Effekte](./rueckgabewerte_vs_effekte.md)

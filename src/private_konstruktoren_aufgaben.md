@@ -27,18 +27,18 @@ Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
 Schreibe zuerst auf, was passiert. Führe dann den Code aus und überprüfe deine Vermutung.
 
 ```java, java-exec
-class Article {
+class MutableStudent {
     String name;
-    int price;
-    Article(String name, int price) {
+    int age;
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    private Article(String name, int price, int discount) {
-        this(name, price - discount);
+    private MutableStudent(String name, int birthYear, int currentYear) {
+        this(name, currentYear - birthYear);
     }
 }
-new Article("Banane", 3, 2)
+new MutableStudent("Pana", 2007, 2024)
 ```
 
 ### 2. Verändere die Eingabe
@@ -46,56 +46,56 @@ new Article("Banane", 3, 2)
 Ändere nur die Argumente, sodass der öffentliche Konstruktor zum Zug kommt.
 
 ```java, java-exec
-class Article {
+class MutableStudent {
     String name;
-    int price;
-    Article(String name, int price) {
+    int age;
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    private Article(String name, int price, int discount) {
-        this(name, price - discount);
+    private MutableStudent(String name, int birthYear, int currentYear) {
+        this(name, currentYear - birthYear);
     }
 }
-new Article("Banane", 3, 2)
+new MutableStudent("Pana", 2007, 2024)
 ```
 
 ### 3. Ergänze die Lücke
 
-Ergänze die Lücke, sodass der Rabatt-Konstruktor von außen nicht nutzbar ist.
+Ergänze die Lücke, sodass der Hilfskonstruktor von außen nicht nutzbar ist.
 
 ```java, java-exec
-class Article {
+class MutableStudent {
     String name;
-    int price;
-    Article(String name, int price) {
+    int age;
+    public MutableStudent(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    ____ Article(String name, int price, int discount) {
-        this(name, price - discount);
+    ____ MutableStudent(String name, int birthYear, int currentYear) {
+        this(name, currentYear - birthYear);
     }
 }
-new Article("Banane", 3, 2)
+new MutableStudent("Pana", 2007, 2024)
 ```
 
 ### 4. Fehler finden und reparieren
 
-Der Code erzeugt einen Fehler, weil der Haupt-Konstruktor privat ist. Nutze stattdessen die Rabatt-Variante.
+Der Code erzeugt einen Fehler, weil der Hauptkonstruktor privat ist. Nutze stattdessen den öffentlichen Konstruktor mit nur einem Argument.
 
 ```java, java-exec
-class Article2 {
+class MutableStudent2 {
     String name;
-    int price;
-    private Article2(String name, int price) {
+    int age;
+    private MutableStudent2(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    Article2(String name, int price, int discount) {
-        this(name, price - discount);
+    public MutableStudent2(String name) {
+        this(name, 18);
     }
 }
-new Article2("Apfel", 3)
+new MutableStudent2("Luca", 18)
 ```
 
 ### 5. Prüfe deine Idee
@@ -103,31 +103,31 @@ new Article2("Apfel", 3)
 Sage voraus, welcher Aufruf gelingt und welcher abbricht, bevor du den Code ausführst.
 
 ```java, java-exec
-class Article2 {
+class MutableStudent2 {
     String name;
-    int price;
-    private Article2(String name, int price) {
+    int age;
+    private MutableStudent2(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    Article2(String name, int price, int discount) {
-        this(name, price - discount);
+    public MutableStudent2(String name) {
+        this(name, 18);
     }
 }
-new Article2("Apfel", 3, 1)
+new MutableStudent2("Luca")
 ```
 
 ```java, java-exec
-class Article2 {
+class MutableStudent2 {
     String name;
-    int price;
-    private Article2(String name, int price) {
+    int age;
+    private MutableStudent2(String name, int age) {
         this.name = name;
-        this.price = price;
+        this.age = age;
     }
-    Article2(String name, int price, int discount) {
-        this(name, price - discount);
+    public MutableStudent2(String name) {
+        this(name, 18);
     }
 }
-new Article2("Apfel", 3)
+new MutableStudent2("Luca", 18)
 ```

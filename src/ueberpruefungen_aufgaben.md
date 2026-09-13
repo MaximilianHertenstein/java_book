@@ -31,15 +31,11 @@ Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
 Schreibe zuerst auf, was passiert. Führe dann den Code aus und überprüfe deine Vermutung.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
 }
 new Article("Banane", -2)
@@ -50,15 +46,11 @@ new Article("Banane", -2)
 Ändere nur das Argument, sodass ein gültiges Objekt erzeugt wird.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
 }
 new Article("Banane", -2)
@@ -69,14 +61,13 @@ new Article("Banane", -2)
 Ergänze die Lücke, sodass negative Rabatte abgelehnt werden.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
-        this.name = name;
-        this.price = price;
+record Article(String name, int price) {
+    public Article {
+        if (price < 0) {
+            throw new IllegalArgumentException("Der Preis muss positiv sein");
+        }
     }
-    Article(String name, int price, int discount) {
+    public Article(String name, int price, int discount) {
         this(name, price - discount);
         if (____) {
             throw new IllegalArgumentException("Der Rabatt muss positiv sein");
@@ -91,12 +82,8 @@ new Article("Banane", 3, -1)
 Der Code erzeugt keinen Fehler, obwohl der Preis ungültig ist. Ergänze die Prüfung im Konstruktor.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
-        this.name = name;
-        this.price = price;
+record Article(String name, int price) {
+    public Article {
     }
 }
 new Article("Banane", -2)
@@ -107,30 +94,22 @@ new Article("Banane", -2)
 Sage voraus, welcher Aufruf gelingt und welcher abbricht, bevor du den Code ausführst.
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
 }
 new Article("Apfel", 3)
 ```
 
 ```java, java-exec
-class Article {
-    String name;
-    int price;
-    Article(String name, int price) {
+record Article(String name, int price) {
+    public Article {
         if (price < 0) {
             throw new IllegalArgumentException("Der Preis muss positiv sein");
         }
-        this.name = name;
-        this.price = price;
     }
 }
 new Article("Banane", -2)

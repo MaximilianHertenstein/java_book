@@ -27,79 +27,76 @@ Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.
 Schreibe zuerst das Ergebnis auf. Führe dann den Code aus und überprüfe deine Vermutung.
 
 ```java, java-exec
-class Article {
-    String name;
-    private int priceInEuro;
-    Article(String name, int priceInEuro) {
+class MutableStudent {
+    private String name;
+    private int age;
+    MutableStudent(String name, int age) {
         this.name = name;
-        this.priceInEuro = priceInEuro;
+        this.age = age;
     }
-    boolean enoughEuros(int myMoneyInEuros) {
-        return priceInEuro < myMoneyInEuros;
+    public int getAge() {
+        return age;
     }
 }
-var apple = new Article("Apfel", 3);
-apple.enoughEuros(4)
+var pana = new MutableStudent("Pana", 17);
+pana.getAge()
 ```
 
 ### 2. Verändere die Eingabe
 
-Ändere nur das Argument, sodass `false` zurückgegeben wird.
+Ändere nur das Alter, sodass `18` zurückgegeben wird.
 
 ```java, java-exec
-class Article {
-    String name;
-    private int priceInEuro;
-    Article(String name, int priceInEuro) {
+class MutableStudent {
+    private String name;
+    private int age;
+    MutableStudent(String name, int age) {
         this.name = name;
-        this.priceInEuro = priceInEuro;
+        this.age = age;
     }
-    boolean enoughEuros(int myMoneyInEuros) {
-        return priceInEuro < myMoneyInEuros;
+    public int getAge() {
+        return age;
     }
 }
-var apple = new Article("Apfel", 3);
-apple.enoughEuros(4)
+var pana = new MutableStudent("Pana", 17);
+pana.getAge()
 ```
 
 ### 3. Ergänze die Lücke
 
-Ergänze die Lücke, sodass der Zugriff von außen verboten ist.
+Ergänze die Lücke, sodass der direkte Zugriff auf `age` von außen verboten ist.
 
 ```java, java-exec
-class Article {
+class MutableStudent {
     String name;
-    ____ int priceInEuro;
-    Article(String name, int priceInEuro) {
+    ____ int age;
+    MutableStudent(String name, int age) {
         this.name = name;
-        this.priceInEuro = priceInEuro;
+        this.age = age;
     }
 }
-var apple = new Article("Apfel", 3);
-apple.priceInEuro
+var pana = new MutableStudent("Pana", 17);
+pana.age
 ```
 
 ### 4. Fehler finden und reparieren
 
-Der Code erzeugt einen Fehler, weil `calcPriceInCents` privat ist. Rufe stattdessen die öffentliche Methode auf.
+Der Code erzeugt einen Fehler, weil `age` privat ist. Rufe stattdessen die Getter-Methode auf.
 
 ```java, java-exec
-class Article {
-    String name;
-    private int priceInEuro;
-    Article(String name, int priceInEuro) {
+class MutableStudent {
+    private String name;
+    private int age;
+    MutableStudent(String name, int age) {
         this.name = name;
-        this.priceInEuro = priceInEuro;
+        this.age = age;
     }
-    private int calcPriceInCents() {
-        return 100 * priceInEuro;
-    }
-    boolean enoughCents(int moneyInCents) {
-        return calcPriceInCents() < moneyInCents;
+    public int getAge() {
+        return age;
     }
 }
-var banana = new Article("Banane", 2);
-banana.calcPriceInCents()
+var luca = new MutableStudent("Luca", 18);
+luca.age
 ```
 
 ### 5. Prüfe deine Idee
@@ -107,20 +104,18 @@ banana.calcPriceInCents()
 Sage voraus, was zurückgegeben wird, bevor du den Code ausführst.
 
 ```java, java-exec
-class Article {
-    String name;
-    private int priceInEuro;
-    Article(String name, int priceInEuro) {
+class MutableStudent {
+    private String name;
+    private int age;
+    public int absences = 0;
+    MutableStudent(String name, int age) {
         this.name = name;
-        this.priceInEuro = priceInEuro;
+        this.age = age;
     }
-    private int calcPriceInCents() {
-        return 100 * priceInEuro;
-    }
-    boolean enoughCents(int moneyInCents) {
-        return calcPriceInCents() < moneyInCents;
+    public int getAge() {
+        return age;
     }
 }
-var banana = new Article("Banane", 2);
-banana.enoughCents(300)
+var luca = new MutableStudent("Luca", 18);
+luca.absences
 ```

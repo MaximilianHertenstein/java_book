@@ -20,6 +20,11 @@ class MutableStudent {
 var pana = new MutableStudent("Pana", 17);
 pana.age
 ```
+```java, java-exec
+pana.age = 20;
+pana.age
+```
+
 
 ## Private Eigenschaften
 
@@ -49,48 +54,106 @@ class MutableStudent {
 
 ```java, java-exec
 var luca = new MutableStudent("Luca", 18);
-luca.getAge()
 ```
 
-Der direkte Zugriff auf `age` ist jetzt nicht mehr möglich.
+Der direkte Zugriff auf `age` ist jetzt nicht mehr möglich:
 
 ```java
 luca.age
 ```
 
-Stattdessen greifen wir über die öffentlichen Methoden `getAge` und
-`setAge` auf die Eigenschaft zu.
+## Getter
+
+Um das Lesen dieser Eigenschaft zu ermöglichen, kann eine *öffentliche*
+Methode definiert werden, die den Wert zurückgibt.
 
 ```java, java-exec
-luca.setAge(19);
-luca.getAge()
-```
-
-## Eigenschaften im Klassenkörper initialisieren
-
-Eigenschaften können auch direkt bei ihrer Definition einen Wert
-erhalten. Dieser Wert gilt für jedes neu erzeugte Objekt, sofern der
-Konstruktor ihn nicht ändert.
-
-```java, java-exec
-class Cat {
+class MutableStudent {
     private String name;
-    public int lives = 7;
+    private int age;
 
-    public Cat(String name) {
+    public MutableStudent(String name, int age) {
         this.name = name;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
 ```
 
 ```java, java-exec
-var garfield = new Cat("Garfield");
-garfield.lives
+var luca = new MutableStudent("Luca", 18);
+luca.getAge()
+```
+
+Methoden, mit denen Werte von Eigenschaften gelesen werden, nennt man
+*Getter*.
+
+## Setter
+
+Um den Wert zu ändern, können wir ebenfalls eine Methode definieren:
+
+```java, java-exec
+class MutableStudent {
+    private String name;
+    private int age;
+
+    public MutableStudent(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
 ```
 
 ```java, java-exec
-var catmando = new Cat("Catmando");
-catmando.lives
+var luca = new MutableStudent("Luca", 18);
+luca.setAge(19);
+luca.getAge()
+```
+
+Methoden, mit denen Werte von Eigenschaften geändert werden, nennt man
+*Setter*.
+
+## Verhindern von inkorrekten Werten
+
+Um fehlerhafte Werte von Eigenschaften zu vermeiden, müssen wir im
+Konstruktor und im Setter den übergebenen Wert prüfen und eventuell eine
+Fehlermeldung werfen.
+
+```java, java-exec
+class MutableStudent {
+    private String name;
+    private int age;
+
+    public MutableStudent(String name, int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Das Alter muss positiv sein");
+        }
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Das Alter muss positiv sein");
+        }
+        this.age = age;
+    }
+}
 ```
 
 ## Aufgaben

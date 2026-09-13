@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Warum reicht die Prüfung im Konstruktor nicht, sobald das Feld offen ist?"
+prompt.prompt = "Was unterscheidet Methoden in einer `class` von Methoden in einem `record`?"
 prompt.distractors = [
-  "Weil Konstruktoren grundsätzlich nie geprüft werden.",
-  "Weil offene Felder automatisch negativ werden.",
-  "Weil die Prüfung im Konstruktor dann gar nicht mehr ausgeführt wird."
+  "In einer `class` können keine Methoden definiert werden.",
+  "Methoden in einer `class` haben keinen Rückgabetyp.",
+  "In einem `record` sind Methoden immer privat."
 ]
-answer.answer = "Weil sich der Wert danach trotzdem direkt setzen lässt, z. B. `banana.price = -1;`."
-context = "Die Konstruktor-Prüfung schützt nur die Erzeugung. Ohne `private` bleibt jede spätere Zuweisung ungeprüft."
+answer.answer = "In einer `class` können Methoden Eigenschaften des Objekts verändern, in Records nicht."
+context = "Records sind unveränderlich, während Klassen veränderbare Eigenschaften erlauben."
 id = "92e08bf0-434f-4365-b02b-1b459b0e4afe"
