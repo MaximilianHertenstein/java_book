@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was legt ein Typ wie `int` oder `String` fest?"
+prompt.distractors = [
+  "Welche Operationen beim Start des Programms ausgeführt werden.",
+  "Wie lange eine Variable im Programm gespeichert bleibt.",
+  "Unter welchem Dateinamen das Programm gespeichert wird."
+]
+answer.answer = "Welche Art von Werten in einer Variablen gespeichert werden darf."
+context = "Ein Typ legt fest, welche Art von Werten in einer Variablen gespeichert werden darf."
+id = "3e831f31-7ca6-47d9-908c-f1e671f64c72"

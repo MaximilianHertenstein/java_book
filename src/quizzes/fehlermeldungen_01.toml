@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `new ArithmeticException(\"/ by zero\")` in Java?"
+prompt.distractors = [
+  "Es wirft den Fehler sofort, sodass er beim Programmierer ankommt.",
+  "Es gibt die Fehlermeldung als `String` zurück.",
+  "Es beendet das Programm, ohne ein Objekt zu erzeugen."
+]
+answer.answer = "Es erzeugt mit einem Konstruktor ein Fehlerobjekt der Klasse `ArithmeticException`."
+context = "Fehler sind in Java Klassen, von denen mit einem Konstruktor Objekte erzeugt werden."
+id = "20fa0b94-39e5-435d-8ce3-a1e18dcb29e2"

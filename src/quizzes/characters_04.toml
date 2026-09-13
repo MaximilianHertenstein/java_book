@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist das Ergebnis von `\"a\" + 'b'` ein String und kein `char`?"
+prompt.distractors = [
+  "Weil `'b'` kein gültiger Character ist.",
+  "Weil `+` bei Strings immer eine Zahl berechnet.",
+  "Weil das Leerzeichen `' '` der einzige gültige Character ist."
+]
+answer.answer = "Weil zwei Zeichen nicht in einen `char` passen und auch `' '` nur ein einzelner Character ist."
+context = "Zwei Zeichen passen nicht in einen Character, deshalb kommt bei `char` plus String ein String heraus."
+id = "aa691bc1-986a-4b5c-bc38-b92f84cdb562"

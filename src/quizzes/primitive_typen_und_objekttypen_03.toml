@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `int converted = c;` wenn `Integer c = 5;` gilt?"
+prompt.distractors = [
+  "Es entsteht ein Fehler, weil `Integer` und `int` unverträglich sind.",
+  "Der Wert muss erst mit `c.toString()` in einen String umgewandelt werden.",
+  "`converted` zeigt danach auf dasselbe Objekt wie `c`."
+]
+answer.answer = "Java wandelt das `Integer`-Objekt automatisch in den primitiven Wert `5` um."
+context = "Java wandelt primitive Werte und passende Wrapper-Klassen bei Bedarf automatisch ineinander um."
+id = "0dfbdd16-07f4-439c-9ebc-1a623a4571ac"

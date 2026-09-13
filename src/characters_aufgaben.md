@@ -1,5 +1,23 @@
 # Aufgaben: Characters
 
+## Quiz
+
+### Quiz 1
+
+{{#quiz ./quizzes/characters_01.toml}}
+
+### Quiz 2
+
+{{#quiz ./quizzes/characters_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/characters_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/characters_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeuten `<T, S>` und der Aufruf `ifEqualFirstElseSecond(1, 1, List.of('u', 'a'))`?"
+prompt.distractors = [
+  "Der Aufruf übergibt die Typen von Hand: `T` ist `S` und beide sind `List`.",
+  "Die Methode funktioniert nur für `Integer`-Listen und `Boolean`-Vergleiche.",
+  "Die Typvariablen müssen beim Aufruf als zusätzliche Argumente übergeben werden."
+]
+answer.answer = "Die Methode hat zwei Typvariablen und der Compiler erschließt `T` und `S` selbst aus den Argumenten."
+context = "Mehrere Typvariablen werden durch Kommas getrennt und beim Aufruf erschließt der Compiler die konkreten Typen aus den Argumenten."
+id = "5b894165-d201-4216-83c4-5eaa39ec1d35"

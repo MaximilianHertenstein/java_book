@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welche Aussage zu `xs.set(0, 9)` und `xs.remove(1)` ist richtig?"
+prompt.distractors = [
+  "`set` fügt `9` an Index `0` ein und verschiebt alle anderen Elemente, `remove` entfernt alle Elemente mit dem Wert `1`.",
+  "`set` hängt `9` am Ende an, `remove` entfernt das Element mit dem Wert `1`.",
+  "`set` entfernt das Element an Index `0`, `remove` ersetzt das Element an Index `1` durch `1`."
+]
+answer.answer = "`set` ersetzt das Element an Index `0` durch `9`, `remove` entfernt das Element an Index `1`."
+context = "Mit `set` wird ein Element an einem Index ersetzt, mit `remove` wird das Element an einem Index entfernt."
+id = "589bb951-245d-4046-9438-05e5c6b2f2d1"

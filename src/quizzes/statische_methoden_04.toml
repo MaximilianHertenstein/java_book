@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gilt für `private static int square(int x)` in der Klasse `Utils`?"
+prompt.distractors = [
+  "Die Methode kann überall mit `Utils.square(3)` aufgerufen werden.",
+  "Die Methode wird automatisch von außen aufgerufen.",
+  "Die Methode darf nur mit einem Objekt der Klasse `Utils` aufgerufen werden."
+]
+answer.answer = "Die Methode ist nur innerhalb von `Utils` nutzbar, zum Beispiel in `cube`."
+context = "Private Methoden sind nicht außerhalb der Klasse nutzbar: `Utils.square(3)` erzeugt dann einen Fehler."
+id = "99cb154b-b10e-41e2-847b-965f83add913"

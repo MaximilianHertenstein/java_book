@@ -1,6 +1,6 @@
 # Explizite Typangabe bei Variablen
 
-In Java ist es oft nicht nötig, den Typ einer Variable anzugeben.
+In Java ist es oft nicht nötig, den Typ einer Variablen anzugeben.
 
 ```java, java-exec
 var x = 2;

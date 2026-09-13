@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `punkte = \"viel\";`, wenn `punkte` zuvor mit `var punkte = 50;` angelegt wurde?"
+prompt.distractors = [
+  "Der Typ von `punkte` wechselt automatisch von `int` zu `String`.",
+  "`punkte` speichert danach sowohl `50` als auch `\"viel\"` gleichzeitig.",
+  "Die Zuweisung wird ignoriert und `punkte` behält stillschweigend `50`."
+]
+answer.answer = "Es gibt einen Fehler, weil `punkte` den festen Typ `int` hat und kein `String` speichern kann."
+context = "Der Typ steht nach der Initialisierung fest, auch bei `var`, ein fremder Typ erzeugt einen Fehler."
+id = "4451052e-f813-4099-af63-c01a414f27bc"

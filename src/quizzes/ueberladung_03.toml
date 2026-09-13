@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann spricht man von Methodenüberladung?"
+prompt.distractors = [
+  "Wenn eine Methode besonders viele Zeilen Code enthält.",
+  "Wenn eine Methode zweimal hintereinander aufgerufen wird.",
+  "Wenn eine Methode in zwei verschiedenen Klassen denselben Code enthält."
+]
+answer.answer = "Wenn mehrere Methoden denselben Namen, aber unterschiedliche Parameter haben."
+context = "Methodenüberladung bedeutet: gleicher Name, aber unterschiedliche Typen oder Anzahl der Parameter."
+id = "d47df684-ef1f-44af-a761-4cbad7889b8d"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt der Aufruf `pana.getOlder();`?"
+prompt.distractors = [
+  "Er gibt das neue Alter zurück, ohne `pana` zu verändern.",
+  "Er erzeugt ein neues `Student`-Objekt mit erhöhtem Alter.",
+  "Er ändert nichts, weil `getOlder` keinen Rückgabewert hat."
+]
+answer.answer = "Er erhöht `pana.age` um eins und gibt nichts zurück (`void`)."
+context = "`getOlder` hat den Rückgabetyp `void` und verändert das Objekt, auf dem es aufgerufen wird."
+id = "3734f3ac-3ffa-4e32-bc0d-1544c0ad1426"

@@ -50,17 +50,17 @@ Auf der linken Seite des *Zuweisungsoperators* (`=`) steht der Name der
 *Variablen*. Auf der rechten Seite steht ein *Ausdruck*. Bei der
 Ausführung dieses *Statements* wird zunächst der *Ausdruck* auf der
 rechten Seite ausgewertet. Der *Wert* des *Ausdrucks* wird dann unter
-dem angegeben Namen gespeichert.
+dem angegebenen Namen gespeichert.
 
 Allgemein ist ein *Statement* eine Anweisung an die Java-Umgebung.
-Bei *Zuweisung-Statements* weisen wir diese an, eine *Variable*
+Bei *Zuweisungs-Statements* weisen wir diese an, eine *Variable*
 anzulegen[^1].
 
 ## Variablen in Ausdrücken verwenden
 
 Wir können jetzt den *Variablennamen* in *Ausdrücken* verwenden. Bei der
 Auswertung wird der *Variablenname* durch den *Wert* der *Variable*
-ersetzt
+ersetzt.
 
 ```java, java-exec
 threeYardsInFeet

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `xs.add(5)` und `xs.addAll(ys)`?"
+prompt.distractors = [
+  "`add` fügt alle Elemente einer anderen Liste hinzu, `addAll` fügt nur ein einzelnes Element hinzu.",
+  "Beide fügen genau ein einzelnes Element hinzu, `addAll` ist nur eine andere Schreibweise für `add`.",
+  "`addAll` überschreibt die Liste `xs` mit der Liste `ys`, `add` hängt ein Element an."
+]
+answer.answer = "`add` fügt ein einzelnes Element hinzu, `addAll` fügt alle Elemente einer anderen Liste hinzu."
+context = "Mit `add` wird ein Element angehängt, mit `addAll` werden mehrere Elemente aus einer anderen Liste übernommen."
+id = "edab30e2-16b8-4370-8c55-2ddaaa4e8a75"

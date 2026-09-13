@@ -1,11 +1,11 @@
 [[questions]]
 type = "MultipleChoice"
-prompt.prompt = "Was unterscheidet Java-Lambdas mit Rückgabewert von Kotlin-Lambdas?"
+prompt.prompt = "Was bewirkt `Utils.doWithOneToThree(Utils::showNumber)`?"
 prompt.distractors = [
-  "In Java gibt es gar keine Lambdas mit Rückgabewert.",
-  "In Java steht der Rückgabewert vor dem Pfeil.",
-  "Es gibt keinen Unterschied, beides geht ohne `return`."
+  "Es wird nur einmal `showNumber(1)` aufgerufen.",
+  "Die Methode `doWithOneToThree` wird als Wert gespeichert.",
+  "Der Code erzeugt einen Fehler, weil die Klammern bei `showNumber` fehlen."
 ]
-answer.answer = "In Java braucht ein Block-Lambda ein explizites `return`. Die letzte Zeile allein genügt nicht."
-context = "`x -> { ...; return x + 1; }` mit Typ `Function<Integer, Integer>`. Ohne `return` meldet der Compiler einen Fehler."
+answer.answer = "`showNumber` wird nacheinander mit `1`, `2` und `3` aufgerufen."
+context = "`doWithOneToThree` ruft die übergebene Methode mit `accept(1)`, `accept(2)` und `accept(3)` auf."
 id = "bd13a1c8-70c4-4b6f-b35f-017994009cf5"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `break` und `return`?"
+prompt.distractors = [
+  "Es gibt keinen Unterschied, beide beenden nur die Schleife.",
+  "`break` beendet die ganze Methode, `return` beendet nur die Schleife.",
+  "Beide beenden die ganze Methode, `break` gibt zusätzlich einen Wert zurück."
+]
+answer.answer = "`break` beendet nur die Schleife, `return` beendet die ganze Methode."
+context = "Im Gegensatz zu `return` wird mit `break` nicht die ganze Methode beendet, sondern nur die Schleife."
+id = "a7d619b9-ae53-4b05-ab76-ff4f1932fc72"

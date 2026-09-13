@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ergibt `'a' + 'b'` in Java?"
+prompt.distractors = [
+  "Den String `\"ab\"`.",
+  "Den Character `'c'`.",
+  "Einen Fehler, weil `+` für Characters verboten ist."
+]
+answer.answer = "Die Zahl `195`, weil die Zeichencodes addiert werden."
+context = "Zwei Characters sollten nicht mit `+` verbunden werden, das Ergebnis ist die Zahl `195`."
+id = "dbf8d1d4-72f4-4dad-834e-296b208a76b0"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wo werden Eigenschaften einer mit `class` definierten Klasse festgelegt?"
+prompt.distractors = [
+  "In den runden Klammern hinter dem Klassennamen.",
+  "Nur in den runden Klammern des Konstruktors.",
+  "Außerhalb der Klasse in einer separaten Datei."
+]
+answer.answer = "Im Klassenkörper, zum Beispiel mit `String name;` und `int age;` in `MutableStudent`."
+context = "Bei `class` werden alle Eigenschaften im Klassenkörper definiert."
+id = "9850a63b-299a-4d86-a752-122faf705a6e"

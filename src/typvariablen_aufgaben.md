@@ -10,6 +10,14 @@
 
 {{#quiz ./quizzes/typvariablen_02.toml}}
 
+### Quiz 3
+
+{{#quiz ./quizzes/typvariablen_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/typvariablen_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

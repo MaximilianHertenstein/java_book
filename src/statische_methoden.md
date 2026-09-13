@@ -3,7 +3,7 @@
 ## Motivation
 
 Aufrufe wie `Integer.parseInt("052")`, `List.of(1, 2, 3)` oder
-`IO.println("Hello")` kennst du schon: Diese *Methoden* gehört zu einer
+`IO.println("Hello")` kennst du schon: Diese *Methoden* gehören zu einer
 *Klasse*, deshalb steht vor dem Punkt der Klassenname. 
  Eine
 *Klasse* ist hier erst einmal nur ein Container für *Methoden*.
@@ -16,7 +16,6 @@ schreiben wir selbst solche *Methoden*.
 ## Klassen als Container
 
 Mit `class` kannst du eine Klasse erstellen. Hinter `class` steht der Name der Klasse.
-Hinter
 ```java, java-exec
 class Utils {
 }

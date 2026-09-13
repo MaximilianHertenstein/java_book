@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu wird `throw` in der Methode `allowedToDrinkBeer(int age)` verwendet?"
+prompt.distractors = [
+  "Um den Rückgabewert `true` oder `false` zu berechnen.",
+  "Um das Alter automatisch auf `0` zu korrigieren.",
+  "Um die Methode ohne Prüfung direkt zu beenden."
+]
+answer.answer = "Um anzuzeigen, dass die Methode mit einem ungültigen Wert aufgerufen wurde."
+context = "Fehlermeldungen zeigen an, dass eine Methode mit einem ungültigen Wert aufgerufen wurde, zum Beispiel mit negativem Alter."
+id = "d528e136-3af3-4e35-a330-841be3a9f615"

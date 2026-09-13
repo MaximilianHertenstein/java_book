@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gilt für `pana.age` nach dem Aufruf `pana.nextAge();`?"
+prompt.distractors = [
+  "`pana.age` ist danach um eins größer, weil `nextAge` das Alter erhöht.",
+  "`pana.age` ist danach `17`, egal welcher Wert vorher gespeichert war.",
+  "`pana.age` wird gelöscht, weil der Rückgabewert nicht gespeichert wurde."
+]
+answer.answer = "`pana.age` ist unverändert, der Rückgabewert von `nextAge` muss extra verwendet werden."
+context = "`nextAge` gibt `age + 1` nur zurück, ohne das Objekt zu verändern."
+id = "a04cf111-1a5f-4995-b59e-a9ab4ff4a3e3"

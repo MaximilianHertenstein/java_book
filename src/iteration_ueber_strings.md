@@ -26,7 +26,7 @@ for (char c : greeting.toCharArray()) {
 ## Akkumulator-Pattern
 
 Ein einzelnes Zeichen (`char`) lässt sich wie ein *String* mit `+`
-verbinden. D.h. wir können mit Zeichen die *String-Addition*
+verbinden. D. h. wir können mit Zeichen die *String-Addition*
 durchführen.
 
 ```java, java-exec

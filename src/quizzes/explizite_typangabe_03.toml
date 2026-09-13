@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist an `int y = 3;` korrekt?"
+prompt.distractors = [
+  "Der Typ steht hinter dem Namen, also `y int = 3;`.",
+  "Der Typ wird nur bei `var` angegeben, also `var int y = 3;`.",
+  "Die Zeile erzeugt eine Variable ohne Wert, also ohne `= 3`."
+]
+answer.answer = "Der Typ `int` steht vor dem Namen `y` bei der Initialisierung mit `3`."
+context = "Bei expliziter Typangabe schreibt man den Typ vor den Variablennamen."
+id = "56abf904-8714-4937-85aa-23390bf7dd34"

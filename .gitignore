@@ -3,3 +3,5 @@
 opencode.json
 /src/quiz
 /material
+*.jsh
+*.log

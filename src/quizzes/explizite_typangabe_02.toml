@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `var x = 2;`?"
+prompt.distractors = [
+  "`x` hat keinen Typ und kann später alles enthalten.",
+  "`x` ist vom Typ `String`, weil kein Typ angegeben wurde.",
+  "Die Zeile ist fehlerhaft, weil der Typ vor `x` fehlt."
+]
+answer.answer = "Java leitet den Typ `int` aus dem Wert `2` ab, ohne dass er hingeschrieben wird."
+context = "Mit `var` bestimmt der Compiler den Typ aus der Initialisierung."
+id = "33157db2-1c73-488d-924d-2ce85921396a"

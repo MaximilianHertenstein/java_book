@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welche Methode wird bei `greet()` und `greet(\"Alex\")` jeweils aufgerufen?"
+prompt.distractors = [
+  "Beide Aufrufe rufen immer `greet()` ohne Parameter auf.",
+  "Beide Aufrufe rufen immer `greet(String name)` auf.",
+  "Der Aufruf schlägt fehl, weil der Name `greet` zweimal vorkommt."
+]
+answer.answer = "`greet()` ruft die Methode ohne Parameter auf, `greet(\"Alex\")` die Methode mit `String`-Parameter."
+context = "Bei unterschiedlicher Parameteranzahl entscheidet die Anzahl der Argumente, welche `greet`-Methode läuft."
+id = "fa3cecbb-3d0f-423b-88e1-d7513670ca09"

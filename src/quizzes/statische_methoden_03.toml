@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie ruft man die statische Methode `square` der Klasse `Utils` mit dem Argument `3` auf?"
+prompt.distractors = [
+  "Mit `square Utils 3`.",
+  "Mit `new Utils().square`.",
+  "Mit `square(Utils, 3)`."
+]
+answer.answer = "Mit `Utils.square(3)`."
+context = "`Utils.square(3)` ruft die Methode `square` der Klasse `Utils` mit dem Argument `3` auf."
+id = "efe3734e-0e4a-4a51-9f62-3db3dbd43676"

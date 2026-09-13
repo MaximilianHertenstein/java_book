@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was ist der Unterschied zwischen `var x = 2;` und `int y = 3;`?"
+prompt.distractors = [
+  "`var x = 2;` erzeugt einen String, `int y = 3;` eine Zahl.",
+  "`var x = 2;` ist falsch, nur `int y = 3;` erzeugt eine Variable.",
+  "Beide erzeugen Variablen ohne festen Typ."
+]
+answer.answer = "Beide erzeugen eine `int`-Variable, einmal abgeleitet und einmal explizit angegeben."
+context = "`var` leitet denselben Typ ab, den man auch explizit hinschreiben könnte."
+id = "46b861f0-6836-4b78-9d4c-7e9dd691c262"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet es, dass eine Klasse ein Container für Methoden ist?"
+prompt.distractors = [
+  "Die Klasse speichert nur Objekte und keine Methoden.",
+  "Jede Methode braucht ein eigenes Objekt der Klasse.",
+  "Die Klasse erzeugt automatisch ein Programm beim Start."
+]
+answer.answer = "Die Klasse fasst zusammengehörige Methoden wie `square` und `cube` in `Utils` zusammen."
+context = "Eine Klasse wie `Utils` gruppiert passende statische Methoden an einem Ort."
+id = "7378cabb-d1cb-4eb6-9f3a-8ad1fce37488"

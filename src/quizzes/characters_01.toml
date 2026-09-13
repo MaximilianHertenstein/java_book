@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wie schreibt man einen `char` mit dem Buchstaben `a` korrekt?"
+prompt.distractors = [
+  "In doppelten Anführungszeichen als `\"a\"`, das ist der Typ `char`.",
+  "Ohne Anführungszeichen als `a`, das ist der Typ `char`.",
+  "In eckigen Klammern als `[a]`, das ist der Typ `char`."
+]
+answer.answer = "In einfachen Anführungszeichen als `'a'`, das ist der Typ `char`."
+context = "Ein einzelnes Zeichen hat den Typ `char` und steht in einfachen Anführungszeichen, Strings stehen in doppelten."
+id = "ebdeefc1-65da-466f-a0ba-eff0219f9fb4"

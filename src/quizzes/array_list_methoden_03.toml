@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Welche Aussage zu `xs.contains(6)` und `xs.subList(1, 4)` ist richtig?"
+prompt.distractors = [
+  "`contains` liefert das Element an Index `6`, `subList` liefert die Elemente von Index `1` bis einschließlich Index `4`.",
+  "`contains` entfernt das Element `6`, `subList` löscht den Bereich von Index `1` bis Index `4`.",
+  "`contains` prüft den Index `6`, `subList` liefert die Elemente von Index `1` bis einschließlich Index `4`."
+]
+answer.answer = "`contains` prüft, ob `6` enthalten ist, `subList` liefert den Ausschnitt ab Index `1`, wobei der Endindex `4` nicht mehr dazugehört."
+context = "`contains` prüft, ob ein Element enthalten ist, bei `subList` gehört der Endindex nicht mehr zum Ausschnitt."
+id = "6191a3bf-0ca3-4397-8bba-6c74770a3d5c"

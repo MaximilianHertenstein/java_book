@@ -6,6 +6,18 @@
 
 {{#quiz ./quizzes/ueberladung_01.toml}}
 
+### Quiz 2
+
+{{#quiz ./quizzes/ueberladung_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/ueberladung_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/ueberladung_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

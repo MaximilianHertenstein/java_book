@@ -1,5 +1,23 @@
 # Aufgaben: Typ und Inferenz
 
+## Quiz
+
+### Quiz 1
+
+{{#quiz ./quizzes/typ_und_inferenz_01.toml}}
+
+### Quiz 2
+
+{{#quiz ./quizzes/typ_und_inferenz_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/typ_und_inferenz_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/typ_und_inferenz_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

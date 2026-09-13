@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bedeutet `var punkte = 50;`?"
+prompt.distractors = [
+  "`punkte` bekommt keinen Typ und kann später alles speichern.",
+  "`punkte` wird als `String` angelegt, weil `var` immer Text bedeutet.",
+  "`var` speichert nur den Wert `50`, ohne eine Variable zu erzeugen."
+]
+answer.answer = "Der Typ von `punkte` wird aus dem Anfangswert erschlossen, also `int`, genauso als wäre `int` hingeschrieben worden."
+context = "Mit `var` wird der Typ vom Anfangswert erschlossen, das nennt man Inferenz."
+id = "afa22a5f-afb1-4a19-9eff-d519563a8671"

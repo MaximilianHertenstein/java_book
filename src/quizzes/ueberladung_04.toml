@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Können auch Konstruktoren überladen werden?"
+prompt.distractors = [
+  "Nein, jede Klasse darf nur genau einen Konstruktor haben.",
+  "Nein, Konstruktoren dürfen keine Parameter haben.",
+  "Ja, aber nur wenn alle Konstruktoren denselben Rückgabetyp haben."
+]
+answer.answer = "Ja, genau wie Methoden können auch Konstruktoren mit unterschiedlichen Parametern überladen werden."
+context = "Überladene Konstruktoren unterscheiden sich wie überladene Methoden in Typen oder Anzahl der Parameter."
+id = "8c9a358e-4f21-4960-bcfb-26be8b168c92"

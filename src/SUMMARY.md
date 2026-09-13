@@ -83,6 +83,7 @@
 - [Aufgaben zu Weitere Konstruktoren](./weitere_konstruktoren_aufgaben.md)
 
 - [Fehlermeldungen](./fehlermeldungen.md)
+- [Aufgaben zu Fehlermeldungen](./fehlermeldungen_aufgaben.md)
 - [Überprüfungen bei der Objekterzeugung](./ueberpruefungen.md)
 - [Aufgaben zu Überprüfungen bei der Objekterzeugung](./ueberpruefungen_aufgaben.md)
 - [Nullwerte](./nullwerte.md)
@@ -96,6 +97,7 @@
 - [Veränderbare Eigenschaften](./veraenderbare_eigenschaften.md)
 - [Aufgaben zu Veränderbare Eigenschaften](./veraenderbare_eigenschaften_aufgaben.md)
 - [Rückgabewerte vs. Effekte](./rueckgabewerte_vs_effekte.md)
+- [Aufgaben zu Rückgabewerte vs. Effekte](./rueckgabewerte_vs_effekte_aufgaben.md)
 - [Private Konstruktoren](./private_konstruktoren.md)
 - [Aufgaben zu Private Konstruktoren](./private_konstruktoren_aufgaben.md)
 - [Klassen mit Typparametern](./klassen_mit_typparametern.md)
@@ -111,4 +113,6 @@
 - [Vererbung](./vererbung.md)
 - [Aufgaben zu Vererbung](./vererbung_aufgaben.md)
 - [ArrayList-Methoden](./array_list_methoden.md)
+- [Aufgaben zu ArrayList-Methoden](./array_list_methoden_aufgaben.md)
 - [Schleifen mit `break` abbrechen](./break.md)
+- [Aufgaben zu Schleifen mit `break` abbrechen](./break_aufgaben.md)

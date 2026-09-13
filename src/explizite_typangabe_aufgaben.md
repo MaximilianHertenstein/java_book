@@ -6,6 +6,18 @@
 
 {{#quiz ./quizzes/explizite_typangabe_01.toml}}
 
+### Quiz 2
+
+{{#quiz ./quizzes/explizite_typangabe_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/explizite_typangabe_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/explizite_typangabe_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

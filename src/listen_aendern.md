@@ -3,7 +3,7 @@
 ## Übersicht
 
 Wir haben bis jetzt nur unveränderliche *Werte* genutzt. Wir konnten
-zwar den *Wert* einer *Variablen* durch einen neuen *Wert* ersetzen aber
+zwar den *Wert* einer *Variablen* durch einen neuen *Wert* ersetzen, aber
 **nicht** den *Wert* selbst ändern. Bei *Listen*, die wir mit
 `new ArrayList<>(...)` erzeugen, ist dies jedoch möglich.
 
@@ -72,7 +72,7 @@ xs
 
 ## Listen in Methoden ändern
 
-Eine Methode kann eine *Liste*, die ihr übergeben wird ändern. Als
+Eine Methode kann eine *Liste*, die ihr übergeben wird, ändern. Als
 *Typ* schreiben wir `List`, erzeugt wird eine `ArrayList`.
 
 ```java, java-exec

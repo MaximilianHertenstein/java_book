@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert beim Aufruf `allowedToDrinkBeer(-3)`?"
+prompt.distractors = [
+  "Es wird `false` zurückgegeben, weil `-3` kleiner als `16` ist.",
+  "Es wird `true` zurückgegeben, weil die Prüfung übersprungen wird.",
+  "Es wird `0` zurückgegeben, weil negative Werte auf `0` gesetzt werden."
+]
+answer.answer = "Es wird mit `throw new IllegalArgumentException(...)` ein Fehler geworfen, weil das Alter negativ ist."
+context = "Bei negativem Alter wirft `allowedToDrinkBeer` einen `IllegalArgumentException`, sonst gibt sie `age >= 16` zurück."
+id = "b9e30e84-99be-49d9-aee6-639c2e4635c7"

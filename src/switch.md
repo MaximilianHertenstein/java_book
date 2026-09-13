@@ -109,7 +109,7 @@ weekday(3)
 weekday(9)
 ```
 
-Als Faustregel: eine `else if`-Kette mit immer demselben `==`-Vergleich
+Als Faustregel: Eine `else if`-Kette mit immer demselben `==`-Vergleich
 wird ein `switch`. Alles mit `>`, `<`, `&&` oder `||` bleibt ein `if`.
 
 ## Aufgaben

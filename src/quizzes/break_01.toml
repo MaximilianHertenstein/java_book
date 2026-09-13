@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `break` in einer Schleife?"
+prompt.distractors = [
+  "Es beendet die gesamte Methode sofort.",
+  "Es überspringt nur den aktuellen Durchlauf und macht mit dem nächsten weiter.",
+  "Es startet die Schleife von vorne."
+]
+answer.answer = "Es beendet die Schleife vorzeitig."
+context = "Mit `break` wird eine Schleife vorzeitig beendet, ohne die Methode zu verlassen."
+id = "51135bb7-5204-41d0-a400-1645488fac88"

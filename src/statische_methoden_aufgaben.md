@@ -6,6 +6,18 @@
 
 {{#quiz ./quizzes/statische_methoden_01.toml}}
 
+### Quiz 2
+
+{{#quiz ./quizzes/statische_methoden_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/statische_methoden_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/statische_methoden_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

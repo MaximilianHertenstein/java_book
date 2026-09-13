@@ -1,6 +1,6 @@
 # While-Schleifen
 
-## Wiederholung if-Statements
+## Wiederholung von if-Statements
 
 Mit `if`-Statements kann entschieden werden, ob bestimmte Codezeilen
 ausgeführt werden sollen. Wenn die Bedingung hinter `if` zu `true`

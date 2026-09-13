@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was bewirkt `throw new ArithmeticException(\"/ by zero\")`?"
+prompt.distractors = [
+  "Es erzeugt nur das Objekt, ohne es zu werfen.",
+  "Es fängt einen geworfenen Fehler wieder ab.",
+  "Es wandelt die Fehlermeldung in einen `String` um."
+]
+answer.answer = "Es wirft das Fehlerobjekt, sodass die Fehlermeldung beim Programmierer ankommt."
+context = "Mit `throw` wird ein Fehler geworfen und dadurch an den Programmierer übergeben."
+id = "0748d17d-6d75-4a0d-939f-b715ae89e613"

@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wo steht die Typvariable in `<T> T getFirst(List<T> xs)`?"
+prompt.distractors = [
+  "Nur hinter dem Methodennamen: `getFirst<T>`.",
+  "Nur in den spitzen Klammern hinter `List`.",
+  "Hinter dem Rückgabetyp: `T getFirst<T>`."
+]
+answer.answer = "In spitzen Klammern vor dem Rückgabetyp: `<T>` vor `T getFirst(List<T> xs)`."
+context = "Die Typvariable muss vor dem Rückgabetyp definiert werden, danach kann sie als `T` und `List<T>` verwendet werden."
+id = "8820ba23-16a8-4f9b-a705-57be6c5787a2"

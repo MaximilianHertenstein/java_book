@@ -1,5 +1,23 @@
 # Aufgaben: Klassen mit class
 
+## Quiz
+
+### Quiz 1
+
+{{#quiz ./quizzes/klassen_mit_class_01.toml}}
+
+### Quiz 2
+
+{{#quiz ./quizzes/klassen_mit_class_02.toml}}
+
+### Quiz 3
+
+{{#quiz ./quizzes/klassen_mit_class_03.toml}}
+
+### Quiz 4
+
+{{#quiz ./quizzes/klassen_mit_class_04.toml}}
+
 ## Übungen
 
 Bearbeite die folgenden Aufgaben in den ausführbaren Java-Blöcken.

@@ -34,7 +34,7 @@ folgenden Methodenaufruf
 yardToInch(2)
 ```
 
-gibt es **bevor** die erste Zeile im *Methodenkörper* ausgeführt wurde,
+gibt es, **bevor** die erste Zeile im *Methodenkörper* ausgeführt wurde,
 die folgenden *Variablen*:
 
 <div class="center">

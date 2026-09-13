@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert bei `alex.getOlderCheckAllowedToBuyBeer()` wenn `alex.age` vorher `15` ist?"
+prompt.distractors = [
+  "Es wird nur `true` zurückgegeben, `alex.age` bleibt `15`.",
+  "Es wird `alex.age` auf `16` erhöht, aber nichts zurückgegeben.",
+  "Es wird `false` zurückgegeben, weil `alex.age` erst danach erhöht wird."
+]
+answer.answer = "`alex.age` wird auf `16` erhöht und `true` wird zurückgegeben."
+context = "Die Methode verbindet Effekt und Rückgabe: Sie erhöht `age` um eins und gibt zurück, ob `age >= 16` gilt."
+id = "49605f4a-ab6e-466c-b139-e36739778d84"

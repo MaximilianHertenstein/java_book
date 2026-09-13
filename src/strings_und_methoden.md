@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Wir wollen eine Methode `greetBavarian` schreiben, der ein Name einer
+Wir wollen eine Methode `greetBavarian` schreiben, der einen Namen einer
 Benutzerin als *String* übergeben wird und die diese Benutzerin mit
 `"Servus"` begrüßt.
 
@@ -100,7 +100,7 @@ Methodenaufruf `greetBavarian("Ada")` anschauen.
 Der *Parameter* `name` hat hier den Wert `"Ada"`. Bei der Auswertung des
 *Methodenkörpers* wird dieser *Parameter* durch seinen *Wert* ersetzt.
 Wird die Methode mit anderen *Argumenten* aufgerufen, werden die
-*Parameter* auch andere *Werte* ersetzt. Im Gegensatz dazu bleibt der
+*Parameter* auch durch andere *Werte* ersetzt. Im Gegensatz dazu bleibt der
 *String* `"Servus "` immer gleich.
 
 ## Fehler beim Verwechseln von String und Parameternamen

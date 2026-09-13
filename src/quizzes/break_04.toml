@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was passiert im Beispiel mit Fritz (Deutsch `7`, Mathe `4`, GGK `2`)?"
+prompt.distractors = [
+  "Alle drei Fächer werden geprüft, weil `break` erst am Ende der Liste wirkt.",
+  "Kein Fach wird geprüft, weil `found` zu Beginn `false` ist.",
+  "GGK wird geprüft und Deutsch und Mathe werden übersprungen."
+]
+answer.answer = "Nach Mathe wird die Schleife per `break` abgebrochen, GGK wird nicht mehr geprüft."
+context = "Sobald mit Mathe ein Unterkurs gefunden ist, beendet `break` die Suche, spätere Fächer werden nicht mehr geprüft."
+id = "6cc8798f-9c84-4cf3-9b5f-cef57463f0ca"

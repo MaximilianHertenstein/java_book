@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum reicht `record Student(String name, int age)` für veränderliche Daten nicht aus?"
+prompt.distractors = [
+  "Weil ein `record` keine Eigenschaften speichern kann.",
+  "Weil ein `record` keinen Konstruktor zum Erzeugen nutzt.",
+  "Weil ein `record` nur Texte, aber keine Zahlen speichern kann."
+]
+answer.answer = "Weil die Eigenschaften eines `record` nach dem Erzeugen nicht mehr geändert werden können."
+context = "Die starke Einschränkung von `record` ist, dass Eigenschaften nach dem Erzeugen unveränderlich sind."
+id = "bed71961-230b-449a-bfc0-8859d040d804"

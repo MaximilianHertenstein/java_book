@@ -127,7 +127,7 @@ yardToFeet(7)
 
 
 
-[^1]: Für die Namen von Methoden gelten die selben Regeln wie für die
+[^1]: Für die Namen von Methoden gelten dieselben Regeln wie für die
     Namen von Variablen
 
 ## Aufgaben

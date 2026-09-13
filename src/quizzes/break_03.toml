@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wozu dient die Variable `found` in der Methode `hasUnderCourse`?"
+prompt.distractors = [
+  "Sie zählt, wie viele Fächer geprüft wurden.",
+  "Sie speichert die Note des schlechtesten Fachs.",
+  "Sie beendet die Methode, sobald ein Unterkurs gefunden wurde."
+]
+answer.answer = "Sie merkt sich, ob ein Unterkurs gefunden wurde, und wird nach der Schleife ausgewertet."
+context = "Das `found`-Flag wird bei Note unter `5` auf `true` gesetzt und entscheidet nach der Schleife über die Ausgabe."
+id = "79fa7816-0b18-4518-a934-7966c28dd6d4"

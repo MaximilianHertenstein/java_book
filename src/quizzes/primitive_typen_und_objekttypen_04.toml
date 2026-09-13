@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gilt für `Integer noInt = null;` im Vergleich zu `int`?"
+prompt.distractors = [
+  "Auch `int`-Variablen können `null` enthalten.",
+  "`null` ist ein primitiver Wert vom Typ `int`.",
+  "`Integer` kann nie `null` sein, weil es ein Objekt enthält."
+]
+answer.answer = "Nur Variablen mit Klassentyp wie `Integer` können `null` enthalten, `int` nicht."
+context = "Klassentypen können `null` enthalten, primitive Typen immer einen echten Wert."
+id = "e9c5372a-06f7-4a9c-a614-a688804e8cd7"

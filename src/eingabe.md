@@ -3,7 +3,7 @@
 
 ## Motivation
 
-Die Methoden, die wir bisher geschrieben haben, haben wir im Code die
+Den Methoden, die wir bisher geschrieben haben, haben wir im Code die
 notwendigen Argumente übergeben. Im folgenden Beispiel wird der String
 `"Wie heißt du? "` an die Methode `greetBavarianPrint` übergeben.
 

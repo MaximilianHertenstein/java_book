@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Wann ist `this.name = name;` im Konstruktor nötig?"
+prompt.distractors = [
+  "Immer, weil ohne `this` keine Zuweisung möglich ist.",
+  "Nur wenn der Konstruktor einen Rückgabetyp hat.",
+  "Nur wenn die Klasse mit `record` statt `class` definiert wurde."
+]
+answer.answer = "Wenn die Argumente dieselben Namen wie die Eigenschaften haben, greift man mit `this.name` auf die Eigenschaft zu."
+context = "Bei gleichen Namen unterscheidet `this.eigenschaft` die Eigenschaft vom gleichnamigen Argument."
+id = "fb7a4ba1-8bda-456b-af1b-5bded5bc8789"

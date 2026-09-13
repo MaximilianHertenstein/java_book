@@ -86,7 +86,7 @@ xs
 
 ### 5. Prüfe deine Idee
 
-Sage voraus, welchen Wert `xs` am Ende hat, und erkläre warum.
+Sage voraus, welchen Wert `xs` am Ende hat, und erkläre, warum.
 
 ```java, java-exec
 import java.util.ArrayList;

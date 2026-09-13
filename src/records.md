@@ -29,7 +29,7 @@ showArticle(nameOfFirstArticle, priceOfFirstArticle)
 ```
 
 Die Methode `showArticle` hat keine Möglichkeit zu überprüfen, ob die
-beiden Werte zusammen gehören. Deshalb wird beim folgenden Aufruf keine
+beiden Werte zusammengehören. Deshalb wird beim folgenden Aufruf keine
 Fehlermeldung angezeigt, obwohl Name und Preis von verschiedenen
 Artikeln stammen.
 
@@ -37,7 +37,7 @@ Artikeln stammen.
 showArticle(nameOfFirstArticle, priceOfSecondArticle)
 ```
 
-Da *Name* und *Preis* eines Artikels zusammen gehören, wäre es
+Da *Name* und *Preis* eines Artikels zusammengehören, wäre es
 sinnvoller, einen Artikel mit **nur einem** Wert darzustellen.
 
 ## Records

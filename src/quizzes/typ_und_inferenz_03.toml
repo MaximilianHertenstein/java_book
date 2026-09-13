@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Warum ist `var fehler;` ungültig?"
+prompt.distractors = [
+  "Weil Variablennamen mindestens sieben Zeichen lang sein müssen.",
+  "Weil `var` nur für Zahlen, aber nicht für andere Typen erlaubt ist.",
+  "Weil hinter `var` immer ein Typ wie `int` stehen muss."
+]
+answer.answer = "`var` braucht immer einen Anfangswert, ohne ihn kann kein Typ erschlossen werden."
+context = "Ohne Anfangswert kann `var` nichts erschließen, deshalb ist `var fehler;` ungültig."
+id = "25b0ea71-ad60-4eb4-81c0-7da223049b6f"

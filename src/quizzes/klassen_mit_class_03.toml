@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Woran erkennt man den Konstruktor `MutableStudent(String pName, int pAge)`?"
+prompt.distractors = [
+  "Sein Name ist immer `new` und er hat den Rückgabetyp `void`.",
+  "Sein Name ist frei wählbar und er gibt immer `int` zurück.",
+  "Er steht außerhalb der Klasse und hat den Rückgabetyp der Klasse."
+]
+answer.answer = "Sein Name stimmt mit dem Klassennamen überein und es wird kein Rückgabetyp angegeben."
+context = "Konstruktoren heißen wie die Klasse und werden ohne Rückgabetyp definiert."
+id = "cc76fc2a-a6c9-4877-b187-51d887652006"

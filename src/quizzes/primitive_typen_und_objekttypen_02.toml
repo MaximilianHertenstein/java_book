@@ -1,0 +1,11 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Was gilt für `Integer c = 5;` und den Aufruf `c.toString()`?"
+prompt.distractors = [
+  "`Integer` ist ein primitiver Typ und hat keine Methoden.",
+  "Auch auf `int`-Werten lässt sich `toString()` mit Punkt aufrufen.",
+  "`c.toString()` wandelt den String `\"5\"` in die Zahl `5` um."
+]
+answer.answer = "`Integer` ist die Klasse zu `int`, deshalb geht `c.toString()` mit Punkt."
+context = "Auf Objekten von Wrapper-Klassen wie `Integer` lassen sich Methoden mit Punkt aufrufen."
+id = "364edc03-e0dc-41a2-ad3e-7c3ec5633604"
