@@ -114,7 +114,7 @@ Auch in die Methode *factorial* können wir *println*-Anweisungen einbauen, um b
 ```java, java-exec
 public static int factorial(int x) {
     IO.println("Start des Aufrufs von factorial mit x = " + x);
-    if (x <= 1) {
+    if (x = 1) {
         IO.println("Ende des Aufrufs von factorial mit x = " + x + " mit Ergebnis = 1");
         return 1;
     }
@@ -128,7 +128,7 @@ Auch diese Methode rufen wir folgendermaßen auf:
 
 
 ```java, java-exec
-factorial(3)
+factorial(2)
 ```
 
 
